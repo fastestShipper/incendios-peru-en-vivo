@@ -27,7 +27,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-pucyura",
@@ -54,7 +55,8 @@
      "url": "https://canaln.pe/actualidad/werner-salcedo-cusco-registra-tres-incendios-activos-pucyura-layo-y-marangani-n495552",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-santa-teresa",
@@ -81,7 +83,8 @@
      "url": "https://larepublica.pe/sociedad/2026/10/09/cusco-registra-60-incendios-forestales-en-nueve-dias-y-bomberos-advierten-falta-de-personal-245718",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-layo",
@@ -102,7 +105,8 @@
      "url": "https://canaln.pe/actualidad/werner-salcedo-cusco-registra-tres-incendios-activos-pucyura-layo-y-marangani-n495552",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-marangani",
@@ -129,7 +133,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-velille",
@@ -150,7 +155,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-oropesa",
@@ -171,7 +177,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": "2026-10-08T00:00:00-05:00"
   },
   {
    "id": "cus-yanatile",
@@ -192,7 +199,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": "2026-10-08T00:00:00-05:00"
   },
   {
    "id": "cus-huanuquite",
@@ -213,7 +221,8 @@
      "url": "https://larepublica.pe/sociedad/2026/10/09/cusco-registra-60-incendios-forestales-en-nueve-dias-y-bomberos-advierten-falta-de-personal-245718",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-san-pablo",
@@ -234,7 +243,8 @@
      "url": "https://larepublica.pe/sociedad/2026/10/09/cusco-registra-60-incendios-forestales-en-nueve-dias-y-bomberos-advierten-falta-de-personal-245718",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-pomacanchi",
@@ -261,7 +271,8 @@
      "url": "https://larepublica.pe/sociedad/2026/10/09/dos-muertos-y-mas-de-16000-hectareas-quemadas-en-cusco-asi-avanza-el-incendio-forestal-mas-grave-del-ano-hnews-466000",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-colquepata",
@@ -282,7 +293,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "cus-yanahuara",
@@ -303,7 +315,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "apu-pacobamba",
@@ -324,7 +337,8 @@
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": "2026-10-08T00:00:00-05:00"
   },
   {
    "id": "apu-tapairihua",
@@ -345,7 +359,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "apu-cachora",
@@ -366,7 +381,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "apu-mara",
@@ -387,7 +403,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "apu-challhuahuacho",
@@ -408,7 +425,8 @@
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "jun-rio-tambo",
@@ -442,7 +460,8 @@
      "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-13769-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-R%C3%8DO-TAMBO-JUN%C3%8DN-3.pdf",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": "2026-10-05T00:00:00-05:00"
   },
   {
    "id": "pas-huayllay",
@@ -470,7 +489,8 @@
      "url": "https://larepublica.pe/sociedad/2026/10/09/incendio-forestal-arrasa-mas-de-1000-hectareas-y-amenaza-el-bosque-de-piedras-de-huayllay-en-pasco-784611",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": "2026-10-02T13:30:00-05:00"
   },
   {
    "id": "aya-lucanamarca",
@@ -497,7 +517,8 @@
      "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-13767-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTIAGO-DE-LUCANAMARCA-AYACUCHO-2.pdf",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": "2026-10-06T14:00:00-05:00"
   },
   {
    "id": "aya-quinua",
@@ -518,7 +539,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "aya-huamanguilla",
@@ -539,7 +561,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "aya-paras",
@@ -560,7 +583,8 @@
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "aya-cabana",
@@ -581,7 +605,8 @@
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "pun-huacullani",
@@ -602,7 +627,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "pun-macari",
@@ -623,7 +649,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "anc-aija",
@@ -644,7 +671,8 @@
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "anc-yauya",
@@ -671,7 +699,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "anc-piscobamba",
@@ -692,7 +721,8 @@
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "sm-cunumbuqui",
@@ -713,7 +743,8 @@
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "sm-sacanche",
@@ -734,7 +765,8 @@
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   },
   {
    "id": "sm-el-eslabon",
@@ -755,7 +787,8 @@
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
      "fecha": "2026-10-09"
     }
-   ]
+   ],
+   "inicio": null
   }
  ],
  "resumen_oficial": {

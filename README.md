@@ -7,6 +7,8 @@ Mapa web **no oficial** que reúne en un solo lugar:
 - **Agrupaciones de focos inferidas por satélite**, siempre marcadas como *inferido por satélite* y nunca como confirmadas.
 - **Últimas noticias** (Google Noticias) y contadores: focos, incidentes activos, regiones y fallecidos reportados.
 
+**Interfaz 3D (three.js).** Muestra un Perú en relieve con sus regiones y nombres. Los incendios aparecen como columnas de fuego, y su altura crece con las hectáreas reportadas. Los puntos de calor satelitales forman una capa sutil. Arriba hay un titular en lenguaje simple ("Ahora hay N incendios activos en M regiones") y debajo una leyenda de 4 colores. También tiene un botón **Ver mi región**, la lista **Incendios más graves ahora** y tarjetas simples con lugar, estado, hectáreas, desde cuándo, qué hacer, teléfonos 116 y 115, y noticias. Los datos técnicos (FRP, sensor, confianza, todas las fuentes) están detrás de **Ver datos técnicos**. Si el dispositivo no tiene WebGL, se muestra la lista y un enlace al [mapa 2D clásico](mapa-2d.html) (Leaflet).
+
 Se actualiza solo. GitHub Actions regenera los datos cada ~20 minutos y la página revisa cada 2 minutos si hay datos nuevos, sin que tengas que recargarla.
 
 > ⚠️ **Aviso.** Esta herramienta es informativa y **no es una fuente oficial**. En una emergencia sigue las indicaciones de [INDECI / COEN](https://portal.indeci.gob.pe/emergencias/), del Cuerpo General de Bomberos Voluntarios del Perú y de tu gobierno local.
@@ -43,9 +45,11 @@ Se actualiza solo. GitHub Actions regenera los datos cada ~20 minutos y la pági
 ## Estructura
 
 ```
-index.html               página (Leaflet, sin compilación)
-assets/app.js            lógica del mapa, filtros y actualización automática
-assets/style.css         estilos (adaptado a celulares)
+index.html               página principal: mapa 3D (three.js r170, incluido en assets/vendor, sin compilación)
+assets/app3d.js          escena 3D, tarjetas, lista por gravedad, región y actualización automática
+assets/style.css         estilos (primero para celulares)
+mapa-2d.html             mapa 2D clásico (Leaflet), también sirve de respaldo sin WebGL
+assets/app-2d.js, assets/style-2d.css
 scripts/update.py        actualizador (Python estándar + pdftotext)
 data/incidentes_curados.json   incidentes cargados a mano, con fuentes
 data/firms.json          focos satelitales en Perú (7 días)      ← generado
@@ -85,6 +89,9 @@ Si la API falla, el script vuelve solo a los CSV públicos.
 Edita `data/incidentes_curados.json`. Los estados válidos son `activo`, `en_control`, `controlado`, `extinguido` y `sin_dato`. Usa `null` cuando no haya dato y agrega siempre al menos una fuente con `url`. Los nombres de departamento, provincia y distrito van en mayúsculas y sin tildes, como en `data/ref/distritos.json`.
 
 ## Limitaciones
+
+- El mapa 3D usa los límites departamentales simplificados, sin relieve real del terreno. Para ver imágenes satelitales y relieve usa el mapa 2D.
+- Para que vaya fluido en celulares se dibujan como máximo 6 000 puntos de calor, los más recientes.
 
 - Los focos FIRMS tienen una resolución de 375 m a 1 km. Las nubes, el humo denso o la hora de la pasada pueden ocultar un incendio, y algunas quemas agrícolas o fuentes industriales aparecen como focos.
 - La lectura automática de los PDF de INDECI depende de su formato. Si cambia, el estado queda en "sin dato", con el enlace al reporte.

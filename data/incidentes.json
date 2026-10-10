@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-10T00:48:27.942598+00:00",
+ "generado": "2026-10-10T01:32:16.171100+00:00",
  "incidentes": [
   {
    "id": "cus-espinar-pichigua",
@@ -27,6 +27,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -14.7368,
    "lon": -71.2218,
    "precision": "centroide del distrito",
@@ -58,12 +59,6 @@
      "fecha": "2026-10-08"
     },
     {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13750 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13750-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PUCYURA-CUSCO-1.pdf",
-     "fecha": "2026-10-08"
-    },
-    {
      "medio": "Forbes Perú / EFE (COEN)",
      "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
      "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
@@ -76,6 +71,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": null,
    "lat": -13.488,
    "lon": -72.0898,
    "precision": "centroide del distrito",
@@ -125,6 +121,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-08T00:00:00-05:00",
    "lat": -13.2432,
    "lon": -72.7326,
    "precision": "centroide del distrito",
@@ -156,6 +153,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": null,
    "lat": -14.5292,
    "lon": -71.0921,
    "precision": "centroide del distrito",
@@ -193,13 +191,14 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -14.3754,
    "lon": -71.0953,
    "precision": "centroide del distrito",
    "origen": "curado",
    "satelite": {
     "focos_24h": 24,
-    "focos_48h": 93,
+    "focos_48h": 90,
     "ultimo": "2026-10-09T20:49:00+00:00",
     "radio_km": 15
    }
@@ -236,6 +235,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": "2026-10-07T00:00:00-05:00",
    "lat": -14.5496,
    "lon": -71.8489,
    "precision": "centroide del distrito",
@@ -268,18 +268,13 @@
      "fecha": "2026-10-08"
     },
     {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13740 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13740-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-OROPESA-CUSCO-1.pdf",
-     "fecha": "2026-10-08"
-    },
-    {
      "medio": "RPP (COEN-INDECI)",
      "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": "2026-10-08T00:00:00-05:00",
    "lat": -13.5757,
    "lon": -71.7892,
    "precision": "centroide del distrito",
@@ -323,6 +318,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": "2026-10-08T00:00:00-05:00",
    "lat": -12.7958,
    "lon": -72.1036,
    "precision": "centroide del distrito",
@@ -355,6 +351,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": null,
    "lat": -13.6968,
    "lon": -72.0779,
    "precision": "centroide del distrito",
@@ -386,6 +383,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": null,
    "lat": -14.1535,
    "lon": -71.0903,
    "precision": "centroide del distrito",
@@ -423,6 +421,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": null,
    "lat": -14.0549,
    "lon": -71.6239,
    "precision": "centroide del distrito",
@@ -454,6 +453,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -13.3987,
    "lon": -71.6592,
    "precision": "centroide del distrito",
@@ -485,6 +485,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -13.2438,
    "lon": -72.1273,
    "precision": "centroide del distrito",
@@ -528,6 +529,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-08T00:00:00-05:00",
    "lat": -13.5355,
    "lon": -73.1327,
    "precision": "centroide del distrito",
@@ -559,18 +561,13 @@
      "fecha": "2026-10-08"
     },
     {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13747 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13747-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-TAPAIRIHUA-APURÍMAC-1.pdf",
-     "fecha": "2026-10-08"
-    },
-    {
      "medio": "RPP (COEN-INDECI)",
      "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -14.1032,
    "lon": -73.1164,
    "precision": "centroide del distrito",
@@ -602,6 +599,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -13.4877,
    "lon": -72.815,
    "precision": "centroide del distrito",
@@ -633,6 +631,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -14.0415,
    "lon": -72.1148,
    "precision": "centroide del distrito",
@@ -676,6 +675,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-08T00:00:00-05:00",
    "lat": -14.171,
    "lon": -72.3078,
    "precision": "centroide del distrito",
@@ -694,23 +694,23 @@
    "provincia": "SATIPO",
    "distrito": "RIO TAMBO",
    "estado": "activo",
-   "estado_texto": "Seis días activo; el fuego sigue propagándose y amenaza otras comunidades (Municipalidad de Río Tambo / Defensa Civil, vía Andina y La República, 9 oct). Helicóptero MI-17 de la FAP con helibalde (INDECI).",
+   "estado_texto": "INDECI (reporte N.º 13803, leído automáticamente): «incendio forestal se encuentra activo.»",
    "hectareas": "350 ha de bosque primario + 80 ha de cultivos (reporte preliminar de Defensa Civil)",
    "fallecidos": null,
    "heridos": 2,
    "notas": "10 viviendas destruidas, 50 familias afectadas.",
-   "fecha_estado": "2026-10-09T14:57:00-05:00",
+   "fecha_estado": "2026-10-09T18:20:00-05:00",
    "fuentes": [
     {
      "medio": "INDECI – COEN",
-     "titulo": "REPORTE COMPLEMENTARIO N.º 13769 – 9/10/2026 / COEN – INDECI / 00:00 HORAS (Reporte N.° 3) INCENDIO FORESTAL EN EL DISTRITO DE RÍO TAMBO – JUNÍN",
+     "titulo": "REPORTE COMPLEMENTARIO N.º 13803 – 9/10/2026 / COEN – INDECI / 18:20 HORAS (Reporte N.° 4) INCENDIO FORESTAL EN EL DISTRITO DE RÍO TAMBO – JUNÍN",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-0985-5-10-2026-coen-indeci-1310-horas-incendio-forestal-en-el-distrito-de-rio-tambo-junin/",
      "fecha": "2026-10-09"
     },
     {
      "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13769 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13769-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-RÍO-TAMBO-JUNÍN-3.pdf",
+     "titulo": "Reporte N.º 13803 (PDF)",
+     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13803-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-RÍO-TAMBO-JUNÍN-4.pdf",
      "fecha": "2026-10-09"
     },
     {
@@ -732,10 +732,12 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-05T00:00:00-05:00",
    "lat": -11.5287,
    "lon": -73.8149,
    "precision": "centroide del distrito",
    "origen": "curado",
+   "estado_origen": "INDECI automático",
    "satelite": {
     "focos_24h": 0,
     "focos_48h": 0,
@@ -770,6 +772,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-02T13:30:00-05:00",
    "lat": -10.9497,
    "lon": -76.4281,
    "precision": "centroide del distrito",
@@ -819,6 +822,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": "2026-10-06T14:00:00-05:00",
    "lat": -13.8254,
    "lon": -74.5338,
    "precision": "centroide del distrito",
@@ -850,6 +854,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -13.0589,
    "lon": -74.1343,
    "precision": "centroide del distrito",
@@ -869,23 +874,11 @@
    "distrito": "HUAMANGUILLA",
    "estado": "extinguido",
    "estado_texto": "COEN-INDECI (8 oct): declarado extinguido.",
-   "hectareas": "3 ha de cobertura natural (tabla de daños INDECI)",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
    "fecha_estado": "2026-10-08T21:07:00-05:00",
    "fuentes": [
-    {
-     "medio": "INDECI – COEN",
-     "titulo": "REPORTE COMPLEMENTARIO N.° 13731 – 8/10/2026 / COEN-INDECI / 16:10 HORAS (Reporte N.° 2) INCENDIO FORESTAL EN EL DISTRITO DE HUAMANGUILLA – AYACUCHO",
-     "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13672-7-10-2026-coen-indeci-2040-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-huamanguilla-ayacucho/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13731 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13731-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUAMANGUILLA-AYACUCHO-2.pdf",
-     "fecha": "2026-10-08"
-    },
     {
      "medio": "RPP (COEN-INDECI)",
      "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
@@ -893,6 +886,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -12.987,
    "lon": -74.1515,
    "precision": "centroide del distrito",
@@ -936,6 +930,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-08T00:00:00-05:00",
    "lat": -13.462,
    "lon": -74.7215,
    "precision": "centroide del distrito",
@@ -979,6 +974,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-08T00:00:00-05:00",
    "lat": -14.3617,
    "lon": -74.076,
    "precision": "centroide del distrito",
@@ -1010,25 +1006,20 @@
      "fecha": "2026-10-08"
     },
     {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13738 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13738-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUACULLANI-PUNO-1.pdf",
-     "fecha": "2026-10-08"
-    },
-    {
      "medio": "RPP (COEN-INDECI)",
      "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
      "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -16.6026,
    "lon": -69.399,
    "precision": "centroide del distrito",
    "origen": "curado",
    "satelite": {
     "focos_24h": 0,
-    "focos_48h": 54,
+    "focos_48h": 50,
     "ultimo": "2026-10-08T20:12:00+00:00",
     "radio_km": 15
    }
@@ -1053,6 +1044,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -14.7123,
    "lon": -70.9278,
    "precision": "centroide del distrito",
@@ -1096,6 +1088,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-08T00:00:00-05:00",
    "lat": -9.8,
    "lon": -77.5692,
    "precision": "centroide del distrito",
@@ -1134,6 +1127,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -9.0052,
    "lon": -77.2577,
    "precision": "centroide del distrito",
@@ -1165,6 +1159,7 @@
      "fecha": "2026-10-08"
     }
    ],
+   "inicio": null,
    "lat": -8.8637,
    "lon": -77.355,
    "precision": "centroide del distrito",
@@ -1208,6 +1203,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-07T00:00:00-05:00",
    "lat": -6.6127,
    "lon": -76.4715,
    "precision": "centroide del distrito",
@@ -1251,6 +1247,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-07T00:00:00-05:00",
    "lat": -7.0941,
    "lon": -76.7673,
    "precision": "centroide del distrito",
@@ -1294,6 +1291,7 @@
      "fecha": "2026-10-09"
     }
    ],
+   "inicio": "2026-10-07T00:00:00-05:00",
    "lat": -6.9909,
    "lon": -76.7086,
    "precision": "centroide del distrito",
@@ -1302,6 +1300,82 @@
     "focos_24h": 1,
     "focos_48h": 2,
     "ultimo": "2026-10-09T20:51:00+00:00",
+    "radio_km": 15
+   }
+  },
+  {
+   "id": "indeci-13805",
+   "nombre": "Yanaquihua (Arequipa)",
+   "departamento": "AREQUIPA",
+   "provincia": "CONDESUYOS",
+   "distrito": "YANAQUIHUA",
+   "estado": "extinguido",
+   "estado_texto": "INDECI (reporte N.º 13805, leído automáticamente): «incendio se encuentra extinguido.»",
+   "hectareas": "500 ha de cobertura natural (tabla de daños INDECI)",
+   "fallecidos": null,
+   "heridos": null,
+   "inicio": "2026-10-05T00:00:00-05:00",
+   "fecha_estado": "2026-10-09T18:45:00-05:00",
+   "lat": -15.701,
+   "lon": -73.0307,
+   "precision": "centroide del distrito",
+   "origen": "indeci_auto",
+   "fuentes": [
+    {
+     "medio": "INDECI – COEN",
+     "titulo": "REPORTE COMPLEMENTARIO N.° 13805 – 9/10/2026 / COEN – INDECI / 18:45 HORAS (Reporte N.° 3) INCENDIO FORESTAL EN EL DISTRITO DE YANAQUIHUA – AREQUIPA",
+     "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13636-7-10-2026-coen-indeci-0655-horas-reporte-n-01-incendio-forestal-en-el-distrito-de-yanaquihua-arequipa/",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "INDECI – COEN (PDF)",
+     "titulo": "Reporte N.º 13805 (PDF)",
+     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13805-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-YANAQUIHUA-AREQUIPA-3.pdf",
+     "fecha": "2026-10-09"
+    }
+   ],
+   "satelite": {
+    "focos_24h": 0,
+    "focos_48h": 25,
+    "ultimo": "2026-10-08T19:02:00+00:00",
+    "radio_km": 15
+   }
+  },
+  {
+   "id": "indeci-13804",
+   "nombre": "San Sebastián (Cusco) – Los Huertos",
+   "departamento": "CUSCO",
+   "provincia": "CUSCO",
+   "distrito": "SAN SEBASTIAN",
+   "estado": "extinguido",
+   "estado_texto": "INDECI (reporte N.º 13804, leído automáticamente): «incendio forestal se encuentra extinguido.»",
+   "hectareas": "2 ha de cobertura natural (tabla de daños INDECI)",
+   "fallecidos": null,
+   "heridos": null,
+   "inicio": "2026-10-06T00:00:00-05:00",
+   "fecha_estado": "2026-10-09T18:35:00-05:00",
+   "lat": -13.5371,
+   "lon": -71.9255,
+   "precision": "centroide del distrito",
+   "origen": "indeci_auto",
+   "fuentes": [
+    {
+     "medio": "INDECI – COEN",
+     "titulo": "REPORTE COMPLEMENTARIO N.° 13804 – 9/10/2026 / COEN – INDECI / 18:35 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE SAN SEBASTIÁN – CUSCO",
+     "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13804-9-10-2026-coen-indeci-1835-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-san-sebastian-cusco/",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "INDECI – COEN (PDF)",
+     "titulo": "Reporte N.º 13804 (PDF)",
+     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13804-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SAN-SEBASTIÁN-CUSCO-1.pdf",
+     "fecha": "2026-10-09"
+    }
+   ],
+   "satelite": {
+    "focos_24h": 0,
+    "focos_48h": 0,
+    "ultimo": null,
     "radio_km": 15
    }
   },
@@ -1316,6 +1390,7 @@
    "hectareas": "16 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-08T00:00:00-05:00",
    "fecha_estado": "2026-10-09T18:15:00-05:00",
    "lat": -12.1963,
    "lon": -74.7801,
@@ -1353,6 +1428,7 @@
    "hectareas": "40 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-07T00:00:00-05:00",
    "fecha_estado": "2026-10-09T17:35:00-05:00",
    "lat": -13.3695,
    "lon": -74.1654,
@@ -1390,6 +1466,7 @@
    "hectareas": "100 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-07T00:00:00-05:00",
    "fecha_estado": "2026-10-09T17:00:00-05:00",
    "lat": -14.4933,
    "lon": -71.4795,
@@ -1427,6 +1504,7 @@
    "hectareas": "0.5 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-08T00:00:00-05:00",
    "fecha_estado": "2026-10-09T16:35:00-05:00",
    "lat": -12.4603,
    "lon": -75.0542,
@@ -1464,6 +1542,7 @@
    "hectareas": "320 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-03T00:00:00-05:00",
    "fecha_estado": "2026-10-09T15:15:00-05:00",
    "lat": -13.7876,
    "lon": -73.0334,
@@ -1501,6 +1580,7 @@
    "hectareas": "20 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-03T00:00:00-05:00",
    "fecha_estado": "2026-10-09T15:05:00-05:00",
    "lat": -13.9167,
    "lon": -72.3955,
@@ -1538,6 +1618,7 @@
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-01T00:00:00-05:00",
    "fecha_estado": "2026-10-09T14:50:00-05:00",
    "lat": -13.7501,
    "lon": -72.3391,
@@ -1553,7 +1634,7 @@
     {
      "medio": "INDECI – COEN (PDF)",
      "titulo": "Reporte N.º 13790 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13790-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-COTABAMBAS-APURÍMAC-1.pdf",
+     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13790-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-COTABAMBAS-APURÍMAC-1-1.pdf",
      "fecha": "2026-10-09"
     }
    ],
@@ -1575,6 +1656,7 @@
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-08T00:00:00-05:00",
    "fecha_estado": "2026-10-09T14:40:00-05:00",
    "lat": -6.0593,
    "lon": -79.3078,
@@ -1612,6 +1694,7 @@
    "hectareas": "3 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-08T00:00:00-05:00",
    "fecha_estado": "2026-10-09T14:20:00-05:00",
    "lat": -12.456,
    "lon": -74.9059,
@@ -1649,6 +1732,7 @@
    "hectareas": null,
    "fallecidos": 1,
    "heridos": null,
+   "inicio": "2026-10-08T00:00:00-05:00",
    "fecha_estado": "2026-10-09T11:25:00-05:00",
    "lat": -6.3738,
    "lon": -78.3703,
@@ -1686,6 +1770,7 @@
    "hectareas": "3 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-03T00:00:00-05:00",
    "fecha_estado": "2026-10-09T11:00:00-05:00",
    "lat": -13.9167,
    "lon": -73.2432,
@@ -1723,6 +1808,7 @@
    "hectareas": "10 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-09-30T00:00:00-05:00",
    "fecha_estado": "2026-10-09T10:20:00-05:00",
    "lat": -8.5419,
    "lon": -77.6118,
@@ -1760,6 +1846,7 @@
    "hectareas": "8.5 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-08T00:00:00-05:00",
    "fecha_estado": "2026-10-09T10:00:00-05:00",
    "lat": -14.9419,
    "lon": -72.548,
@@ -1797,6 +1884,7 @@
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-06T00:00:00-05:00",
    "fecha_estado": "2026-10-09T05:35:00-05:00",
    "lat": -12.3455,
    "lon": -74.8354,
@@ -1834,6 +1922,7 @@
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-07T00:00:00-05:00",
    "fecha_estado": "2026-10-09T05:15:00-05:00",
    "lat": -14.1306,
    "lon": -73.197,
@@ -1871,6 +1960,7 @@
    "hectareas": "5 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-04T00:00:00-05:00",
    "fecha_estado": "2026-10-09T01:00:00-05:00",
    "lat": -8.793,
    "lon": -77.5085,
@@ -1908,6 +1998,7 @@
    "hectareas": "80 ha de cobertura natural (tabla de daños INDECI)",
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-03T00:00:00-05:00",
    "fecha_estado": "2026-10-08T23:00:00-05:00",
    "lat": -15.1063,
    "lon": -73.7015,
@@ -1945,6 +2036,7 @@
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-05T00:00:00-05:00",
    "fecha_estado": "2026-10-08T22:45:00-05:00",
    "lat": -14.6754,
    "lon": -71.3422,
@@ -1982,6 +2074,7 @@
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-03T00:00:00-05:00",
    "fecha_estado": "2026-10-08T21:40:00-05:00",
    "lat": -14.7585,
    "lon": -71.6349,
@@ -2019,6 +2112,7 @@
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": "2026-10-06T00:00:00-05:00",
    "fecha_estado": "2026-10-08T20:50:00-05:00",
    "lat": -12.8158,
    "lon": -74.1264,
@@ -2047,15 +2141,16 @@
   },
   {
    "id": "indeci-13751",
-   "nombre": "Chuquibambilla (Apurímac) – Pataypampa",
+   "nombre": "Chuquibambilla (Apurímac)",
    "departamento": "APURIMAC",
-   "provincia": "GRAU",
+   "provincia": "",
    "distrito": "CHUQUIBAMBILLA",
    "estado": "sin_dato",
    "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T20:20:00-05:00",
    "lat": -14.1167,
    "lon": -72.7735,
@@ -2066,12 +2161,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.° 13751 – 8/10/2026 / COEN-INDECI / 20:20 HORAS (Reporte N.° 2) INCENDIO FORESTAL EN EL DISTRITO DE CHUQUIBAMBILLA – APURÍMAC",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-1002-7-10-2026-coen-indeci-0730-horas-incendio-forestal-en-la-provincia-de-grau-apurimac/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13751 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13751-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CHUQUIBAMBILLA-APURÍMAC-2.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2086,13 +2175,14 @@
    "id": "indeci-13748",
    "nombre": "Mollepata (Cusco)",
    "departamento": "CUSCO",
-   "provincia": "ANTA",
+   "provincia": "",
    "distrito": "MOLLEPATA",
-   "estado": "extinguido",
-   "estado_texto": "INDECI (reporte N.º 13748, leído automáticamente): «incendio forestal se encuentra extinguido.»",
-   "hectareas": "1 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T19:30:00-05:00",
    "lat": -13.4645,
    "lon": -72.623,
@@ -2103,12 +2193,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.° 13748 – 8/10/2026 /COEN – INDECI / 19:30 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE MOLLEPATA – CUSCO",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-1005-7-10-2026-coen-indeci-2140-horas-incendio-forestal-en-el-distrito-de-mollepata-cusco/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13748 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13748-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-MOLLEPATA-CUSCO-1.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2123,13 +2207,14 @@
    "id": "indeci-13743",
    "nombre": "Huaraz (Áncash)",
    "departamento": "ANCASH",
-   "provincia": "HUARAZ",
+   "provincia": "",
    "distrito": "HUARAZ",
-   "estado": "extinguido",
-   "estado_texto": "INDECI (reporte N.º 13743, leído automáticamente): «incendio forestal se encuentra extinguido.»",
-   "hectareas": "65 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T17:55:00-05:00",
    "lat": -9.5746,
    "lon": -77.4749,
@@ -2140,12 +2225,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.º 13743-8/10/2026 / COEN-INDECI / 17:55 HORAS (Reporte N.° 2) INCENDIO FORESTAL EN EL DISTRITO DE HUARAZ- ÁNCASH",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-0936-29-9-2026-coen-indeci-0120-horas-incendio-forestal-en-el-distrito-de-huaraz-ancash/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13743 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/09/REPORTE-COMPLEMENTARIO-N.º-13743-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUARAZ-ÁNCASH-2.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2160,14 +2239,15 @@
    "id": "indeci-13742",
    "nombre": "Acoria (Huancavelica)",
    "departamento": "HUANCAVELICA",
-   "provincia": "HUANCAVELICA",
+   "provincia": "",
    "distrito": "ACORIA",
    "estado": "sin_dato",
    "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
-   "hectareas": "10.5 ha de cobertura natural (tabla de daños INDECI)",
+   "hectareas": null,
    "fallecidos": null,
-   "heridos": 1,
-   "fecha_estado": "2026-10-02T21:20:00-05:00",
+   "heridos": null,
+   "inicio": null,
+   "fecha_estado": "2026-10-08T17:50:00-05:00",
    "lat": -12.5998,
    "lon": -74.8239,
    "precision": "centroide del distrito",
@@ -2177,12 +2257,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.° 13742 – 8/10/2026 / COEN – INDECI / 17:50 HORAS (Reporte N.° 4) INCENDIO FORESTAL EN EL DISTRITO DE ACORIA – HUANCAVELICA",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13296-2-10-2026-coen-indeci-0125-horas-reporte-n-01-incendio-forestal-en-el-distrito-de-acoria-huancavelica/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13742 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13742-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-ACORIA-HUANCAVELICA-4.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2195,15 +2269,16 @@
   },
   {
    "id": "indeci-13741",
-   "nombre": "Pucará (Junín) – Barrio 28 De Julio",
+   "nombre": "Pucará (Junín)",
    "departamento": "JUNIN",
-   "provincia": "HUANCAYO",
+   "provincia": "",
    "distrito": "PUCARA",
-   "estado": "extinguido",
-   "estado_texto": "INDECI (reporte N.º 13741, leído automáticamente): «incendio forestal se encuentra extinguido.»",
-   "hectareas": "1 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T17:45:00-05:00",
    "lat": -12.1822,
    "lon": -75.1015,
@@ -2214,12 +2289,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.º 13741 – 8/10/2026/ COEN – INDECI / 17:45 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE PUCARÁ – JUNÍN",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13741-8-10-2026-coen-indeci-1745-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-pucara-junin/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13741 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13741-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PUCARÁ-JUNÍN-1.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2232,15 +2301,16 @@
   },
   {
    "id": "indeci-13739",
-   "nombre": "Yarinacocha (Ucayali) – Las Américas",
+   "nombre": "Yarinacocha (Ucayali)",
    "departamento": "UCAYALI",
-   "provincia": "CORONEL PORTILLO",
+   "provincia": "",
    "distrito": "YARINACOCHA",
-   "estado": "extinguido",
-   "estado_texto": "INDECI (reporte N.º 13739, leído automáticamente): «incendio se encuentra extinguido.»",
-   "hectareas": "5.5 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T17:35:00-05:00",
    "lat": -8.2506,
    "lon": -74.6563,
@@ -2251,12 +2321,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.º 13739 – 8/10/2026 / COEN-INDECI / 17:35 HORAS (Reporte N° 2) INCENDIO FORESTAL EN EL DISTRITO DE YARINACOCHA – UCAYALI",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13679-7-10-2026-coen-indeci-2215-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-yarinacocha-ucayali/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13739 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13739-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-YARINACOCHA-UCAYALI-2.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2269,15 +2333,16 @@
   },
   {
    "id": "indeci-13737",
-   "nombre": "Pampamarca (Arequipa) – Secsencaylla",
+   "nombre": "Pampamarca (Arequipa)",
    "departamento": "AREQUIPA",
-   "provincia": "LA UNION",
+   "provincia": "",
    "distrito": "PAMPAMARCA",
-   "estado": "extinguido",
-   "estado_texto": "INDECI (reporte N.º 13737, leído automáticamente): «incendio forestal se encuentra extinguido.»",
-   "hectareas": "5 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T17:25:00-05:00",
    "lat": -14.9924,
    "lon": -72.9325,
@@ -2288,12 +2353,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.° 13737 – 8/10/2026 / COEN – INDECI / 17:25 HORAS (Reporte N° 3) INCENDIO FORESTAL EN EL DISTRITO DE PAMPAMARCA – AREQUIPA",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-0951-1-10-2026-coen-indeci-1420-horas-incendio-forestal-en-el-distrito-de-pampamarca-arequipa/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13737 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13737-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PAMPAMARCA-AREQUIPA-2.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2306,15 +2365,16 @@
   },
   {
    "id": "indeci-13735",
-   "nombre": "Sayla (Arequipa) – Yanaya",
+   "nombre": "Sayla (Arequipa)",
    "departamento": "AREQUIPA",
-   "provincia": "LA UNION",
+   "provincia": "",
    "distrito": "SAYLA",
-   "estado": "extinguido",
-   "estado_texto": "INDECI (reporte N.º 13735, leído automáticamente): «incendio se encuentra extinguido.»",
-   "hectareas": "4 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T16:55:00-05:00",
    "lat": -15.3218,
    "lon": -73.2417,
@@ -2325,12 +2385,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.° 13735 – 8/10/2026 / COEN – INDECI / 16:55 HORAS (Reporte N° 03) INCENDIO FORESTAL EN EL DISTRITO DE SAYLA – AREQUIPA",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13214-1-10-2026-coen-indeci-0045-horas-reporte-n-01-incendio-forestal-en-el-distrito-de-sayla-arequipa/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13735 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13735-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SAYLA-AREQUIPA-3.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2343,15 +2397,16 @@
   },
   {
    "id": "indeci-13734",
-   "nombre": "Recuay (Áncash) – Collahuasi",
+   "nombre": "Recuay (Áncash)",
    "departamento": "ANCASH",
-   "provincia": "RECUAY",
+   "provincia": "",
    "distrito": "RECUAY",
-   "estado": "extinguido",
-   "estado_texto": "INDECI (reporte N.º 13734, leído automáticamente): «incendio forestal se encuentra extinguido.»",
-   "hectareas": "6 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T16:50:00-05:00",
    "lat": -9.7095,
    "lon": -77.4533,
@@ -2362,12 +2417,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.º 13734 – 8/10/2026/ COEN – INDECI / 16:50 HORAS (Reporte N.º 4) INCENDIO FORESTAL EN EL DISTRITO DE RECUAY – ÁNCASH",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13374-2-10-2026-coen-indeci-2355-horas-reporte-n-o-2-incendio-forestal-en-el-distrito-de-recuay-ancash/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13734 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13734-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-RECUAY-ÁNCASH-4.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2384,11 +2433,12 @@
    "departamento": "PIURA",
    "provincia": "",
    "distrito": "SONDORILLO",
-   "estado": "controlado",
-   "estado_texto": "INDECI (reporte N.º 13733, leído automáticamente): «incendio forestal se encuentra controlado.»",
-   "hectareas": "3 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T16:45:00-05:00",
    "lat": -5.3984,
    "lon": -79.4592,
@@ -2399,12 +2449,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.º 13733 – 8/10/2026 / COEN – INDECI / 16:45 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE SONDORILLO – PIURA",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13733-8-10-2026-coen-indeci-1645-horas-reporte-n-o-1-incendio-forestal-en-el-distrito-de-sondorillo-piura/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13733 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13733-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SONDORILLO-PIURA-1.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2417,15 +2461,16 @@
   },
   {
    "id": "indeci-13732",
-   "nombre": "Cátac (Áncash) – Utcuyacu",
+   "nombre": "Cátac (Áncash)",
    "departamento": "ANCASH",
-   "provincia": "RECUAY",
+   "provincia": "",
    "distrito": "CATAC",
-   "estado": "extinguido",
-   "estado_texto": "INDECI (reporte N.º 13732, leído automáticamente): «incendio forestal se encuentra extinguido.»",
-   "hectareas": "2 ha de cobertura natural (tabla de daños INDECI)",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
+   "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T16:15:00-05:00",
    "lat": -9.9144,
    "lon": -77.3154,
@@ -2436,12 +2481,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE COMPLEMENTARIO N.º 13732 – 8/10/2026/ COEN – INDECI / 16:15 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE CÁTAC – ÁNCASH",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13732-8-10-2026-coen-indeci-1615-horas-reporte-n-o-1-incendio-forestal-en-el-distrito-de-catac-ancash/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 13732 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13732-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CÁTAC-ÁNCASH-1.pdf",
      "fecha": "2026-10-08"
     }
    ],
@@ -2454,15 +2493,16 @@
   },
   {
    "id": "indeci-1012",
-   "nombre": "Santo Tomás De Pata (Huancavelica) – Chupacc",
+   "nombre": "Santo Tomás De Pata (Huancavelica)",
    "departamento": "HUANCAVELICA",
-   "provincia": "ANGARAES",
+   "provincia": "",
    "distrito": "SANTO TOMAS DE PATA",
-   "estado": "activo",
-   "estado_texto": "INDECI (reporte N.º 1012, leído automáticamente): «incendio forestal se encuentra activo.»",
+   "estado": "sin_dato",
+   "estado_texto": "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte.",
    "hectareas": null,
    "fallecidos": null,
    "heridos": null,
+   "inicio": null,
    "fecha_estado": "2026-10-08T23:30:00-05:00",
    "lat": -13.1421,
    "lon": -74.4675,
@@ -2473,12 +2513,6 @@
      "medio": "INDECI – COEN",
      "titulo": "REPORTE PRELIMINAR N.° 1012 – 8/10/2026 / COEN – INDECI / 23:30 HORAS INCENDIO FORESTAL EN EL DISTRITO DE SANTO TOMÁS DE PATA – HUANCAVELICA",
      "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-1012-8-10-2026-coen-indeci-2330-horas-incendio-forestal-en-el-distrito-de-santo-tomas-de-pata-huancavelica/",
-     "fecha": "2026-10-08"
-    },
-    {
-     "medio": "INDECI – COEN (PDF)",
-     "titulo": "Reporte N.º 1012 (PDF)",
-     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-PRELIMINAR-N.º-1012-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTO-TOMAS-DE-PATA-HUANCAVELICA.pdf",
      "fecha": "2026-10-08"
     }
    ],

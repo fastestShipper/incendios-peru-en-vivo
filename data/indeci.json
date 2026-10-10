@@ -1,7 +1,77 @@
 {
- "generado": "2026-10-10T00:48:27.942598+00:00",
+ "generado": "2026-10-10T01:32:16.171100+00:00",
  "fuente": "https://portal.indeci.gob.pe/emergencias/",
  "reportes": [
+  {
+   "titulo": "REPORTE COMPLEMENTARIO N.° 13805 – 9/10/2026 / COEN – INDECI / 18:45 HORAS (Reporte N.° 3) INCENDIO FORESTAL EN EL DISTRITO DE YANAQUIHUA – AREQUIPA",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13636-7-10-2026-coen-indeci-0655-horas-reporte-n-01-incendio-forestal-en-el-distrito-de-yanaquihua-arequipa/",
+   "tipo": "complementario",
+   "numero": 13805,
+   "fecha": "2026-10-09T18:45:00-05:00",
+   "reporte_n": 3,
+   "distrito": "YANAQUIHUA",
+   "departamento": "AREQUIPA",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13805-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-YANAQUIHUA-AREQUIPA-3.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio se encuentra extinguido.",
+   "actualizado": "2026-10-09T18:45:00-05:00",
+   "inicio": "2026-10-05T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "AREQUIPA",
+    "provincia": "CONDESUYOS",
+    "distrito": "YANAQUIHUA",
+    "sector": null
+   },
+   "hectareas": "500 ha de cobertura natural (tabla de daños INDECI)"
+  },
+  {
+   "titulo": "REPORTE COMPLEMENTARIO N.° 13804 – 9/10/2026 / COEN – INDECI / 18:35 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE SAN SEBASTIÁN – CUSCO",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13804-9-10-2026-coen-indeci-1835-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-san-sebastian-cusco/",
+   "tipo": "complementario",
+   "numero": 13804,
+   "fecha": "2026-10-09T18:35:00-05:00",
+   "reporte_n": 1,
+   "distrito": "SAN SEBASTIÁN",
+   "departamento": "CUSCO",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13804-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SAN-SEBASTIÁN-CUSCO-1.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "actualizado": "2026-10-09T18:35:00-05:00",
+   "inicio": "2026-10-06T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "CUSCO",
+    "provincia": "CUSCO",
+    "distrito": "SAN SEBASTIÁN",
+    "sector": "LOS HUERTOS"
+   },
+   "hectareas": "2 ha de cobertura natural (tabla de daños INDECI)"
+  },
+  {
+   "titulo": "REPORTE COMPLEMENTARIO N.º 13803 – 9/10/2026 / COEN – INDECI / 18:20 HORAS (Reporte N.° 4) INCENDIO FORESTAL EN EL DISTRITO DE RÍO TAMBO – JUNÍN",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-0985-5-10-2026-coen-indeci-1310-horas-incendio-forestal-en-el-distrito-de-rio-tambo-junin/",
+   "tipo": "complementario",
+   "numero": 13803,
+   "fecha": "2026-10-09T18:20:00-05:00",
+   "reporte_n": 4,
+   "distrito": "RÍO TAMBO",
+   "departamento": "JUNÍN",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13803-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-RÍO-TAMBO-JUNÍN-4.pdf",
+   "v": 2,
+   "estado": "activo",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "actualizado": "2026-10-09T18:20:00-05:00",
+   "inicio": "2026-10-05T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "JUNÍN",
+    "provincia": "SATIPO",
+    "distrito": "RÍO TAMBO",
+    "sector": "TSYAPO"
+   },
+   "hectareas": "50 ha de cobertura natural (tabla de daños INDECI)",
+   "heridos": 2
+  },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13802 – 9/10/2026 / COEN – INDECI / 18:15 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE SALCABAMBA – HUANCAVELICA",
    "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-1011-8-10-2026-coen-indeci-2325-horas-incendio-forestal-en-el-distrito-de-salcabamba-huancavelica/",
@@ -12,9 +82,11 @@
    "distrito": "SALCABAMBA",
    "departamento": "HUANCAVELICA",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13802-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SALCABAMBA-HUANCAVELICA.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia registrada con código SINPAD N° 272698 (sin formularios). 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acc",
+   "estado_texto": "incendio forestal se encuentra activo.",
    "actualizado": "2026-10-09T18:15:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "HUANCAVELICA",
     "provincia": "TAYACAJA",
@@ -33,9 +105,11 @@
    "distrito": "CHIARA",
    "departamento": "AYACUCHO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13801-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CHIARA-AYACUCHO-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N.º 272568. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1. Acciones progra",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T17:35:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
    "ubicacion": {
     "departamento": "AYACUCHO",
     "provincia": "HUAMANGA",
@@ -54,9 +128,11 @@
    "distrito": "HUAYLLAY",
    "departamento": "PASCO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13800-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUAYLLAY-PASCO-8.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio se encuentra ACTIVO. - Las personas desaparecidas ya fueron rescatadas. - Emergencia registrada con código SINPAD N° 272188 (Formulario de Evaluación R",
+   "estado_texto": "incendio se encuentra ACTIVO.",
    "actualizado": "2026-10-09T17:25:00-05:00",
+   "inicio": "2026-10-02T00:00:00-05:00",
    "ubicacion": {
     "departamento": "PASCO",
     "provincia": "PASCO",
@@ -75,9 +151,11 @@
    "distrito": "CHECCA",
    "departamento": "CUSCO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13799-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CHECCA-CUSCO-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - La emergencia no se encuentra registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones prog",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T17:00:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
    "ubicacion": {
     "departamento": "CUSCO",
     "provincia": "CANAS",
@@ -96,9 +174,11 @@
    "distrito": "AIJA",
    "departamento": "ÁNCASH",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13798-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-AIJA-ÁNCASH-2.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "Incendio forestal se encuentra activo. - Emergencia registrada en el SINPAD con código 272605 (sin formularios). 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1",
+   "estado_texto": "Incendio forestal se encuentra activo.",
    "actualizado": "2026-10-09T16:50:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "ÁNCASH",
     "provincia": "AIJA",
@@ -117,9 +197,11 @@
    "distrito": "CUENCA",
    "departamento": "HUANCAVELICA",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13797-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CUENCA-HUANCAVELICA.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N° 272680 (sin formularios). 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T16:35:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "HUANCAVELICA",
     "provincia": "HUANCAVELICA",
@@ -138,9 +220,11 @@
    "distrito": "PICHIRHUA",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13793-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PICHIRHUA-APURÍMAC-3.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N.° 272258, (formulario de Evaluación Rápida: pendiente de enviar al alcald",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T15:15:00-05:00",
+   "inicio": "2026-10-03T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "ABANCAY",
@@ -159,9 +243,11 @@
    "distrito": "COYLLURQUI",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13792-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-COYLLURQUI-APURÍMAC-3.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia registrada con código SINPAD N° 272383, (formulario de evaluación rápida aprobado por el COEN, empadronamien",
+   "estado_texto": "incendio forestal se encuentra activo.",
    "actualizado": "2026-10-09T15:05:00-05:00",
+   "inicio": "2026-10-03T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "COTABAMBAS",
@@ -180,9 +266,11 @@
    "distrito": "ROBLE",
    "departamento": "HUANCAVELICA",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13791-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-ROBLE-HUANCAVELICA.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N° 272630 (sin formularios). 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T14:50:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "HUANCAVELICA",
     "provincia": "TAYACAJA",
@@ -200,9 +288,11 @@
    "reporte_n": 1,
    "distrito": "COTABAMBAS",
    "departamento": "APURÍMAC",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13790-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-COTABAMBAS-APURÍMAC-1.pdf",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13790-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-COTABAMBAS-APURÍMAC-1-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - La emergencia se encuentra registrada con código SINPAD 272049 (formulario Evaluación Rápida: se encuentra pendient",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "inicio": "2026-10-01T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "COTABAMBAS",
@@ -220,8 +310,10 @@
    "distrito": "CAÑARIS",
    "departamento": "LAMBAYEQUE",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13789-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CAÑARIS-LAMBAYEQUE-1-1.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - La emergencia se encuentra registrada con código SINPAD N° 272613 (El formulario de Evaluación Rápida se encuentra en e",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "LAMBAYEQUE",
     "provincia": "FERREÑAFE",
@@ -239,9 +331,11 @@
    "distrito": "AHUAYCHA",
    "departamento": "HUANCAVELICA",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13788-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-AHUAYCHA-HUANCAVELICA.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N° 272654 (Se encuentra pendiente la revisión del formulario de Evaluación",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T14:20:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "HUANCAVELICA",
     "provincia": "TAYACAJA",
@@ -260,8 +354,10 @@
    "distrito": "YANATILE",
    "departamento": "CUSCO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13787-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-YANATILE-CUSCO-2.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia registrada con código SINPAD N.º 272604. - No se reportan daños a la vida y salud de las personas hasta el m",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "CUSCO",
     "provincia": "CALCA",
@@ -279,9 +375,11 @@
    "distrito": "CHOROPAMPA",
    "departamento": "CAJAMARCA",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13786-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CHOROPAMPA-CAJAMARCA-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - La emergencia no se encuentra registrada en el SINPAD . 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1. Acciones pr",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T11:25:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "CAJAMARCA",
     "provincia": "CHOTA",
@@ -300,9 +398,11 @@
    "distrito": "LUCRE",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13785-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-LUCRE-APURÍMAC-2.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - La emergencia se encuentra registrada con código SINPAD N.° 272257 (Los formularios de Evaluación Rápida y Empadron",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T11:00:00-05:00",
+   "inicio": "2026-10-03T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "AYMARAES",
@@ -321,9 +421,11 @@
    "distrito": "VELILLE",
    "departamento": "CUSCO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13784-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-VELILLE-CUSCO-2.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - La emergencia se encuentra registrada con código SINPAD N.° 272594 (El formulario de Evaluación Rápida se encuentra",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T10:50:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
    "ubicacion": {
     "departamento": "CUSCO",
     "provincia": "CHUMBIVILCAS",
@@ -342,9 +444,11 @@
    "distrito": "SIHUAS",
    "departamento": "ÁNCASH",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13783-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SIHUAS-ÁNCASH-5.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio se encuentra extinguido. - Los cultivos afectados corresponden a tubérculos, específicamente papa. - Los formularios registrados en el SINPAD presentan",
+   "estado_texto": "incendio se encuentra extinguido.",
    "actualizado": "2026-10-09T10:20:00-05:00",
+   "inicio": "2026-09-30T00:00:00-05:00",
    "ubicacion": {
     "departamento": "ÁNCASH",
     "provincia": "SIHUAS",
@@ -363,9 +467,11 @@
    "distrito": "PUYCA",
    "departamento": "AREQUIPA",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13782-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PUYCA-AREQUIPA-1.pdf",
+   "v": 2,
    "estado": "controlado",
-   "estado_texto": "incendio forestal se encuentra controlado. - La emergencia no se encuentra registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones prog",
+   "estado_texto": "incendio forestal se encuentra controlado.",
    "actualizado": "2026-10-09T10:00:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "AREQUIPA",
     "provincia": "LA UNIÓN",
@@ -384,9 +490,11 @@
    "distrito": "DANIEL HERNÁNDEZ",
    "departamento": "HUANCAVELICA",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13779-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-DANIEL-HERNÁNDEZ-HUANCAVELICA-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - La emergencia se encuentra registrada con código SINPAD N.° 272553 (Sin registro de formularios). 4. ACCIONES DE RE",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T05:35:00-05:00",
+   "inicio": "2026-10-06T00:00:00-05:00",
    "ubicacion": {
     "departamento": "HUANCAVELICA",
     "provincia": "TAYACAJA",
@@ -404,9 +512,11 @@
    "distrito": "ANCO HUALLO",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13777-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-ANCO-HUALLO-APURÍMAC-1.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio se encuentra activo. • La emergencia no registra código SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Desarrollo de acciones Actualizado al 9",
+   "estado_texto": "incendio se encuentra activo.",
    "actualizado": "2026-10-09T02:15:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "CHINCHEROS",
@@ -424,8 +534,10 @@
    "distrito": "SAN MIGUEL DE CHACCRAMPA",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13776-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SAN-MIGUEL-DE-CHACCRAMPA-APURÍMAC-1.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - El incendio forestal genera riesgo para la flora y fauna silvestre de la zona. - Emergencia no registrada en el SINPAD.",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "ANDAHUAYLAS",
@@ -443,8 +555,10 @@
    "distrito": "JUSTO APU SAHUARAURA",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13775-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-JUSTO-APU-SAHUARAURA-APURÍMAC-2.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - El incendio forestal genera riesgo para la flora y fauna silvestre de la zona. - La emergencia no registra código SINPA",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "inicio": "2026-10-07T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "AYMARAES",
@@ -462,9 +576,11 @@
    "distrito": "MARISCAL GAMARRA",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13774-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-MARISCAL-GAMARRA-APURÍMAC-1.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Desarrollo de acciones Actualizad",
+   "estado_texto": "incendio forestal se encuentra activo.",
    "actualizado": "2026-10-09T05:10:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "GRAU",
@@ -482,9 +598,11 @@
    "distrito": "CHALLHUAHUACHO",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13773-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CHALLHUAHUACHO-APURÍMAC-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia sin registro SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejecutadas",
-   "actualizado": "2026-10-09T01:10:00-05:00"
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "actualizado": "2026-10-09T01:10:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13772 – 9/10/2026/ COEN – INDECI / 01:00 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE POMABAMBA – ÁNCASH",
@@ -496,9 +614,11 @@
    "distrito": "POMABAMBA",
    "departamento": "ÁNCASH",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13772-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-POMABAMBA-ÁNCASH-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con el código SINPAD N° 272316 (Evaluación Rápida pendiente de enviar al alcalde). 4. ACCIONE",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-09T01:00:00-05:00",
+   "inicio": "2026-10-04T00:00:00-05:00",
    "ubicacion": {
     "departamento": "ÁNCASH",
     "provincia": "POMABAMBA",
@@ -506,28 +626,6 @@
     "sector": "HUAJIPAMPA"
    },
    "hectareas": "5 ha de cobertura natural (tabla de daños INDECI)"
-  },
-  {
-   "titulo": "REPORTE COMPLEMENTARIO N.º 13769 – 9/10/2026 / COEN – INDECI / 00:00 HORAS (Reporte N.° 3) INCENDIO FORESTAL EN EL DISTRITO DE RÍO TAMBO – JUNÍN",
-   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-0985-5-10-2026-coen-indeci-1310-horas-incendio-forestal-en-el-distrito-de-rio-tambo-junin/",
-   "tipo": "complementario",
-   "numero": 13769,
-   "fecha": "2026-10-09T00:00:00-05:00",
-   "reporte_n": 3,
-   "distrito": "RÍO TAMBO",
-   "departamento": "JUNÍN",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13769-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-RÍO-TAMBO-JUNÍN-3.pdf",
-   "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia registrada en el SINPAD con código N.° 272268: • Formulario de Evaluación Rápida revisado por el COER. 3.3 D",
-   "actualizado": "2026-10-09T00:00:00-05:00",
-   "ubicacion": {
-    "departamento": "JUNÍN",
-    "provincia": "SATIPO",
-    "distrito": "RÍO TAMBO",
-    "sector": "TSYAPO"
-   },
-   "hectareas": "50 ha de cobertura natural (tabla de daños INDECI)",
-   "heridos": 2
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13767 – 8/10/2026 / COEN – INDECI / 23:35 HORAS (Reporte N.° 2) INCENDIO FORESTAL EN EL DISTRITO DE SANTIAGO DE LUCANAMARCA – AYACUCHO",
@@ -539,9 +637,11 @@
    "distrito": "SANTIAGO DE LUCANAMARCA",
    "departamento": "AYACUCHO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13767-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTIAGO-DE-LUCANAMARCA-AYACUCHO-2.pdf",
+   "v": 2,
    "estado": "controlado",
-   "estado_texto": "incendio forestal se encuentra controlado. • La Oficina de Gestión del Riesgo de Desastres de la Municipalidad Distrital de Santiago de Lucanamarca informó que:",
+   "estado_texto": "incendio forestal se encuentra controlado.",
    "actualizado": "2026-10-08T23:35:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
    "ubicacion": {
     "departamento": "AYACUCHO",
     "provincia": "HUANCA SANCOS",
@@ -559,9 +659,11 @@
    "distrito": "PACOBAMBA",
    "departamento": "APURÍMAC",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13766-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PACOBAMBA-APURÍMAC-1-1.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio se encuentra activo. - La emergencia no registra código SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Desarrollo de acciones Actualizado al 8",
+   "estado_texto": "incendio se encuentra activo.",
    "actualizado": "2026-10-08T23:10:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "APURÍMAC",
     "provincia": "ANDAHUAYLAS",
@@ -579,8 +681,10 @@
    "distrito": "SANTA TERESA",
    "departamento": "CUSCO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13765-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTA-TERESA-CUSCO-1.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia sin registro SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejecutadas Actu"
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "inicio": "2026-10-08T00:00:00-05:00"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13764 – 8/10/2026 / COEN – INDECI / 23:00 HORAS (Reporte N.º 3) INCENDIO FORESTAL EN EL DISTRITO DE CHUMPI – AYACUCHO",
@@ -592,8 +696,10 @@
    "distrito": "CHUMPI",
    "departamento": "AYACUCHO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13764-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CHUMPI-AYACUCHO-3.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. • Oficina de Gestión del Riesgo de Desastres de la Municipalidad Distrital de Chumpi, informó que: - No se reportan d",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "inicio": "2026-10-03T00:00:00-05:00",
    "ubicacion": {
     "departamento": "AYACUCHO",
     "provincia": "PARINACOCHAS",
@@ -612,9 +718,11 @@
    "distrito": "EL ESLABÓN",
    "departamento": "SAN MARTÍN",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13762-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-EL-ESLABÓN-SAN-MARTÍN-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejec",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-08T22:50:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
    "ubicacion": {
     "departamento": "SAN MARTÍN",
     "provincia": "HUALLAGA",
@@ -633,8 +741,10 @@
    "distrito": "PICHIGUA",
    "departamento": "CUSCO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13761-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PICHIGUA-CUSCO-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido en su totalidad. - Las personas afectadas pernoctan en otras viviendas de su propiedad y en viviendas de familiares. -"
+   "estado_texto": "incendio forestal se encuentra extinguido en su totalidad.",
+   "inicio": "2026-10-05T00:00:00-05:00"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13760 – 8/10/2026 / COEN-INDECI / 22:40 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE SACANCHE – SAN MARTÍN",
@@ -646,9 +756,11 @@
    "distrito": "SACANCHE",
    "departamento": "SAN MARTÍN",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13760-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SACANCHE-SAN-MARTÍN-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejec",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-08T22:40:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
    "ubicacion": {
     "departamento": "SAN MARTÍN",
     "provincia": "HUALLAGA",
@@ -667,9 +779,11 @@
    "distrito": "CABANA",
    "departamento": "AYACUCHO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13759-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CABANA-AYACUCHO-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejec",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-08T22:40:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "AYACUCHO",
     "provincia": "LUCANAS",
@@ -687,9 +801,11 @@
    "distrito": "PARAS",
    "departamento": "AYACUCHO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13758-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PARAS-AYACUCHO-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. • La Oficina de Gestión del Riesgo de Desastres de la Municipalidad Distrital de Paras informó que: - Emergencia no r",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-08T22:00:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
    "ubicacion": {
     "departamento": "AYACUCHO",
     "provincia": "CANGALLO",
@@ -707,9 +823,11 @@
    "distrito": "CUÑUMBUQUI",
    "departamento": "SAN MARTÍN",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13757-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CUÑUMBUQUI-SAN-MARTÍN-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejec",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
    "actualizado": "2026-10-08T21:50:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
    "ubicacion": {
     "departamento": "SAN MARTÍN",
     "provincia": "LAMAS",
@@ -728,8 +846,10 @@
    "distrito": "COPORAQUE",
    "departamento": "CUSCO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13756-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-COPORAQUE-CUSCO-1.pdf",
+   "v": 2,
    "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N.º 272244. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones program",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "inicio": "2026-10-03T00:00:00-05:00",
    "ubicacion": {
     "departamento": "CUSCO",
     "provincia": "ESPINAR",
@@ -747,9 +867,11 @@
    "distrito": "HUANTA",
    "departamento": "AYACUCHO",
    "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13753-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUANTA-AYACUCHO-1.pdf",
+   "v": 2,
    "estado": "activo",
-   "estado_texto": "incendio se encuentra activo. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejecutadas Actual",
+   "estado_texto": "incendio se encuentra activo.",
    "actualizado": "2026-10-08T20:50:00-05:00",
+   "inicio": "2026-10-06T00:00:00-05:00",
    "ubicacion": {
     "departamento": "AYACUCHO",
     "provincia": "HUANTA",
@@ -765,15 +887,7 @@
    "fecha": "2026-10-08T20:20:00-05:00",
    "reporte_n": 2,
    "distrito": "CHUQUIBAMBILLA",
-   "departamento": "APURÍMAC",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13751-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CHUQUIBAMBILLA-APURÍMAC-2.pdf",
-   "actualizado": "2026-10-08T20:20:00-05:00",
-   "ubicacion": {
-    "departamento": "APURÍMAC",
-    "provincia": "GRAU",
-    "distrito": "CHUQUIBAMBILLA",
-    "sector": "PATAYPAMPA"
-   }
+   "departamento": "APURÍMAC"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13750 – 8/10/2026 /COEN – INDECI / 20:10 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE PUCYURA – CUSCO",
@@ -783,10 +897,7 @@
    "fecha": "2026-10-08T20:10:00-05:00",
    "reporte_n": 1,
    "distrito": "PUCYURA",
-   "departamento": "CUSCO",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13750-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PUCYURA-CUSCO-1.pdf",
-   "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia sin registro SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejecutadas Actu"
+   "departamento": "CUSCO"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13748 – 8/10/2026 /COEN – INDECI / 19:30 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE MOLLEPATA – CUSCO",
@@ -796,18 +907,7 @@
    "fecha": "2026-10-08T19:30:00-05:00",
    "reporte_n": 1,
    "distrito": "MOLLEPATA",
-   "departamento": "CUSCO",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13748-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-MOLLEPATA-CUSCO-1.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con códigos SINPAD N.º 272601 y 272602. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Accion",
-   "actualizado": "2026-10-08T19:30:00-05:00",
-   "ubicacion": {
-    "departamento": "CUSCO",
-    "provincia": "ANTA",
-    "distrito": "MOLLEPATA",
-    "sector": null
-   },
-   "hectareas": "1 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "CUSCO"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13747 – 8/10/2026 / COEN-INDECI / 18:35 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE TAPAIRIHUA – APURÍMAC",
@@ -817,16 +917,7 @@
    "fecha": "2026-10-08T18:35:00-05:00",
    "reporte_n": 1,
    "distrito": "TAPAIRIHUA",
-   "departamento": "APURÍMAC",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13747-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-TAPAIRIHUA-APURÍMAC-1.pdf",
-   "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejecutad",
-   "ubicacion": {
-    "departamento": "APURÍMAC",
-    "provincia": "AYMARAES",
-    "distrito": "TAPAIRIHUA",
-    "sector": "LAYME"
-   }
+   "departamento": "APURÍMAC"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13743-8/10/2026 / COEN-INDECI / 17:55 HORAS (Reporte N.° 2) INCENDIO FORESTAL EN EL DISTRITO DE HUARAZ- ÁNCASH",
@@ -836,18 +927,7 @@
    "fecha": "2026-10-08T17:55:00-05:00",
    "reporte_n": 2,
    "distrito": "HUARAZ",
-   "departamento": "ÁNCASH",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/09/REPORTE-COMPLEMENTARIO-N.º-13743-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUARAZ-ÁNCASH-2.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N.° 271826 (Evaluación Rápida en Shansha y Pariac Alto, pendiente de enviar",
-   "actualizado": "2026-10-08T17:55:00-05:00",
-   "ubicacion": {
-    "departamento": "ÁNCASH",
-    "provincia": "HUARAZ",
-    "distrito": "HUARAZ",
-    "sector": null
-   },
-   "hectareas": "65 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "ÁNCASH"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13742 – 8/10/2026 / COEN – INDECI / 17:50 HORAS (Reporte N.° 4) INCENDIO FORESTAL EN EL DISTRITO DE ACORIA – HUANCAVELICA",
@@ -857,17 +937,7 @@
    "fecha": "2026-10-08T17:50:00-05:00",
    "reporte_n": 4,
    "distrito": "ACORIA",
-   "departamento": "HUANCAVELICA",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13742-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-ACORIA-HUANCAVELICA-4.pdf",
-   "actualizado": "2026-10-02T21:20:00-05:00",
-   "ubicacion": {
-    "departamento": "HUANCAVELICA",
-    "provincia": "HUANCAVELICA",
-    "distrito": "ACORIA",
-    "sector": null
-   },
-   "hectareas": "10.5 ha de cobertura natural (tabla de daños INDECI)",
-   "heridos": 1
+   "departamento": "HUANCAVELICA"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13741 – 8/10/2026/ COEN – INDECI / 17:45 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE PUCARÁ – JUNÍN",
@@ -877,18 +947,7 @@
    "fecha": "2026-10-08T17:45:00-05:00",
    "reporte_n": 1,
    "distrito": "PUCARÁ",
-   "departamento": "JUNÍN",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13741-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PUCARÁ-JUNÍN-1.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. • La Municipalidad Distrital de Pucará informó que: - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA",
-   "actualizado": "2026-10-08T17:45:00-05:00",
-   "ubicacion": {
-    "departamento": "JUNÍN",
-    "provincia": "HUANCAYO",
-    "distrito": "PUCARÁ",
-    "sector": "BARRIO 28 DE JULIO"
-   },
-   "hectareas": "1 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "JUNÍN"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13740 – 8/10/2026 /COEN – INDECI / 17:40 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE OROPESA – CUSCO",
@@ -898,17 +957,7 @@
    "fecha": "2026-10-08T17:40:00-05:00",
    "reporte_n": 1,
    "distrito": "OROPESA",
-   "departamento": "CUSCO",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13740-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-OROPESA-CUSCO-1.pdf",
-   "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia sin registro en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejecutada",
-   "actualizado": "2026-10-08T17:40:00-05:00",
-   "ubicacion": {
-    "departamento": "CUSCO",
-    "provincia": "QUISPICANCHI",
-    "distrito": "OROPESA",
-    "sector": "CERRO RACCHI"
-   }
+   "departamento": "CUSCO"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13739 – 8/10/2026 / COEN-INDECI / 17:35 HORAS (Reporte N° 2) INCENDIO FORESTAL EN EL DISTRITO DE YARINACOCHA – UCAYALI",
@@ -918,18 +967,7 @@
    "fecha": "2026-10-08T17:35:00-05:00",
    "reporte_n": 2,
    "distrito": "YARINACOCHA",
-   "departamento": "UCAYALI",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13739-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-YARINACOCHA-UCAYALI-2.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio se encuentra extinguido. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejecutadas Ac",
-   "actualizado": "2026-10-08T17:35:00-05:00",
-   "ubicacion": {
-    "departamento": "UCAYALI",
-    "provincia": "CORONEL PORTILLO",
-    "distrito": "YARINACOCHA",
-    "sector": "LAS AMÉRICAS"
-   },
-   "hectareas": "5.5 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "UCAYALI"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13738 – 8/10/2026 / COEN – INDECI / 17:30 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE HUACULLANI – PUNO",
@@ -939,17 +977,7 @@
    "fecha": "2026-10-08T17:30:00-05:00",
    "reporte_n": 1,
    "distrito": "HUACULLANI",
-   "departamento": "PUNO",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13738-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUACULLANI-PUNO-1.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio se encuentra extinguido. - En el sector de Aurincota el incendio se encuentra activo. - Emergencia sin registro en el SINPAD. Detalle de daños a la vid",
-   "actualizado": "2026-10-08T17:30:00-05:00",
-   "ubicacion": {
-    "departamento": "PUNO",
-    "provincia": "CHUCUITO",
-    "distrito": "HUACULLANI",
-    "sector": "COLLARIJO"
-   }
+   "departamento": "PUNO"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13737 – 8/10/2026 / COEN – INDECI / 17:25 HORAS (Reporte N° 3) INCENDIO FORESTAL EN EL DISTRITO DE PAMPAMARCA – AREQUIPA",
@@ -959,18 +987,7 @@
    "fecha": "2026-10-08T17:25:00-05:00",
    "reporte_n": 3,
    "distrito": "PAMPAMARCA",
-   "departamento": "AREQUIPA",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13737-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PAMPAMARCA-AREQUIPA-2.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con el código SINPAD N.° 272060 (Formulario de Evaluación Rápida: Pendiente de revisión por e",
-   "actualizado": "2026-10-08T17:25:00-05:00",
-   "ubicacion": {
-    "departamento": "AREQUIPA",
-    "provincia": "LA UNION",
-    "distrito": "PAMPAMARCA",
-    "sector": "SECSENCAYLLA"
-   },
-   "hectareas": "5 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "AREQUIPA"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13735 – 8/10/2026 / COEN – INDECI / 16:55 HORAS (Reporte N° 03) INCENDIO FORESTAL EN EL DISTRITO DE SAYLA – AREQUIPA",
@@ -980,17 +997,7 @@
    "fecha": "2026-10-08T16:55:00-05:00",
    "reporte_n": 3,
    "distrito": "SAYLA",
-   "departamento": "AREQUIPA",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13735-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SAYLA-AREQUIPA-3.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio se encuentra extinguido. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Desarrollo de acciones Actualizado al 8 de octubre de 2026 Fecha Entidad Ejecut",
-   "ubicacion": {
-    "departamento": "AREQUIPA",
-    "provincia": "LA UNIÓN",
-    "distrito": "SAYLA",
-    "sector": "YANAYA"
-   },
-   "hectareas": "4 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "AREQUIPA"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13734 – 8/10/2026/ COEN – INDECI / 16:50 HORAS (Reporte N.º 4) INCENDIO FORESTAL EN EL DISTRITO DE RECUAY – ÁNCASH",
@@ -1000,18 +1007,7 @@
    "fecha": "2026-10-08T16:50:00-05:00",
    "reporte_n": 4,
    "distrito": "RECUAY",
-   "departamento": "ÁNCASH",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13734-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-RECUAY-ÁNCASH-4.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia no registrada con código SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o",
-   "actualizado": "2026-10-08T16:50:00-05:00",
-   "ubicacion": {
-    "departamento": "ÁNCASH",
-    "provincia": "RECUAY",
-    "distrito": "RECUAY",
-    "sector": "COLLAHUASI"
-   },
-   "hectareas": "6 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "ÁNCASH"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13733 – 8/10/2026 / COEN – INDECI / 16:45 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE SONDORILLO – PIURA",
@@ -1021,12 +1017,7 @@
    "fecha": "2026-10-08T16:45:00-05:00",
    "reporte_n": 1,
    "distrito": "SONDORILLO",
-   "departamento": "PIURA",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13733-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SONDORILLO-PIURA-1.pdf",
-   "estado": "controlado",
-   "estado_texto": "incendio forestal se encuentra controlado. - Emergencia registrada con código SINPAD N.º 272586. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones program",
-   "actualizado": "2026-10-08T16:45:00-05:00",
-   "hectareas": "3 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "PIURA"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13732 – 8/10/2026/ COEN – INDECI / 16:15 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE CÁTAC – ÁNCASH",
@@ -1036,39 +1027,7 @@
    "fecha": "2026-10-08T16:15:00-05:00",
    "reporte_n": 1,
    "distrito": "CÁTAC",
-   "departamento": "ÁNCASH",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13732-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CÁTAC-ÁNCASH-1.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N.º 272580 (Evaluación rápida, pendiente revisión COER). 4. ACCIONES DE RES",
-   "actualizado": "2026-10-08T16:15:00-05:00",
-   "ubicacion": {
-    "departamento": "ÁNCASH",
-    "provincia": "RECUAY",
-    "distrito": "CÁTAC",
-    "sector": "UTCUYACU"
-   },
-   "hectareas": "2 ha de cobertura natural (tabla de daños INDECI)"
-  },
-  {
-   "titulo": "REPORTE COMPLEMENTARIO N.° 13731 – 8/10/2026 / COEN-INDECI / 16:10 HORAS (Reporte N.° 2) INCENDIO FORESTAL EN EL DISTRITO DE HUAMANGUILLA – AYACUCHO",
-   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13672-7-10-2026-coen-indeci-2040-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-huamanguilla-ayacucho/",
-   "tipo": "complementario",
-   "numero": 13731,
-   "fecha": "2026-10-08T16:10:00-05:00",
-   "reporte_n": 2,
-   "distrito": "HUAMANGUILLA",
-   "departamento": "AYACUCHO",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13731-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUAMANGUILLA-AYACUCHO-2.pdf",
-   "estado": "extinguido",
-   "estado_texto": "incendio forestal se encuentra extinguido. - Emergencia registrada con código SINPAD N.° 272577 (Sin formularios registrados). 4. ACCIONES DE RESPUESTA Y REHABI",
-   "actualizado": "2026-10-07T20:40:00-05:00",
-   "ubicacion": {
-    "departamento": "AYACUCHO",
-    "provincia": "HUANTA",
-    "distrito": "HUAMANGUILLA",
-    "sector": "TROGACCATA"
-   },
-   "hectareas": "3 ha de cobertura natural (tabla de daños INDECI)"
+   "departamento": "ÁNCASH"
   },
   {
    "titulo": "REPORTE PRELIMINAR N.° 1012 – 8/10/2026 / COEN – INDECI / 23:30 HORAS INCENDIO FORESTAL EN EL DISTRITO DE SANTO TOMÁS DE PATA – HUANCAVELICA",
@@ -1078,16 +1037,7 @@
    "fecha": "2026-10-08T23:30:00-05:00",
    "reporte_n": null,
    "distrito": "SANTO TOMÁS DE PATA",
-   "departamento": "HUANCAVELICA",
-   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-PRELIMINAR-N.º-1012-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTO-TOMAS-DE-PATA-HUANCAVELICA.pdf",
-   "estado": "activo",
-   "estado_texto": "incendio forestal se encuentra activo. - Emergencia no registrada en el SINPAD. 4. ACCIONES DE RESPUESTA Y REHABILITACIÓN: 4.1 Acciones programadas y/o ejecutad",
-   "ubicacion": {
-    "departamento": "HUANCAVELICA",
-    "provincia": "ANGARAES",
-    "distrito": "SANTO TOMÁS DE PATA",
-    "sector": "CHUPACC"
-   }
+   "departamento": "HUANCAVELICA"
   }
  ]
 }

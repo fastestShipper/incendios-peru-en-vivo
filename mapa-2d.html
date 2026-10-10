@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Incendios forestales en Perú – mapa en vivo</title>
+<meta name="description" content="Mapa en vivo de incendios forestales en Perú: focos de calor satelitales NASA FIRMS, incidentes reportados por INDECI/COEN y noticias. No oficial.">
+<meta property="og:title" content="Incendios forestales en Perú – mapa en vivo">
+<meta property="og:description" content="Focos satelitales NASA FIRMS + incidentes con fuentes (INDECI, COER, prensa). Se actualiza solo.">
+<meta name="theme-color" content="#1b1d22">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="assets/style-2d.css">
+</head>
+<body>
+<div id="app">
+  <aside id="panel" aria-label="Panel de información">
+    <button id="toggle" aria-expanded="true" title="Mostrar/ocultar panel">☰</button>
+    <header>
+      <h1>🔥 Incendios forestales en Perú <span class="live">EN VIVO</span></h1>
+      <p class="upd">Última actualización de datos: <b id="upd">—</b> <span id="ago"></span></p>
+      <p class="warn">Mapa <b>no oficial</b>. Sigue las indicaciones de <a href="https://portal.indeci.gob.pe/emergencias/" target="_blank" rel="noopener">INDECI/COEN</a> y de los Bomberos.<br>📞 Bomberos <b>116</b> · Defensa Civil <b>115</b> · Policía <b>105</b> · SAMU <b>106</b> <span class="small">(<a href="https://www.gob.pe/547-telefonos-de-emergencia" target="_blank" rel="noopener">fuente: gob.pe</a>)</span></p>
+    </header>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="filters">
+      <h2>Filtros</h2>
+      <label>Región
+        <select id="f-region"><option value="">Todas</option></select>
+      </label>
+      <fieldset id="f-estado"><legend>Estado del incidente</legend></fieldset>
+      <fieldset id="f-time"><legend>Focos satelitales</legend>
+        <label><input type="radio" name="win" value="6"> 6 h</label>
+        <label><input type="radio" name="win" value="24" checked> 24 h</label>
+        <label><input type="radio" name="win" value="48"> 48 h</label>
+        <label><input type="radio" name="win" value="168"> 7 días</label>
+      </fieldset>
+      <fieldset id="f-sensor"><legend>Sensor</legend>
+        <label><input type="checkbox" value="VIIRS" checked> VIIRS (375 m)</label>
+        <label><input type="checkbox" value="MODIS" checked> MODIS (1 km)</label>
+      </fieldset>
+      <label class="inline"><input type="checkbox" id="f-inferidos" checked> Mostrar agrupaciones inferidas por satélite</label>
+    </section>
+
+    <section>
+      <h2>Incidentes <small id="n-inc"></small></h2>
+      <ul id="incidents" class="list"></ul>
+    </section>
+
+    <section>
+      <h2>Últimas noticias</h2>
+      <ul id="news" class="list news"></ul>
+    </section>
+
+    <section class="legend-text">
+      <h2>Cómo leer el mapa</h2>
+      <ul>
+        <li><b>Puntos pequeños</b>: detecciones de calor de satélites NASA (FIRMS). Color = antigüedad; tamaño = potencia radiativa (FRP). Un foco no siempre es un incendio forestal (puede ser una quema agrícola o industrial).</li>
+        <li><b>Marcadores grandes</b>: incidentes con estado tomado de fuentes citadas (INDECI/COEN, COER, prensa). La ubicación suele ser el centro del distrito, no el frente de fuego.</li>
+        <li><b>Anillo pulsante</b>: actividad satelital reciente (focos en 24 h a ≤ 15 km).</li>
+        <li><b>Círculos morados punteados</b>: agrupaciones de focos <i>inferidas por satélite</i> sin reporte oficial asociado.</li>
+      </ul>
+      <p id="sources-status"></p>
+      <p class="small">Fuentes: NASA FIRMS (VIIRS S-NPP, NOAA-20, NOAA-21, MODIS), NASA GIBS, COEN-INDECI, COER regionales, Google Noticias. Código abierto en <a id="repo-link" href="#" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+  </aside>
+  <main id="map" aria-label="Mapa"></main>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="assets/app-2d.js"></script>
+</body>
+</html>

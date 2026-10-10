@@ -303,6 +303,13 @@ def parse_pdf(txt):
     meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
     if m and m.group(2).lower() in meses:
         info["actualizado"] = datetime(int(m.group(3)), meses.index(m.group(2).lower()) + 1, int(m.group(1)), int(m.group(4)), int(m.group(5)), tzinfo=LIMA).isoformat()
+    h = flat.find("HECHOS")
+    m = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})\s+(?:(\d{1,2}):(\d{2}))?", flat[h:h + 600]) if h >= 0 else None
+    if m:
+        try:
+            info["inicio"] = datetime(int(m.group(3)), int(m.group(2)), int(m.group(1)), int(m.group(4) or 0), int(m.group(5) or 0), tzinfo=LIMA).isoformat()
+        except ValueError:
+            pass
     lines = txt.splitlines()
     for i, ln in enumerate(lines):
         if re.search(r"DEPARTAMENTO\s+PROVINCIA\s+DISTRITO", ln):
@@ -349,7 +356,7 @@ def update_indeci():
     fetched = 0
     for it in latest:
         key = str(it["numero"])
-        if key in cache:
+        if key in cache and cache[key].get("v") == 2:
             it.update(cache[key])
             continue
         if fetched >= 40:
@@ -357,7 +364,7 @@ def update_indeci():
         try:
             page = get(it["url"], timeout=60)
             pdfs = [u for u in re.findall(r'href="([^"]+\.pdf)"', page) if "uploads" in u]
-            info = {"pdf": pdfs[0] if pdfs else None}
+            info = {"pdf": pdfs[0] if pdfs else None, "v": 2}
             if pdfs:
                 info.update(parse_pdf(pdf_text(pdfs[0])))
             cache[key] = info
@@ -455,7 +462,7 @@ def build_incidents(firms, indeci):
                 inc["estado_texto"] = f"INDECI (reporte N.º {r['numero']}, leído automáticamente): «{corta(r.get('estado_texto', ''))}»"
                 inc["fecha_estado"] = rep_time
                 inc["estado_origen"] = "INDECI automático"
-            for fld in ("hectareas", "fallecidos", "heridos"):
+            for fld in ("hectareas", "fallecidos", "heridos", "inicio"):
                 if r.get(fld) is not None and inc.get(fld) is None:
                     inc[fld] = r[fld]
             continue
@@ -465,12 +472,13 @@ def build_incidents(firms, indeci):
         sector = u.get("sector")
         inc = {
             "id": "indeci-" + str(r["numero"]),
-            "nombre": f"{dist.title()} ({dep.title()})" + (f" – {sector.title()}" if sector else ""),
+            "nombre": f"{dist.title()} ({dep.title()})" + (f" – {sector.title()}" if sector and norm(sector) != norm(dist) else ""),
             "departamento": norm(dep), "provincia": norm(prov), "distrito": norm(dist),
             "estado": r.get("estado") or "sin_dato",
             "estado_texto": (f"INDECI (reporte N.º {r['numero']}, leído automáticamente): «{corta(r['estado_texto'])}»" if r.get("estado_texto")
                              else "Reportado por COEN-INDECI; el estado no pudo leerse automáticamente: revisa el reporte."),
             "hectareas": r.get("hectareas"), "fallecidos": r.get("fallecidos"), "heridos": r.get("heridos"),
+            "inicio": r.get("inicio"),
             "fecha_estado": rep_time, "lat": ll[0], "lon": ll[1], "precision": how,
             "origen": "indeci_auto", "fuentes": [fuente] + ([fuente_pdf] if fuente_pdf else []),
         }

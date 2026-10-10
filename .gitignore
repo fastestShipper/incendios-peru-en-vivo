@@ -2,3 +2,4 @@ __pycache__/
 *.tmp
 data/cache/
 screenshot-*.png
+3d-*.png

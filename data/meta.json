@@ -1,11 +1,11 @@
 {
- "generado": "2026-10-10T00:48:27.942598+00:00",
- "generado_lima": "09/10/2026 19:48",
+ "generado": "2026-10-10T01:32:16.171100+00:00",
+ "generado_lima": "09/10/2026 20:32",
  "conteos": {
   "focos_24h": 1577,
   "focos_7d": 21264,
-  "incidentes": 65,
-  "incidentes_activos": 23,
+  "incidentes": 67,
+  "incidentes_activos": 22,
   "regiones_activas": [
    "ANCASH",
    "APURIMAC",
@@ -46,11 +46,11 @@
   },
   "INDECI emergencias": {
    "ok": true,
-   "detalle": "84 reportes de incendio forestal en 4 páginas"
+   "detalle": "89 reportes de incendio forestal en 4 páginas"
   },
   "Google Noticias RSS": {
    "ok": true,
-   "detalle": "86 titulares"
+   "detalle": "85 titulares"
   }
  }
 }
