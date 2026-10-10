@@ -18,14 +18,29 @@ const EST = {
   controlado: { w: "Controlado", c: "#f5d000", d: "El fuego ya no avanza, pero todavía lo vigilan." },
   extinguido: { w: "Apagado", c: "#2fbf5b", d: "El último reporte dice que el fuego fue apagado." },
   sin_dato: { w: "Sin información del estado", c: "#9aa3ad", d: "No hay un reporte oficial reciente sobre su estado." },
+  alerta: { w: "Alerta de SERFOR, por confirmar", c: "#8f5bff", d: "El monitoreo satelital de SERFOR detectó un posible incendio forestal aquí y todavía no lo ha confirmado." },
   inferido: { w: "Posible fuego visto por satélite, sin confirmar", c: "#b77cff", d: "Un satélite de la NASA detectó calor aquí, pero ninguna autoridad lo ha confirmado. Puede ser una quema agrícola." },
 };
 const TIPO = {
   nuevo: { i: "🔥", w: "Nuevo incendio" }, estado: { i: "🔁", w: "Cambio de estado" }, reporte: { i: "📄", w: "Reporte INDECI" },
   victimas: { i: "🕯️", w: "Víctimas" }, dato: { i: "📏", w: "Cifra actualizada" }, satelite: { i: "🛰️", w: "Satélite" },
   noticia: { i: "📰", w: "Noticia" }, sistema: { i: "⚙️", w: "Sistema" },
+  serfor: { i: "🌳", w: "SERFOR" }, oficial: { i: "🏛️", w: "Nota oficial" },
 };
-const FILTROS = { "": null, incendios: ["nuevo", "estado", "reporte", "victimas", "dato"], noticia: ["noticia"], satelite: ["satelite"] };
+const FILTROS = { "": null, incendios: ["nuevo", "estado", "reporte", "victimas", "dato", "serfor"], oficial: ["oficial"], noticia: ["noticia"], satelite: ["satelite"] };
+// Enlaces oficiales (verificados el 9 oct 2026). La región elegida suma la página de su gobierno regional.
+const LINKS = [
+  { n: "SERFOR · GEOSERFOR", d: "Visor oficial de focos de calor e incendios forestales. De aquí tomamos los reportes de incendio y los focos por tipo de cobertura.", u: "https://geo.serfor.gob.pe/visor/" },
+  { n: "INDECI · Reportes de emergencias (COEN)", d: "Reportes oficiales de cada incendio forestal, con estado, daños y víctimas. Los leemos cada 10 minutos.", u: "https://portal.indeci.gob.pe/emergencias/" },
+  { n: "INDECI · Visor geográfico", d: "Mapa de emergencias y peligros del INDECI.", u: "https://geo.indeci.gob.pe/visorindeci/" },
+  { n: "INDECI · SINPAD", d: "Sistema de información para la respuesta y rehabilitación: registro oficial de emergencias.", u: "https://sinpad.indeci.gob.pe/portal/home" },
+  { n: "SENAMHI · Vigilancia atmosférica de incendios", d: "Avisos de riesgo de incendios forestales por clima y boletines semanales.", u: "https://www.senamhi.gob.pe/site/incendio/" },
+  { n: "CENEPRED · SIGRID", d: "Escenarios de riesgo y gestión del riesgo de desastres.", u: "https://sigrid.cenepred.gob.pe/sigridv3/" },
+  { n: "MINAM · Geobosques", d: "Pérdida de bosque y alertas de deforestación (semanales).", u: "https://geobosques.minam.gob.pe/geobosque/visor/" },
+  { n: "NASA FIRMS · Mapa de fuegos", d: "Puntos de calor de los satélites VIIRS y MODIS en todo el mundo.", u: "https://firms.modaps.eosdis.nasa.gov/map/" },
+  { n: "gob.pe · Teléfonos de emergencia", d: "Bomberos 116, Defensa Civil 115, Policía 105, SAMU 106.", u: "https://www.gob.pe/547-telefonos-de-emergencia" },
+];
+const SERFOR_VISOR = "https://geo.serfor.gob.pe/visor/";
 const REG = { AMAZONAS: "Amazonas", ANCASH: "Áncash", APURIMAC: "Apurímac", AREQUIPA: "Arequipa", AYACUCHO: "Ayacucho", CAJAMARCA: "Cajamarca", CALLAO: "Callao", CUSCO: "Cusco", HUANCAVELICA: "Huancavelica", HUANUCO: "Huánuco", ICA: "Ica", JUNIN: "Junín", "LA LIBERTAD": "La Libertad", LAMBAYEQUE: "Lambayeque", LIMA: "Lima", LORETO: "Loreto", "MADRE DE DIOS": "Madre de Dios", MOQUEGUA: "Moquegua", PASCO: "Pasco", PIURA: "Piura", PUNO: "Puno", "SAN MARTIN": "San Martín", TACNA: "Tacna", TUMBES: "Tumbes", UCAYALI: "Ucayali" };
 const regName = (r) => REG[r] || title(r);
 function title(s) { return String(s || "").toLowerCase().replace(/(^|[\s(\-–])([a-záéíóúñ])/g, (m, a, b) => a + b.toUpperCase()); }
@@ -54,10 +69,11 @@ function haNumber(s) { // primer número de un texto de hectáreas (para tamaño
   return m ? parseFloat(m[0].replace(",", ".")) : null;
 }
 function severity(i) {
-  const w = { activo: 100, en_control: 70, sin_dato: 20, controlado: 10, extinguido: 0, inferido: 5 }[i.estado] ?? 0;
+  const w = { activo: 100, en_control: 70, alerta: 25, sin_dato: 20, controlado: 10, extinguido: 0, inferido: 5 }[i.estado] ?? 0;
+  const sp = Math.max(0, ...((i.serfor || []).map((r) => r.puntos || 0)));
   const ha = haNumber(i.hectareas) || 0;
   const sat = (i.satelite && i.satelite.focos_24h) || i.focos_24h || 0;
-  return w + Math.log10(ha + 1) * 20 + (i.fallecidos || 0) * 8 + Math.min(sat, 30) * 0.3;
+  return w + Math.log10(ha + 1) * 20 + (i.fallecidos || 0) * 8 + Math.min(sat, 30) * 0.3 + Math.log10(sp + 1) * 6;
 }
 
 // ------------------------------------------------------------ proyección
@@ -377,7 +393,7 @@ function bindPointer() {
 }
 
 // ------------------------------------------------------------ datos
-const D = { meta: null, firms24: null, firmsFull: null, inc: null, news: null, nov: null, geo: null, gen: null, novN: null, region: "", showAll: false, tab: "fuegos", filtro: "", offline: false, seenN: 0 };
+const D = { oficial: null, meta: null, firms24: null, firmsFull: null, inc: null, news: null, nov: null, geo: null, gen: null, novN: null, region: "", showAll: false, tab: "fuegos", filtro: "", offline: false, seenN: 0 };
 try { D.seenN = +localStorage.getItem("nov-seen") || 0; } catch {}
 async function j(path) { const r = await fetch(`${path}?t=${Date.now()}`, { cache: "no-store" }); if (!r.ok) throw new Error(path + " " + r.status); return r.json(); }
 const techOn = () => $("#tech").open;
@@ -408,6 +424,7 @@ async function load(first) {
     dataChanged ? j("data/noticias.json").catch(() => ({ noticias: [] })) : D.news,
     novChanged ? j("data/novedades.json").catch(() => ({ items: [], ultimo_n: 0 })) : D.nov,
   ]);
+  if (dataChanged) D.oficial = await j("data/oficial.json").catch(() => D.oficial || { items: [] });
   if (dataChanged) D.firmsFull = null;
   Object.assign(D, { meta, firms24, inc, news, nov, gen: meta.generado, novN: meta.novedades_n });
   if (first) {
@@ -431,8 +448,10 @@ async function load(first) {
     renderText();
   }
   if (novChanged) renderFeed(!first);
+  if (dataChanged) renderFuentes();
   renderStatus();
   if (first) {
+    renderFuentes();
     $("#loader").classList.add("off");
     if (GL) { const v = D.region ? null : homeView(); if (v) { camera.position.copy(viewToPos(v)); controls.target.copy(v.target); controls.update(); } else flyToRegion(D.region); }
   }
@@ -444,7 +463,9 @@ async function refreshHot() {
   try { firms = await firmsFor(hours); } catch (e) { $("#tech-stats").textContent = "No se pudieron cargar los 7 días."; return; }
   const r = buildHotspots(firms, hours);
   const n24 = (D.meta.conteos || {}).focos_24h || 0;
-  $("#tech-stats").textContent = r ? `Mostrando ${r.shown.toLocaleString("es-PE")} de ${r.total.toLocaleString("es-PE")} puntos de calor (máx. ${MAX_HOTSPOTS.toLocaleString("es-PE")}). En 24 h: ${n24.toLocaleString("es-PE")}.` : "Puntos de calor ocultos.";
+  const sf = D.meta.serfor_focos;
+  const sfTxt = sf ? ` Según SERFOR, de los focos de las últimas 24 h ${sf.forestal.toLocaleString("es-PE")} están en cobertura forestal y ${sf.agricola.toLocaleString("es-PE")} en agrícola (suelen ser quemas).` : "";
+  $("#tech-stats").textContent = (r ? `Mostrando ${r.shown.toLocaleString("es-PE")} de ${r.total.toLocaleString("es-PE")} puntos de calor (máx. ${MAX_HOTSPOTS.toLocaleString("es-PE")}). En 24 h: ${n24.toLocaleString("es-PE")}.` : "Puntos de calor ocultos.") + sfTxt;
 }
 
 function renderText() {
@@ -459,7 +480,11 @@ function renderText() {
   const sumFal = incs.reduce((s, i) => s + (i.fallecidos || 0), 0), offFal = ro.fallecidos_octubre || 0;
   const falTxt = offFal ? ` · ${offFal} fallecidos en octubre según COEN (<a href="${esc(safeUrl(ro.fuente_url))}" target="_blank" rel="noopener">fuente</a>)` + (sumFal > offFal ? `<span class="xtra"> y ${sumFal - offFal} más en reportes posteriores de INDECI</span>` : "") : (sumFal ? ` · ${sumFal} fallecidos reportados` : "");
   const inf = (D.inc.inferidos || []).length;
-  $("#subline").innerHTML = `${nAct} con fuego activo · ${nCtl} los están controlando` + falTxt +
+  const nSerfor = burning.filter((i) => i.estado_origen === "SERFOR").length;
+  const nAlert = incs.filter((i) => i.estado === "alerta").length;
+  $("#subline").innerHTML = `${nAct} con fuego activo · ${nCtl} los están controlando` +
+    (nSerfor ? `<span class="xtra"> · ${nSerfor} de ellos según el monitoreo satelital de <a href="${SERFOR_VISOR}" target="_blank" rel="noopener">SERFOR</a></span>` : "") + falTxt +
+    (nAlert ? `<span class="xtra"><br>SERFOR tiene ${nAlert} alerta${nAlert === 1 ? "" : "s"} de incendio por confirmar.</span>` : "") +
     (inf ? `<span class="xtra"><br>Además, los satélites ven ${inf} posibles fuegos sin confirmar.</span>` : "");
   const s = D.meta.fuentes || {};
   $("#sources-status").innerHTML = "<b>Estado de las fuentes:</b><br>" + Object.entries(s).map(([k, v]) => `${v.ok ? "✅" : "⚠️"} ${esc(k)}: ${esc(v.detalle)}`).join("<br>");
@@ -548,7 +573,8 @@ function renderList() {
   const shown = D.showAll ? all : all.slice(0, 8);
   $("#list-title").textContent = reg ? `Incendios en ${regName(reg)}` : (D.showAll ? "Todos los incendios" : "Incendios más graves ahora");
   const ol = $("#list"); ol.innerHTML = "";
-  if (!shown.length) ol.innerHTML = `<li style="cursor:default">No hay incendios reportados ${reg ? "en " + regName(reg) : ""} en este momento.</li>`;
+  if (reg) ol.appendChild(regionSummary(reg));
+  if (!shown.length) ol.insertAdjacentHTML("beforeend", `<li style="cursor:default">No hay incendios reportados ${reg ? "en " + regName(reg) : ""} en este momento.</li>`);
   shown.forEach((i, k) => {
     const e = EST[i.estado] || EST.sin_dato;
     const li = document.createElement("li"); li.tabIndex = 0;
@@ -606,7 +632,8 @@ function markSeen() {
 function setTab(name) {
   D.tab = name;
   document.querySelectorAll('.tabs [role="tab"]').forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === name)));
-  $("#tab-fuegos").hidden = name !== "fuegos"; $("#tab-novedades").hidden = name !== "novedades";
+  $("#tab-fuegos").hidden = name !== "fuegos"; $("#tab-novedades").hidden = name !== "novedades"; $("#tab-fuentes").hidden = name !== "fuentes";
+  if (name === "fuentes") { renderFuentes(); if (innerWidth <= 820) $("#panel").classList.add("open"); }
   if (name === "novedades") { renderFeed(false); markSeen(); if (innerWidth <= 820) $("#panel").classList.add("open"); }
   $("#panel").scrollTop = 0;
 }
@@ -619,6 +646,48 @@ let toastT = null;
 function toast(msg, onClick) {
   const t = $("#toast"); t.textContent = msg; t.hidden = false; t.onclick = () => { t.hidden = true; if (onClick) onClick(); };
   clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 7000);
+}
+
+// ------------------------------------------------------------ SERFOR, clima, región y fuentes
+function serforBlock(i) {
+  const reps = i.serfor || [];
+  if (!reps.length) return "";
+  const r = reps.slice().sort((a, b) => (b.ultima || "").localeCompare(a.ultima || ""))[0];
+  const col = { Alertado: "#8f5bff", Confirmado: "#ff3b1f", Controlado: "#f5d000", Extinguido: "#2fbf5b" }[r.estado_w] || "#9aa3ad";
+  const difiere = i.estado_origen !== "SERFOR" && r.estado !== i.estado && !(r.estado === "activo" && i.estado === "en_control");
+  return `<div class="serfor"><div class="serfor-h"><span class="pill" style="background:${col}22;color:${col === "#f5d000" ? "#8a6d00" : col}">SERFOR: ${esc(r.estado_w)}</span>
+    <a href="${SERFOR_VISOR}" target="_blank" rel="noopener">Ver en GEOSERFOR</a></div>
+    <div class="serfor-b">Reporte ${esc(r.codigo)} · ${r.puntos} detecci${r.puntos === 1 ? "ón" : "ones"} satelital${r.puntos === 1 ? "" : "es"}${r.cobertura ? " · " + esc(r.cobertura.toLowerCase()) : ""}${r.area ? "<br>📍 " + esc(r.area) : ""}<br>Última detección ${esc(ago(r.ultima))}${reps.length > 1 ? ` · ${reps.length} reportes de SERFOR en esta zona` : ""}</div>
+    ${difiere ? `<div class="serfor-d">Ojo: SERFOR dice «${esc(r.estado_w)}» y el dato principal de esta tarjeta dice «${esc((EST[i.estado] || EST.sin_dato).w)}». Son fuentes distintas y pueden tener horas distintas.</div>` : ""}</div>`;
+}
+function climaBlock(c) {
+  if (!c || c.humedad == null) return "";
+  const seco = c.humedad < 30 && ((c.viento || 0) >= 20 || (c.rafagas || 0) >= 35);
+  return `<div class="clima"><b>Clima ahora cerca</b> <span class="m">(Open-Meteo)</span><div class="clima-g">
+    <span>🌡️ ${Math.round(c.temp)} °C</span><span>💧 ${Math.round(c.humedad)} % humedad</span>
+    <span>💨 ${Math.round(c.viento)} km/h${c.viene_del ? " del " + esc(c.viene_del) : ""}${c.rafagas ? ` (ráfagas ${Math.round(c.rafagas)})` : ""}</span>
+    <span>☀️ ${c.dias_sin_lluvia >= 14 ? "más de 14" : c.dias_sin_lluvia} día${c.dias_sin_lluvia === 1 ? "" : "s"} sin lluvia</span></div>
+    ${seco ? '<div class="clima-w">⚠️ Aire muy seco y viento fuerte: condiciones que ayudan a que el fuego se extienda.</div>' : ""}</div>`;
+}
+function regionSummary(reg) {
+  const li = document.createElement("li"); li.className = "reg-sum"; li.style.cursor = "default";
+  const sf = D.meta && D.meta.serfor_focos && D.meta.serfor_focos.por_region ? D.meta.serfor_focos.por_region[reg] : null;
+  const inst = (D.oficial && D.oficial.instituciones || []).find((x) => x.region === reg);
+  const reps = D.inc.incidentes.filter((i) => i.departamento === reg).flatMap((i) => i.serfor || []);
+  const cnt = {}; reps.forEach((r) => { cnt[r.estado_w] = (cnt[r.estado_w] || 0) + 1; });
+  li.innerHTML = `<div><div class="n">${esc(regName(reg))} en cifras</div><div class="s">${sf ? `Focos de calor en 24 h según SERFOR: <b>${sf.forestal}</b> en bosque o vegetación natural y <b>${sf.agricola}</b> en zonas agrícolas.<br>` : ""}${reps.length ? `Reportes de incendio de SERFOR (14 días): ${Object.entries(cnt).map(([k, v]) => `${v} ${k.toLowerCase()}${v === 1 ? "" : "s"}`).join(", ")}.<br>` : ""}${inst ? `<a href="${esc(inst.url)}" target="_blank" rel="noopener">Notas del ${esc(inst.nombre)}</a>` : ""}</div></div>`;
+  return li;
+}
+function renderFuentes() {
+  const reg = D.region;
+  const inst = reg && D.oficial ? (D.oficial.instituciones || []).find((x) => x.region === reg) : null;
+  const links = inst ? [{ n: inst.nombre, d: "Notas de prensa del gobierno regional.", u: inst.url }, ...LINKS] : LINKS;
+  $("#links").innerHTML = links.map((l) => `<li><a href="${esc(l.u)}" target="_blank" rel="noopener">${esc(l.n)} ↗</a><div class="d">${esc(l.d)}</div></li>`).join("");
+  const items = ((D.oficial && D.oficial.items) || []).filter((o) => !reg || !o.region || o.region === reg).slice(0, 10);
+  $("#oficial-list").innerHTML = items.length ? items.map((o) => `<li><a href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener">${esc(o.titulo)}</a><div class="m">${esc(o.institucion)} · ${esc(ago(o.fecha))}</div></li>`).join("")
+    : `<li class="m">No hay notas oficiales recientes sobre incendios${reg ? " de " + esc(regName(reg)) : ""}.</li>`;
+  const st = (D.meta && D.meta.fuentes) || {};
+  $("#src-list").innerHTML = Object.entries(st).map(([k, v]) => `<li><span class="s">${v.ok ? "✅" : "⚠️"}</span><div><div>${esc(k)}</div><div class="d">${esc(v.detalle || "")}</div></div></li>`).join("");
 }
 
 // ------------------------------------------------------------ tarjeta
@@ -646,10 +715,13 @@ function openCard(i) {
     if (sat.focos_24h > 0 && i.estado !== "extinguido") h += `<div class="sat-note">🛰️ Los satélites vieron calor cerca de aquí en las últimas 24 horas (${sat.focos_24h} puntos).</div>`;
     else if (sat.focos_24h > 0) h += `<div class="sat-note">🛰️ Ojo: aunque figura como apagado, los satélites vieron calor cerca en las últimas 24 horas.</div>`;
   }
+  h += serforBlock(i) + climaBlock(i.clima);
   const hist = ((D.nov && D.nov.items) || []).filter((e2) => e2.inc === i.id).slice(0, 4);
   if (hist.length) h += `<b>Novedades de este incendio</b><ul class="news">${hist.map((e2) => `<li>${(TIPO[e2.tipo] || {}).i || "•"} ${esc(e2.texto)}<div class="m">${esc(ago(e2.t))}</div></li>`).join("")}</ul>`;
   h += `<div class="todo"><b>¿Qué hacer?</b>Aléjate del fuego y del humo. No intentes apagarlo solo. No quemes pastos ni basura. Si ves fuego, avisa:<br>
     <a class="tel" href="tel:116">🚒 116 Bomberos</a><a class="tel alt" href="tel:115">🛟 115 Defensa Civil</a></div>`;
+  const ofi = ((D.oficial && D.oficial.items) || []).filter((o) => o.region === i.departamento).slice(0, 2);
+  if (ofi.length) h += `<b>Notas oficiales de ${esc(regName(i.departamento))}</b><ul class="news">${ofi.map((o) => `<li><a href="${esc(safeUrl(o.url))}" target="_blank" rel="noopener">${esc(o.titulo)}</a><div class="m">${esc(o.institucion)} · ${esc(ago(o.fecha))}</div></li>`).join("")}</ul>`;
   const news = fuentes.filter((f) => !/\(PDF\)/.test(f.medio)).slice(0, 3);
   if (news.length) h += `<b>Noticias y reportes</b><ul class="news">${news.map((f) => `<li><a href="${esc(safeUrl(f.url))}" target="_blank" rel="noopener">${esc(f.titulo)}</a><div class="m">${esc(f.medio)} · ${esc(fdate(f.fecha))}</div></li>`).join("")}</ul>`;
   else if (isInf) h += `<p class="where">Todavía no hay noticias ni reportes oficiales sobre este punto. Revisa <a href="https://portal.indeci.gob.pe/emergencias/" target="_blank" rel="noopener">INDECI</a>.</p>`;
@@ -690,8 +762,8 @@ $("#share").addEventListener("click", () => share());
 function syncHash() { history.replaceState(null, "", D.region ? "#r=" + encodeURIComponent(D.region) : location.pathname + location.search); }
 
 // ------------------------------------------------------------ controles de interfaz
-$("#region").addEventListener("change", (e) => { D.region = e.target.value; syncHash(); renderList(); renderFeed(false); if (GL) (D.region ? flyToRegion(D.region) : flyTo(homeView())); if (innerWidth <= 820) $("#panel").classList.remove("open"); });
-$("#reset").addEventListener("click", () => { D.region = ""; $("#region").value = ""; syncHash(); renderList(); renderFeed(false); if (GL) flyTo(homeView()); });
+$("#region").addEventListener("change", (e) => { D.region = e.target.value; syncHash(); renderList(); renderFeed(false); renderFuentes(); if (GL) (D.region ? flyToRegion(D.region) : flyTo(homeView())); if (innerWidth <= 820) $("#panel").classList.remove("open"); });
+$("#reset").addEventListener("click", () => { D.region = ""; $("#region").value = ""; syncHash(); renderList(); renderFeed(false); renderFuentes(); if (GL) flyTo(homeView()); });
 $("#show-all").addEventListener("click", () => { D.showAll = !D.showAll; renderList(); });
 $("#grab").addEventListener("click", () => $("#panel").classList.toggle("open"));
 document.querySelectorAll('input[name="win"]').forEach((r) => r.addEventListener("change", () => refreshHot()));
@@ -700,7 +772,7 @@ function dismissHint() { if ($("#hint").hidden) return; $("#hint").hidden = true
 $("#hint-x").addEventListener("click", dismissHint);
 $("#hint-t").textContent = matchMedia("(pointer: coarse)").matches ? "👆 Toca un fuego para ver qué pasa. Usa dos dedos para acercar." : "👆 Haz clic en un fuego para ver qué pasa. Usa la rueda del ratón para acercar.";
 try { if (!localStorage.getItem("hint-ok")) $("#hint").hidden = false; } catch { $("#hint").hidden = false; }
-addEventListener("hashchange", () => { const m = location.hash.match(/r=([^&]+)/); const r = m ? decodeURIComponent(m[1]).toUpperCase() : ""; if (r !== D.region && (r === "" || regions[r])) { D.region = r; $("#region").value = r; renderList(); renderFeed(false); if (GL) (r ? flyToRegion(r) : flyTo(homeView())); } });
+addEventListener("hashchange", () => { const m = location.hash.match(/r=([^&]+)/); const r = m ? decodeURIComponent(m[1]).toUpperCase() : ""; if (r !== D.region && (r === "" || regions[r])) { D.region = r; $("#region").value = r; renderList(); renderFeed(false); renderFuentes(); if (GL) (r ? flyToRegion(r) : flyTo(homeView())); } });
 
 // ------------------------------------------------------------ arranque
 if (GL) {

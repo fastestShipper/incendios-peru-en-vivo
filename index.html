@@ -31,7 +31,7 @@
     <span><i class="lg en_control"></i>Lo están controlando</span>
     <span><i class="lg controlado"></i>Controlado</span>
     <span><i class="lg extinguido"></i>Apagado</span>
-    <span class="lg-small"><i class="lg inferido"></i>Posible fuego (satélite, sin confirmar)</span>
+    <span class="lg-small"><i class="lg inferido"></i>Posible fuego (alerta o satélite, sin confirmar)</span>
   </div>
   <div id="hint" hidden><span id="hint-t">👆 Toca un fuego para ver qué pasa.</span><button id="hint-x" aria-label="Cerrar ayuda">✕</button></div>
 </header>
@@ -52,6 +52,7 @@
   <nav class="tabs" role="tablist" aria-label="Secciones">
     <button role="tab" data-tab="fuegos" aria-selected="true" id="tab-btn-fuegos">🔥 Incendios</button>
     <button role="tab" data-tab="novedades" aria-selected="false" id="tab-btn-novedades">Novedades <span id="nov-badge" class="badge" hidden>0</span></button>
+    <button role="tab" data-tab="fuentes" aria-selected="false" id="tab-btn-fuentes">Fuentes</button>
   </nav>
 
   <div id="tab-fuegos" role="tabpanel" aria-labelledby="tab-btn-fuegos">
@@ -82,6 +83,17 @@
     <p class="disclaimer">Mapa <b>no oficial</b>. Los datos vienen de INDECI/COEN, gobiernos regionales, prensa y satélites de la NASA. Sigue siempre a <a href="https://portal.indeci.gob.pe/emergencias/" target="_blank" rel="noopener">INDECI</a> y a los Bomberos.</p>
   </div>
 
+  <div id="tab-fuentes" role="tabpanel" aria-labelledby="tab-btn-fuentes" hidden>
+    <h2>Fuentes oficiales</h2>
+    <p class="disclaimer" style="margin-top:0">Estos son los sitios de las autoridades. Para decisiones y emergencias, guíate siempre por ellos.</p>
+    <ul class="links" id="links"></ul>
+    <h2 style="margin-top:16px">Últimas notas oficiales</h2>
+    <ol id="oficial-list" class="feed-mini"></ol>
+    <h2 style="margin-top:16px">Lo que vigilamos cada 10 minutos</h2>
+    <ul class="src" id="src-list"></ul>
+    <p class="disclaimer">El estado de cada incendio se toma, en este orden, de los incidentes curados con fuente, de los reportes de INDECI y de los reportes de SERFOR. Si dos fuentes dicen cosas distintas, la tarjeta muestra ambas.</p>
+  </div>
+
   <div id="tab-novedades" role="tabpanel" aria-labelledby="tab-btn-novedades" hidden>
     <div class="feed-head">
       <h2>Novedades</h2>
@@ -90,6 +102,7 @@
     <div class="chips" id="feed-filter" role="group" aria-label="Filtrar novedades">
       <button data-f="" class="on">Todo</button>
       <button data-f="incendios">Incendios</button>
+      <button data-f="oficial">Oficial</button>
       <button data-f="noticia">Noticias</button>
       <button data-f="satelite">Satélite</button>
     </div>

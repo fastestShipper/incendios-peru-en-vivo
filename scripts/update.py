@@ -140,8 +140,18 @@ REG = {"AMAZONAS": "Amazonas", "ANCASH": "Áncash", "APURIMAC": "Apurímac", "AR
        "MADRE DE DIOS": "Madre de Dios", "MOQUEGUA": "Moquegua", "PASCO": "Pasco", "PIURA": "Piura", "PUNO": "Puno",
        "SAN MARTIN": "San Martín", "TACNA": "Tacna", "TUMBES": "Tumbes", "UCAYALI": "Ucayali"}
 EST_W = {"activo": "fuego activo", "en_control": "lo están controlando", "controlado": "controlado", "extinguido": "apagado",
-         "sin_dato": "sin información del estado", "inferido": "posible fuego (satélite)"}
-EST_RANK = {"extinguido": 0, "controlado": 1, "sin_dato": 2, "inferido": 2, "en_control": 3, "activo": 4}
+         "sin_dato": "sin información del estado", "inferido": "posible fuego (satélite)", "alerta": "alerta de SERFOR, por confirmar"}
+EST_RANK = {"extinguido": 0, "controlado": 1, "sin_dato": 2, "inferido": 2, "alerta": 2, "en_control": 3, "activo": 4}
+# nombre de departamento como aparece en textos -> clave interna
+DEP_RE = re.compile(r"\b(" + "|".join(sorted({re.escape(v) for v in REG.values()} | {re.escape(k.title()) for k in REG}, key=len, reverse=True)) + r")\b")
+
+
+def dep_de_texto(t):
+    m = DEP_RE.search(t or "")
+    if not m:
+        return None
+    n = norm(m.group(1))
+    return n if n in REG else None
 
 
 def reg_name(r):
@@ -489,6 +499,31 @@ def update_news():
         except Exception as e:
             log("news error", e)
     STATUS["Google Noticias RSS"] = {"ok": ok, "detalle": f"{len(out_)} titulares"}
+    # Andina (agencia estatal de noticias): su RSS general, filtrado por el tema
+    try:
+        with timed("Andina RSS"):
+            root = ET.fromstring(get("https://andina.pe/agencia/rss.aspx", timeout=40))
+        n_and = 0
+        for it in root.iter("item"):
+            title = (it.findtext("title") or "").strip()
+            desc = re.sub(r"<[^>]+>", " ", it.findtext("description") or "")
+            if not OFICIAL_RE.search(title + " " + desc):
+                continue
+            key = norm(title)[:80]
+            if key in seen:
+                continue
+            seen.add(key)
+            try:
+                dt = datetime.strptime(it.findtext("pubDate"), "%a, %d %b %Y %H:%M:%S %z").astimezone(timezone.utc)
+            except Exception:
+                dt = NOW
+            out_.append({"titulo": title, "medio": "Andina", "url": it.findtext("link"), "fecha": dt.isoformat()})
+            n_and += 1
+        STATUS["Andina RSS"] = {"ok": True, "detalle": f"{n_and} notas sobre incendios entre las últimas del día"}
+        ok = True
+    except Exception as e:
+        STATUS["Andina RSS"] = {"ok": False, "detalle": str(e)[:200]}
+        log("andina error", e)
     if not ok:
         return load(out("noticias.json"), {"noticias": []}).get("noticias", [])
     out_.sort(key=lambda x: x["fecha"], reverse=True)
@@ -497,8 +532,295 @@ def update_news():
     return out_
 
 
+# ----------------------------------------------------------------- 3b. SERFOR (GEOSERFOR, ArcGIS REST público)
+SERFOR_SVC = "https://geo.serfor.gob.pe/geoservicios/rest/services/Visor/Incendios_Forestales/MapServer"
+SERFOR_VISOR = "https://geo.serfor.gob.pe/visor/"
+SERFOR_EST = {1: "alerta", 2: "activo", 3: "controlado", 4: "extinguido"}
+SERFOR_EST_W = {1: "Alertado", 2: "Confirmado", 3: "Controlado", 4: "Extinguido"}
+SERFOR_DIAS = 14
+
+
+def arcgis_query(layer, params, page=1000, max_pages=15):
+    feats, off = [], 0
+    for _ in range(max_pages):
+        q = dict(params, f="json", resultOffset=off, resultRecordCount=page)
+        d = json.loads(get(f"{SERFOR_SVC}/{layer}/query?" + urllib.parse.urlencode(q), timeout=90))
+        if "error" in d:
+            raise RuntimeError(str(d["error"])[:150])
+        fs = d.get("features") or []
+        feats += fs
+        if not d.get("exceededTransferLimit") or not fs:
+            break
+        off += len(fs)
+    return feats
+
+
+def serfor_dominio(layer, campo):
+    """Valores codificados de un campo (se guardan en caché un día)."""
+    path = os.path.join(CACHE, f"serfor_dominio_{layer}_{campo}.json")
+    c = load(path, None)
+    if c and time.time() - c.get("t", 0) < 86400:
+        return {int(k) if str(k).lstrip("-").isdigit() else k: v for k, v in c["v"].items()}
+    d = json.loads(get(f"{SERFOR_SVC}/{layer}?f=json", timeout=60))
+    v = {}
+    for f in d.get("fields", []):
+        if f["name"] == campo and f.get("domain"):
+            v = {cv["code"]: cv["name"] for cv in f["domain"].get("codedValues", [])}
+    dump(path, {"t": time.time(), "v": v})
+    return v
+
+
+def lima_dt(fecha_ms, hora):
+    """FECHA de SERFOR es la medianoche de Lima del día; HORA está en hora de Lima."""
+    if not fecha_ms:
+        return None
+    d = datetime.fromtimestamp(fecha_ms / 1000, timezone.utc).astimezone(LIMA)
+    try:
+        hh, mm = (int(x) for x in str(hora or "0:0").split(":")[:2])
+    except ValueError:
+        hh, mm = 0, 0
+    return d.replace(hour=hh, minute=mm, second=0, microsecond=0)
+
+
+def update_serfor():
+    """Reportes de incendio forestal de la Unidad de Monitoreo Satelital de SERFOR (últimos 14 días),
+    agrupados por código de reporte, y los focos de calor de 24 h clasificados por cobertura."""
+    reps, focos = [], None
+    desde = (NOW.astimezone(LIMA) - timedelta(days=SERFOR_DIAS)).strftime("%Y-%m-%d")
+    try:
+        with timed("SERFOR incendios forestales"):
+            cat = serfor_dominio(1, "CATEG")
+            feats = arcgis_query(1, {"where": f"FECHA >= DATE '{desde}'", "returnGeometry": "false",
+                                     "outFields": "CODREP,ESTADO,TIPCOB,CATEG,NOMCATEG,NOMDEP,NOMPRO,NOMDIS,FECHA,HORA,SENSAT,LATITUD,LONGITUD,last_edited_date",
+                                     "orderByFields": "OBJECTID"})
+        groups = {}
+        for f in feats:
+            a = f["attributes"]
+            cod = (a.get("CODREP") or "").strip()
+            if not cod or a.get("LATITUD") is None:
+                continue
+            groups.setdefault(cod, []).append(a)
+        for cod, pts in groups.items():
+            def mc(k):
+                vals = [str(p.get(k) or "").strip() for p in pts if str(p.get(k) or "").strip()]
+                return max(set(vals), key=vals.count) if vals else ""
+            last = max(pts, key=lambda p: (p.get("last_edited_date") or 0, p.get("ESTADO") or 0))
+            est_n = last.get("ESTADO") or 1
+            tiempos = [t for t in (lima_dt(p.get("FECHA"), p.get("HORA")) for p in pts) if t]
+            cats = [p for p in pts if p.get("CATEG") in cat and isinstance(p.get("CATEG"), int) and p["CATEG"] <= 15]
+            area = None
+            if cats:
+                c0 = max(cats, key=lambda p: [q.get("CATEG") for q in cats].count(p.get("CATEG")))
+                area = f"{cat.get(c0['CATEG'])}" + (f": {str(c0.get('NOMCATEG') or '').strip().title()}" if str(c0.get("NOMCATEG") or "").strip() else "")
+            reps.append({
+                "codigo": cod, "estado_n": est_n, "estado": SERFOR_EST.get(est_n, "sin_dato"), "estado_w": SERFOR_EST_W.get(est_n, "?"),
+                "lat": round(sum(p["LATITUD"] for p in pts) / len(pts), 4), "lon": round(sum(p["LONGITUD"] for p in pts) / len(pts), 4),
+                "departamento": norm(mc("NOMDEP")), "provincia": norm(mc("NOMPRO")), "distrito": norm(mc("NOMDIS")),
+                "lugar": mc("NOMCATEG").title() or None, "area": area,
+                "puntos": len(pts), "cobertura": mc("TIPCOB") or None,
+                "sensores": sorted({str(p.get("SENSAT") or "").strip() for p in pts} - {""}),
+                "primera": min(tiempos).isoformat() if tiempos else None, "ultima": max(tiempos).isoformat() if tiempos else None,
+            })
+        reps.sort(key=lambda r: r["ultima"] or "", reverse=True)
+        cnt = {}
+        for r in reps:
+            cnt[r["estado_w"]] = cnt.get(r["estado_w"], 0) + 1
+        STATUS["SERFOR incendios forestales"] = {"ok": True, "detalle": f"{len(reps)} reportes en {SERFOR_DIAS} días (" + ", ".join(f"{v} {k.lower()}s" for k, v in sorted(cnt.items())) + ") · GEOSERFOR"}
+        dump(os.path.join(CACHE, "serfor_reportes.json"), reps)
+    except Exception as e:
+        STATUS["SERFOR incendios forestales"] = {"ok": False, "detalle": str(e)[:200]}
+        log("SERFOR incendios error", e)
+        reps = load(os.path.join(CACHE, "serfor_reportes.json"), [])
+    try:
+        with timed("SERFOR focos por cobertura"):
+            stats = json.dumps([{"statisticType": "count", "onStatisticField": "OBJECTID", "outStatisticFieldName": "n"}])
+            feats = arcgis_query(0, {"where": "1=1", "outStatistics": stats, "groupByFieldsForStatistics": "NOMDEP,TIPCOB"})
+        por = {}
+        for f in feats:
+            a = f["attributes"]
+            k = "agricola" if "agr" in norm(a.get("TIPCOB") or "").lower() else "forestal"
+            dep = norm(a.get("NOMDEP") or "")
+            por.setdefault(dep, {"forestal": 0, "agricola": 0})[k] += int(a.get("n") or 0)
+        focos = {"forestal": sum(v["forestal"] for v in por.values()), "agricola": sum(v["agricola"] for v in por.values()),
+                 "por_region": por, "fuente": SERFOR_VISOR, "consultado": NOW.isoformat()}
+        STATUS["SERFOR focos por cobertura"] = {"ok": True, "detalle": f"{focos['forestal']} focos en cobertura forestal y {focos['agricola']} en agrícola (últimas 24 h)"}
+    except Exception as e:
+        STATUS["SERFOR focos por cobertura"] = {"ok": False, "detalle": str(e)[:200]}
+        log("SERFOR focos error", e)
+    return reps, focos
+
+
+# ----------------------------------------------------------------- 3c. Notas oficiales (gob.pe)
+OFICIALES = [("indeci", "INDECI", None), ("serfor", "SERFOR", None), ("senamhi", "SENAMHI", None), ("minam", "MINAM", None),
+             ("regioncusco", "Gobierno Regional de Cusco", "CUSCO"), ("regionapurimac", "Gobierno Regional de Apurímac", "APURIMAC"),
+             ("regionayacucho", "Gobierno Regional de Ayacucho", "AYACUCHO"), ("regionpuno", "Gobierno Regional de Puno", "PUNO"),
+             ("regionjunin", "Gobierno Regional de Junín", "JUNIN"), ("regionhuancavelica", "Gobierno Regional de Huancavelica", "HUANCAVELICA"),
+             ("regionpasco", "Gobierno Regional de Pasco", "PASCO"), ("regionancash", "Gobierno Regional de Áncash", "ANCASH")]
+_FUEGO_RE = re.compile(r"incendi|\bfuego|\bquemas?\b|focos? de calor|\bhumo\b", re.I)
+_FORESTAL_RE = re.compile(r"forestal|\bquemas?\b|focos? de calor|pastizal|cobertura (vegetal|natural)|\bbosques?\b|\bmontes?\b|hect[aá]reas?|brigad|serfor|\bcerros?\b|santuario|parque nacional|reserva", re.I)
+
+
+class _OficialRe:
+    """Tema = fuego + algo forestal/rural (deja fuera incendios urbanos: locales, viviendas, fábricas)."""
+    @staticmethod
+    def search(t):
+        return _FUEGO_RE.search(t or "") and _FORESTAL_RE.search(t or "")
+
+
+OFICIAL_RE = _OficialRe()
+OFICIAL_CADA_MIN = 19   # cada institución se consulta como máximo cada ~20 minutos
+
+
+def parse_gobpe(page, slug, inst, dep_inst):
+    items = []
+    idx = [m.start() for m in re.finditer(r"card__mock", page)]
+    for a, b in zip(idx, idx[1:] + [len(page)]):
+        ch = page[a:b]
+        t = re.search(r'data-ga-label="([^"]+)"', ch)
+        h = re.search(r'href="(/institucion/[^"]+/noticias/\d+[^"]*)"', ch)
+        d = re.search(r'datetime="([^"]+)"', ch)
+        ds = re.search(r'class="z-10 relative">(.*?)</div>', ch, re.S)
+        if not (t and h):
+            continue
+        titulo = html.unescape(t.group(1)).strip()
+        resumen = html.unescape(re.sub(r"<[^>]+>", " ", ds.group(1))).strip() if ds else ""
+        if not OFICIAL_RE.search(titulo + " " + resumen):
+            continue
+        try:
+            fecha = datetime.strptime(d.group(1)[:16], "%Y-%m-%d %H:%M").replace(tzinfo=LIMA).astimezone(timezone.utc).isoformat() if d else None
+        except ValueError:
+            fecha = None
+        items.append({"titulo": titulo, "resumen": re.sub(r"\s+", " ", resumen)[:280], "url": "https://www.gob.pe" + h.group(1),
+                      "fecha": fecha, "institucion": inst, "slug": slug, "region": dep_inst or dep_de_texto(titulo + " " + resumen)})
+    return items
+
+
+def update_oficial():
+    cache = load(os.path.join(CACHE, "oficial.json"), {})
+    nuevas_consultas, fallos = 0, []
+    with timed("Notas oficiales (gob.pe)"):
+        for slug, inst, dep in OFICIALES:
+            c = cache.get(slug) or {}
+            if time.time() - c.get("t", 0) < OFICIAL_CADA_MIN * 60:
+                continue
+            try:
+                page = get(f"https://www.gob.pe/institucion/{slug}/noticias", timeout=40, tries=2)
+                cache[slug] = {"t": time.time(), "items": parse_gobpe(page, slug, inst, dep), "ok": True}
+                nuevas_consultas += 1
+            except Exception as e:
+                cache[slug] = {"t": c.get("t", 0), "items": c.get("items", []), "ok": False, "error": str(e)[:120]}
+                fallos.append(inst)
+                log("gob.pe error", slug, e)
+    dump(os.path.join(CACHE, "oficial.json"), cache)
+    items, seen = [], set()
+    cutoff = (NOW - timedelta(days=10)).isoformat()
+    for slug, inst, dep in OFICIALES:
+        for it in (cache.get(slug) or {}).get("items", []):
+            if it["url"] in seen or (it.get("fecha") or "") < cutoff:
+                continue
+            seen.add(it["url"])
+            items.append(it)
+    items.sort(key=lambda x: x.get("fecha") or "", reverse=True)
+    ok_n = sum(1 for s, _, _ in OFICIALES if (cache.get(s) or {}).get("ok"))
+    STATUS["Notas oficiales (gob.pe)"] = {"ok": ok_n >= len(OFICIALES) // 2,
+                                          "detalle": f"{len(items)} notas sobre incendios de {ok_n}/{len(OFICIALES)} instituciones (INDECI, SERFOR, SENAMHI, MINAM y 8 gobiernos regionales)"
+                                          + (f" · fallaron: {', '.join(fallos)}" if fallos else "") + f" · {nuevas_consultas} consultadas en esta corrida"}
+    dump(out("oficial.json"), {"generado": NOW.isoformat(), "instituciones": [{"slug": s, "nombre": n, "region": d, "url": f"https://www.gob.pe/institucion/{s}/noticias"} for s, n, d in OFICIALES],
+                               "items": items[:80]}, pretty=True)
+    return items
+
+
+# ----------------------------------------------------------------- 3d. Clima cerca de cada incendio (Open-Meteo)
+CLIMA_CADA_MIN = 29
+DIRS = ["N", "NE", "E", "SE", "S", "SO", "O", "NO"]
+
+
+def update_clima(incs):
+    """Temperatura, humedad, viento y días sin lluvia en los incendios activos (una consulta para todos)."""
+    burning = [i for i in incs if i["estado"] in ("activo", "en_control", "alerta")]
+    keys = sorted({(round(i["lat"], 1), round(i["lon"], 1)) for i in burning})[:80]
+    cache = load(os.path.join(CACHE, "clima.json"), {"t": 0, "v": {}})
+    falta = [k for k in keys if f"{k[0]},{k[1]}" not in cache["v"]]
+    if keys and (time.time() - cache.get("t", 0) >= CLIMA_CADA_MIN * 60 or falta):
+        try:
+            with timed("Open-Meteo (clima)"):
+                q = {"latitude": ",".join(str(k[0]) for k in keys), "longitude": ",".join(str(k[1]) for k in keys),
+                     "current": "temperature_2m,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation",
+                     "daily": "precipitation_sum", "past_days": 14, "forecast_days": 1, "timezone": "America/Lima"}
+                d = json.loads(get("https://api.open-meteo.com/v1/forecast?" + urllib.parse.urlencode(q), timeout=60))
+            d = d if isinstance(d, list) else [d]
+            v = {}
+            for k, r in zip(keys, d):
+                cu = r.get("current") or {}
+                pr = (r.get("daily") or {}).get("precipitation_sum") or []
+                seco = 0
+                for x in reversed(pr):
+                    if x is None or x >= 1:
+                        break
+                    seco += 1
+                wd = cu.get("wind_direction_10m")
+                v[f"{k[0]},{k[1]}"] = {"temp": cu.get("temperature_2m"), "humedad": cu.get("relative_humidity_2m"),
+                                        "viento": cu.get("wind_speed_10m"), "rafagas": cu.get("wind_gusts_10m"),
+                                        "viene_del": DIRS[int(((wd + 22.5) % 360) // 45)] if wd is not None else None,
+                                        "dias_sin_lluvia": seco, "hora": cu.get("time")}
+            cache = {"t": time.time(), "v": v}
+            dump(os.path.join(CACHE, "clima.json"), cache)
+            STATUS["Open-Meteo (clima)"] = {"ok": True, "detalle": f"humedad, viento y lluvia en {len(v)} puntos con fuego"}
+        except Exception as e:
+            STATUS["Open-Meteo (clima)"] = {"ok": False, "detalle": str(e)[:200]}
+            log("open-meteo error", e)
+    elif keys:
+        STATUS["Open-Meteo (clima)"] = {"ok": True, "detalle": f"en caché, de hace {int((time.time() - cache.get('t', 0)) / 60)} min · {len(cache['v'])} puntos"}
+    for i in burning:
+        c = cache["v"].get(f"{round(i['lat'], 1)},{round(i['lon'], 1)}")
+        if c:
+            i["clima"] = c
+
+
 # ----------------------------------------------------------------- 4. Fusión
-def build_incidents(firms, indeci):
+def serfor_estado(r):
+    """Estado efectivo de un reporte: «Confirmado» sin detecciones en 48 h ni estado posterior no se muestra como fuego activo."""
+    est = r["estado"]
+    texto = f"SERFOR (reporte {r['codigo']}): «{r['estado_w']}». Información de su Unidad de Monitoreo Satelital."
+    if est == "activo" and r.get("ultima") and NOW - datetime.fromisoformat(r["ultima"]) > timedelta(hours=48):
+        est = "sin_dato"
+        texto += " La última detección satelital fue hace más de 48 horas y no figura como controlado ni extinguido."
+    return est, texto
+
+
+def merge_serfor(incs, reps):
+    """Asocia cada reporte de SERFOR a un incidente (mismo distrito o a ≤ 10 km) o crea uno nuevo."""
+    for r in reps:
+        est, texto = serfor_estado(r)
+        fuente = {"medio": "SERFOR – monitoreo satelital", "titulo": f"Reporte {r['codigo']}: {r['estado_w'].lower()}",
+                  "url": SERFOR_VISOR, "fecha": (r.get("ultima") or "")[:10]}
+        cands = [i for i in incs if i.get("origen") != "satelite" and
+                 ((i["departamento"] == r["departamento"] and norm(i.get("distrito")) == r["distrito"]) or km(i["lat"], i["lon"], r["lat"], r["lon"]) <= 10)]
+        if cands:
+            inc = min(cands, key=lambda i: km(i["lat"], i["lon"], r["lat"], r["lon"]))
+            inc.setdefault("serfor", []).append(r)
+            if not any(f.get("medio", "").startswith("SERFOR") for f in inc["fuentes"]):
+                inc["fuentes"].append(fuente)
+            if inc["estado"] == "sin_dato" and est not in ("alerta", "sin_dato"):
+                inc["estado"] = est
+                inc["estado_texto"] = texto
+                inc["fecha_estado"] = r.get("ultima") or inc.get("fecha_estado")
+                inc["estado_origen"] = "SERFOR"
+            continue
+        inc = {
+            "id": "serfor-" + r["codigo"],
+            "nombre": f"{r['distrito'].title()} ({r['departamento'].title()})" + (f" – {r['lugar']}" if r.get("lugar") and norm(r["lugar"]) != r["distrito"] else ""),
+            "departamento": r["departamento"], "provincia": r["provincia"], "distrito": r["distrito"],
+            "estado": est, "estado_texto": texto, "estado_origen": "SERFOR",
+            "hectareas": None, "fallecidos": None, "heridos": None,
+            "inicio": r.get("primera"), "fecha_estado": r.get("ultima") or NOW.isoformat(),
+            "lat": r["lat"], "lon": r["lon"], "precision": "promedio de las detecciones de SERFOR",
+            "origen": "serfor", "fuentes": [fuente], "serfor": [r],
+        }
+        incs.append(inc)
+
+
+def build_incidents(firms, indeci, serfor=()):
     cur = load(os.path.join(DATA, "incidentes_curados.json"), {"incidentes": []})
     incs = []
     for c in cur["incidentes"]:
@@ -555,6 +877,7 @@ def build_incidents(firms, indeci):
         }
         incs.append(inc)
         by_key[k] = inc
+    merge_serfor(incs, serfor)
     # actividad satelital reciente cerca de cada incidente
     now_ts = NOW.timestamp()
     recent = [p for p in firms["puntos"] if now_ts - p[2] <= 48 * 3600]
@@ -641,7 +964,7 @@ def nombre_corto(i):
     return i.get("nombre", "")
 
 
-def build_novedades(prev_inc, incs, clusters, prev_news, news):
+def build_novedades(prev_inc, incs, clusters, prev_news, news, prev_oficial=None, oficial=()):
     """Eventos nuevos entre la corrida anterior y esta. Cada uno lleva tipo, texto, región, nivel y enlace."""
     ev = []
 
@@ -656,14 +979,36 @@ def build_novedades(prev_inc, incs, clusters, prev_news, news):
         add("sistema", "Empieza el monitoreo automático: datos cada 10 minutos.", nivel="bajo")
         return ev
     pi = {i["id"]: i for i in prev_inc.get("incidentes", [])}
-    pk = {(i["departamento"], i["distrito"]): i for i in prev_inc.get("incidentes", [])}
+    pk = {(i["departamento"], i.get("distrito")): i for i in prev_inc.get("incidentes", [])}
+    # SERFOR: la primera vez que entra no se anuncia reporte por reporte
+    prev_cod = {r["codigo"]: r for i in prev_inc.get("incidentes", []) for r in i.get("serfor") or []}
+    serfor_nuevo = not prev_cod and any(i.get("serfor") for i in incs)
+    if serfor_nuevo:
+        n_rep = sum(len(i.get("serfor") or []) for i in incs)
+        add("sistema", f"Ahora también seguimos los reportes de incendio de SERFOR: {n_rep} en los últimos {SERFOR_DIAS} días, con su estado oficial.", nivel="bajo", url=SERFOR_VISOR)
     for i in incs:
-        p = pi.get(i["id"]) or pk.get((i["departamento"], i["distrito"]))
+        p = pi.get(i["id"]) or pk.get((i["departamento"], i.get("distrito")))
         nom, reg, est = nombre_corto(i), i["departamento"], i.get("estado", "sin_dato")
         if not p:
-            add("nuevo", f"Nuevo incendio reportado: {nom} · {EST_W.get(est, est)}", reg, i["id"], src_url(i),
-                "alto" if est in ("activo", "en_control") else "medio")
+            if i.get("origen") == "serfor":
+                if serfor_nuevo:
+                    continue
+                txt = (f"SERFOR emitió una alerta de incendio en {nom} (por confirmar)" if est == "alerta"
+                       else f"SERFOR reporta un incendio en {nom} · {EST_W.get(est, est)}")
+                add("serfor", txt, reg, i["id"], SERFOR_VISOR, "alto" if est in ("activo", "en_control") else "medio")
+            else:
+                add("nuevo", f"Nuevo incendio reportado: {nom} · {EST_W.get(est, est)}", reg, i["id"], src_url(i),
+                    "alto" if est in ("activo", "en_control") else "medio")
             continue
+        if not serfor_nuevo:
+            for r in i.get("serfor") or []:
+                q = prev_cod.get(r["codigo"])
+                if q is None and i.get("origen") != "serfor":
+                    add("serfor", f"SERFOR registró el reporte {r['codigo']} en {nom}: {r['estado_w'].lower()}", reg, i["id"], SERFOR_VISOR, "medio")
+                elif q is not None and q.get("estado_n") != r.get("estado_n"):
+                    worse = (q.get("estado_n") == 1 and r.get("estado_n") == 2) or (r.get("estado_n") or 0) < (q.get("estado_n") or 0)
+                    add("serfor", f"SERFOR: {nom} pasó de «{q.get('estado_w')}» a «{r['estado_w']}» (reporte {r['codigo']})", reg, i["id"], SERFOR_VISOR,
+                        "alto" if worse else "bajo")
         pe = p.get("estado", "sin_dato")
         primera_lectura = pe == "sin_dato" and est != "sin_dato"
         if pe != est:
@@ -694,6 +1039,13 @@ def build_novedades(prev_inc, incs, clusters, prev_news, news):
     nuevas = [n for n in news if norm(n.get("titulo", ""))[:80] not in seen]
     for n in nuevas[:15]:
         add("noticia", n["titulo"], url=n.get("url"), nivel="bajo", t=n.get("fecha"), medio=n.get("medio"))
+    # notas oficiales (gob.pe): la primera vez solo las de las últimas 48 h
+    if prev_oficial is None:
+        cand = [o for o in oficial if (o.get("fecha") or "") >= (NOW - timedelta(hours=48)).isoformat()][:6]
+    else:
+        cand = [o for o in oficial if o["url"] not in prev_oficial][:10]
+    for o in cand:
+        add("oficial", o["titulo"], o.get("region"), None, o["url"], "medio", t=o.get("fecha"), medio=o.get("institucion"))
     return ev
 
 
@@ -785,7 +1137,12 @@ def main():
         indeci = update_indeci()
     with timed("Google Noticias RSS"):
         news = update_news()
-    incs, clusters, resumen = build_incidents(firms, indeci)
+    prev_of = load(out("oficial.json"), None)
+    prev_oficial = {o["url"] for o in prev_of.get("items", [])} if prev_of else None
+    serfor, serfor_focos = update_serfor()
+    oficial = update_oficial()
+    incs, clusters, resumen = build_incidents(firms, indeci, serfor)
+    update_clima(incs)
     now_ts = NOW.timestamp()
     f24 = [p for p in firms["puntos"] if now_ts - p[2] <= 86400]
     activos = [i for i in incs if i["estado"] in ("activo", "en_control")]
@@ -797,12 +1154,16 @@ def main():
         "regiones_activas": sorted({i["departamento"] for i in activos}),
         "fallecidos_reportados": sum(i.get("fallecidos") or 0 for i in incs),
         "agrupaciones_satelitales": len(clusters),
-        "incidentes_por_estado": {e: sum(1 for i in incs if i["estado"] == e) for e in ("activo", "en_control", "controlado", "extinguido", "sin_dato")},
+        "incidentes_por_estado": {e: sum(1 for i in incs if i["estado"] == e) for e in ("activo", "en_control", "controlado", "extinguido", "sin_dato", "alerta")},
+        "serfor_reportes": len(serfor),
+        "serfor_por_estado": {w: sum(1 for r in serfor if r["estado_w"] == w) for w in SERFOR_EST_W.values()},
+        "notas_oficiales": len(oficial),
     }
     firms_ok = any(v["ok"] for k, v in STATUS.items() if k.startswith("FIRMS"))
     indeci_ok = STATUS.get("INDECI emergencias", {}).get("ok", False)
-    fresh = firms_ok or indeci_ok
-    ultimo_n, added = write_novedades(build_novedades(prev_inc, incs, clusters, prev_news, news))
+    serfor_ok = STATUS.get("SERFOR incendios forestales", {}).get("ok", False)
+    fresh = firms_ok or indeci_ok or serfor_ok
+    ultimo_n, added = write_novedades(build_novedades(prev_inc, incs, clusters, prev_news, news, prev_oficial, oficial))
     if fresh:
         dump(out("incidentes.json"), {"generado": NOW.isoformat(), "incidentes": incs, "inferidos": clusters}, pretty=True)
         write_historial(conteos)
@@ -816,6 +1177,7 @@ def main():
             "novedades_n": ultimo_n,
             "conteos": conteos,
             "resumen_oficial": resumen,
+            "serfor_focos": serfor_focos,
             "fuentes": STATUS,
         }
         dump(out("meta.json"), meta, pretty=True)

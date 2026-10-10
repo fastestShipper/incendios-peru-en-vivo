@@ -28,7 +28,10 @@ Se actualiza solo. El actualizador corre **cada 10 minutos** y la página revisa
 | Focos de calor | [NASA FIRMS](https://firms.modaps.eosdis.nasa.gov/) (VIIRS 375 m, MODIS 1 km, datos casi en tiempo real) | CSV públicos de Sudamérica de 7 días (sin clave) o la API de área si configuras `FIRMS_MAP_KEY`. Se filtran solo los puntos dentro de Perú usando los límites departamentales. |
 | Incidentes oficiales | [COEN-INDECI – Emergencias](https://portal.indeci.gob.pe/emergencias/) | Se lee el listado de reportes "INCENDIO FORESTAL EN EL DISTRITO DE …" y se abre el PDF del último reporte de cada distrito. Del PDF se extraen la frase de estado ("El incendio se encuentra ACTIVO/CONTROLADO/EXTINGUIDO"), la hora de actualización, la ubicación, las hectáreas de cobertura natural y las víctimas. |
 | Incidentes curados | `data/incidentes_curados.json` | Están cargados a mano con cita textual y enlace: COEN-INDECI, COER Cusco, Agencia Andina, RPP, La República, Canal N, EFE/Forbes Perú, etc. Si INDECI publica un reporte **más reciente** para el mismo distrito, se usa su estado y se indica el origen. |
-| Noticias | Google Noticias RSS (`incendio forestal Perú`, regiones afectadas) | Titulares de los últimos 3 días, con enlace. |
+| Reportes de incendio SERFOR | [GEOSERFOR](https://geo.serfor.gob.pe/visor/), Unidad de Monitoreo Satelital (servicio ArcGIS REST público `Visor/Incendios_Forestales`) | Reportes de los últimos 14 días agrupados por código (`PIF_…`), con su estado oficial (Alertado, Confirmado, Controlado, Extinguido), cobertura y área protegida. Si coinciden con un incidente (mismo distrito o ≤ 10 km) se adjuntan a él; si no, se crea uno. «Confirmado» sin detecciones en 48 h se muestra como «sin dato». También se leen los focos de 24 h clasificados en cobertura forestal o agrícola. |
+| Notas oficiales | gob.pe: INDECI, SERFOR, SENAMHI, MINAM y los gobiernos regionales de Cusco, Apurímac, Ayacucho, Puno, Junín, Huancavelica, Pasco y Áncash | Notas de prensa sobre incendios forestales (cada institución, cada ~20 min). |
+| Clima | [Open-Meteo](https://open-meteo.com/) | Temperatura, humedad, viento y días sin lluvia en cada incendio activo (cada ~30 min). Es meteorología, no un índice oficial de riesgo; para eso, los avisos de [SENAMHI](https://www.senamhi.gob.pe/site/incendio/). |
+| Noticias | Google Noticias RSS (`incendio forestal Perú`, regiones afectadas) y RSS de Andina | Titulares de los últimos 3 días, con enlace. De Andina solo pasan las notas sobre fuego en zonas rurales o forestales. |
 | Mapas base | OpenStreetMap, Esri (relieve y satélite), [NASA GIBS](https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/gibs-api) (VIIRS/MODIS en color verdadero y aerosoles/humo del día anterior) | Teselas públicas |
 | Límites y centroides | [juaneladio/peru-geojson](https://github.com/juaneladio/peru-geojson) (departamentos y distritos, INEI) | `data/ref/` |
 
@@ -65,6 +68,7 @@ data/firms_24h.json      solo las últimas 24 h (carga inicial)   ← generado
 data/indeci.json         últimos reportes COEN de incendio forestal ← generado
 data/incidentes.json     incidentes fusionados + inferidos        ← generado
 data/noticias.json       titulares                                ← generado
+data/oficial.json        notas oficiales sobre incendios (gob.pe)      ← generado
 data/novedades.json      feed de novedades (diferencias entre corridas, 7 días) ← generado
 data/historial.json      conteos por corrida (7 días)             ← generado
 data/health.json         salud del actualizador: duración, fallos seguidos por fuente, últimas corridas ← generado

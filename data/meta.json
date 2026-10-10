@@ -1,36 +1,51 @@
 {
- "generado": "2026-10-10T02:25:52.079779+00:00",
- "generado_lima": "09/10/2026 21:25",
+ "generado": "2026-10-10T03:11:44.345528+00:00",
+ "generado_lima": "09/10/2026 22:11",
  "intervalo_min": 10,
- "proxima_estimada": "2026-10-10T02:35:52.079779+00:00",
- "duracion_s": 27.4,
- "version": "test2",
- "novedades_n": 25,
+ "proxima_estimada": "2026-10-10T03:21:44.345528+00:00",
+ "duracion_s": 29.8,
+ "version": "test-serfor2",
+ "novedades_n": 27,
  "conteos": {
   "focos_24h": 1576,
   "focos_7d": 21244,
-  "incidentes": 64,
-  "incidentes_activos": 23,
+  "incidentes": 165,
+  "incidentes_activos": 53,
   "regiones_activas": [
    "ANCASH",
    "APURIMAC",
    "AYACUCHO",
+   "CAJAMARCA",
    "CUSCO",
    "HUANCAVELICA",
+   "HUANUCO",
+   "ICA",
    "JUNIN",
+   "LA LIBERTAD",
    "LAMBAYEQUE",
+   "LIMA",
+   "LORETO",
    "PASCO",
    "PUNO"
   ],
   "fallecidos_reportados": 7,
-  "agrupaciones_satelitales": 80,
+  "agrupaciones_satelitales": 65,
   "incidentes_por_estado": {
-   "activo": 22,
+   "activo": 52,
    "en_control": 1,
-   "controlado": 1,
-   "extinguido": 34,
-   "sin_dato": 6
-  }
+   "controlado": 3,
+   "extinguido": 81,
+   "sin_dato": 6,
+   "alerta": 22
+  },
+  "serfor_reportes": 183,
+  "serfor_por_estado": {
+   "Alertado": 28,
+   "Confirmado": 57,
+   "Controlado": 3,
+   "Extinguido": 95
+  },
+  "notas_oficiales": 14
  },
  "resumen_oficial": {
   "fallecidos_octubre": 6,
@@ -38,6 +53,102 @@
   "fuente_url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
   "hectareas_texto": "Cusco: > 16 000 ha afectadas en 2026 según COER/RPP; el COER (9 oct, La República) cita > 8 000 ha y 280 incendios en el año. Las cifras difieren entre fuentes.",
   "hectareas_fuente_url": "https://larepublica.pe/sociedad/2026/10/09/cusco-registra-60-incendios-forestales-en-nueve-dias-y-bomberos-advierten-falta-de-personal-245718"
+ },
+ "serfor_focos": {
+  "forestal": 2628,
+  "agricola": 905,
+  "por_region": {
+   "LIMA": {
+    "forestal": 78,
+    "agricola": 16
+   },
+   "CAJAMARCA": {
+    "forestal": 77,
+    "agricola": 45
+   },
+   "CUSCO": {
+    "forestal": 284,
+    "agricola": 18
+   },
+   "JUNIN": {
+    "forestal": 353,
+    "agricola": 92
+   },
+   "AMAZONAS": {
+    "forestal": 11,
+    "agricola": 16
+   },
+   "ICA": {
+    "forestal": 7,
+    "agricola": 8
+   },
+   "LORETO": {
+    "forestal": 106,
+    "agricola": 45
+   },
+   "MOQUEGUA": {
+    "forestal": 3,
+    "agricola": 0
+   },
+   "ANCASH": {
+    "forestal": 73,
+    "agricola": 40
+   },
+   "MADRE DE DIOS": {
+    "forestal": 72,
+    "agricola": 42
+   },
+   "LA LIBERTAD": {
+    "forestal": 20,
+    "agricola": 53
+   },
+   "PUNO": {
+    "forestal": 53,
+    "agricola": 66
+   },
+   "SAN MARTIN": {
+    "forestal": 21,
+    "agricola": 41
+   },
+   "AREQUIPA": {
+    "forestal": 152,
+    "agricola": 8
+   },
+   "UCAYALI": {
+    "forestal": 279,
+    "agricola": 79
+   },
+   "APURIMAC": {
+    "forestal": 531,
+    "agricola": 77
+   },
+   "HUANCAVELICA": {
+    "forestal": 163,
+    "agricola": 45
+   },
+   "AYACUCHO": {
+    "forestal": 108,
+    "agricola": 76
+   },
+   "LAMBAYEQUE": {
+    "forestal": 5,
+    "agricola": 21
+   },
+   "PIURA": {
+    "forestal": 11,
+    "agricola": 19
+   },
+   "HUANUCO": {
+    "forestal": 196,
+    "agricola": 86
+   },
+   "PASCO": {
+    "forestal": 25,
+    "agricola": 12
+   }
+  },
+  "fuente": "https://geo.serfor.gob.pe/visor/",
+  "consultado": "2026-10-10T03:11:44.345528+00:00"
  },
  "fuentes": {
   "FIRMS VIIRS S-NPP": {
@@ -58,11 +169,31 @@
   },
   "INDECI emergencias": {
    "ok": true,
-   "detalle": "70 reportes de incendio forestal en 4 páginas · 13 PDF leídos"
+   "detalle": "70 reportes de incendio forestal en 4 páginas"
   },
   "Google Noticias RSS": {
    "ok": true,
-   "detalle": "85 titulares"
+   "detalle": "86 titulares"
+  },
+  "Andina RSS": {
+   "ok": true,
+   "detalle": "0 notas sobre incendios entre las últimas del día"
+  },
+  "SERFOR incendios forestales": {
+   "ok": true,
+   "detalle": "183 reportes en 14 días (28 alertados, 57 confirmados, 3 controlados, 95 extinguidos) · GEOSERFOR"
+  },
+  "SERFOR focos por cobertura": {
+   "ok": true,
+   "detalle": "2628 focos en cobertura forestal y 905 en agrícola (últimas 24 h)"
+  },
+  "Notas oficiales (gob.pe)": {
+   "ok": true,
+   "detalle": "14 notas sobre incendios de 12/12 instituciones (INDECI, SERFOR, SENAMHI, MINAM y 8 gobiernos regionales) · 12 consultadas en esta corrida"
+  },
+  "Open-Meteo (clima)": {
+   "ok": true,
+   "detalle": "en caché, de hace 2 min · 75 puntos"
   }
  }
 }

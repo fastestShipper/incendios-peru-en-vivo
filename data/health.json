@@ -1,59 +1,94 @@
 {
- "generado": "2026-10-10T02:25:52.079779+00:00",
+ "generado": "2026-10-10T03:11:44.345528+00:00",
  "ok": true,
- "duracion_s": 27.4,
+ "duracion_s": 29.8,
  "intervalo_min": 10,
- "version": "test2",
+ "version": "test-serfor2",
  "fallos_seguidos": 0,
- "ultima_ok": "2026-10-10T02:25:52.079779+00:00",
+ "ultima_ok": "2026-10-10T03:11:44.345528+00:00",
  "fuentes": {
   "FIRMS VIIRS S-NPP": {
    "ok": true,
    "detalle": "6857 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)",
-   "duracion_s": 2.0,
+   "duracion_s": 1.9,
    "fallos_seguidos": 0,
-   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
   },
   "FIRMS VIIRS NOAA-20": {
    "ok": true,
    "detalle": "7010 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)",
-   "duracion_s": 2.0,
+   "duracion_s": 1.9,
    "fallos_seguidos": 0,
-   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
   },
   "FIRMS VIIRS NOAA-21": {
    "ok": true,
    "detalle": "6308 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)",
    "duracion_s": 2.0,
    "fallos_seguidos": 0,
-   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
   },
   "FIRMS MODIS Terra/Aqua": {
    "ok": true,
    "detalle": "1069 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)",
    "duracion_s": 1.5,
    "fallos_seguidos": 0,
-   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
   },
   "INDECI emergencias": {
    "ok": true,
-   "detalle": "70 reportes de incendio forestal en 4 páginas · 13 PDF leídos",
-   "duracion_s": 18.2,
+   "detalle": "70 reportes de incendio forestal en 4 páginas",
+   "duracion_s": 2.4,
    "fallos_seguidos": 0,
-   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
   },
   "Google Noticias RSS": {
    "ok": true,
-   "detalle": "85 titulares",
-   "duracion_s": 0.2,
+   "detalle": "86 titulares",
+   "duracion_s": 1.5,
    "fallos_seguidos": 0,
-   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
+  },
+  "Andina RSS": {
+   "ok": true,
+   "detalle": "0 notas sobre incendios entre las últimas del día",
+   "duracion_s": 0.4,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
+  },
+  "SERFOR incendios forestales": {
+   "ok": true,
+   "detalle": "183 reportes en 14 días (28 alertados, 57 confirmados, 3 controlados, 95 extinguidos) · GEOSERFOR",
+   "duracion_s": 8.7,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
+  },
+  "SERFOR focos por cobertura": {
+   "ok": true,
+   "detalle": "2628 focos en cobertura forestal y 905 en agrícola (últimas 24 h)",
+   "duracion_s": 0.4,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
+  },
+  "Notas oficiales (gob.pe)": {
+   "ok": true,
+   "detalle": "14 notas sobre incendios de 12/12 instituciones (INDECI, SERFOR, SENAMHI, MINAM y 8 gobiernos regionales) · 12 consultadas en esta corrida",
+   "duracion_s": 8.0,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
+  },
+  "Open-Meteo (clima)": {
+   "ok": true,
+   "detalle": "en caché, de hace 2 min · 75 puntos",
+   "duracion_s": null,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T03:11:44.345528+00:00"
   }
  },
  "corridas": [
   {
-   "t": "2026-10-10T02:23:23.023890+00:00",
-   "duracion_s": 62.5,
+   "t": "2026-10-10T02:37:57.531758+00:00",
+   "duracion_s": 63.9,
    "ok": true,
    "fuentes_ok": 6,
    "fuentes_total": 6,
@@ -61,13 +96,58 @@
    "activos": 22
   },
   {
-   "t": "2026-10-10T02:25:52.079779+00:00",
+   "t": "2026-10-10T02:40:17.739879+00:00",
    "duracion_s": 27.4,
    "ok": true,
    "fuentes_ok": 6,
    "fuentes_total": 6,
    "focos_24h": 1576,
    "activos": 23
+  },
+  {
+   "t": "2026-10-10T02:50:13.131174+00:00",
+   "duracion_s": 13.6,
+   "ok": true,
+   "fuentes_ok": 6,
+   "fuentes_total": 6,
+   "focos_24h": 1576,
+   "activos": 23
+  },
+  {
+   "t": "2026-10-10T02:53:54.967664+00:00",
+   "duracion_s": 22.4,
+   "ok": true,
+   "fuentes_ok": 6,
+   "fuentes_total": 6,
+   "focos_24h": 1576,
+   "activos": 23
+  },
+  {
+   "t": "2026-10-10T03:00:28.009790+00:00",
+   "duracion_s": 16.6,
+   "ok": true,
+   "fuentes_ok": 6,
+   "fuentes_total": 6,
+   "focos_24h": 1576,
+   "activos": 23
+  },
+  {
+   "t": "2026-10-10T03:09:11.281865+00:00",
+   "duracion_s": 32.0,
+   "ok": true,
+   "fuentes_ok": 11,
+   "fuentes_total": 11,
+   "focos_24h": 1576,
+   "activos": 53
+  },
+  {
+   "t": "2026-10-10T03:11:44.345528+00:00",
+   "duracion_s": 29.8,
+   "ok": true,
+   "fuentes_ok": 11,
+   "fuentes_total": 11,
+   "focos_24h": 1576,
+   "activos": 53
   }
  ]
 }

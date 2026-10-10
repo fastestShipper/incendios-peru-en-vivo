@@ -184,3 +184,23 @@ details#tech summary{font-weight:700;font-size:14px;color:var(--mut);padding:8px
   #card-wrap{align-items:flex-end;padding:0}
   #card{border-radius:20px 20px 0 0;max-height:86vh;padding-bottom:calc(16px + env(safe-area-inset-bottom))}
 }
+
+/* fuentes oficiales, SERFOR y clima */
+.links{list-style:none;margin:0;padding:0}
+.links li{padding:9px 4px;border-bottom:1px solid var(--line)}
+.links a{font-weight:700;text-decoration:none}.links a:hover{text-decoration:underline}
+.links .d,.src .d{font-size:13px;color:var(--mut);margin-top:2px}
+.feed-mini{list-style:none;margin:0;padding:0}
+.feed-mini li{padding:8px 4px;border-bottom:1px solid var(--line);font-size:14.5px}
+.feed-mini a{color:inherit}.feed-mini .m,.m{font-size:12.5px;color:var(--mut)}
+.serfor{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0;font-size:14px}
+.serfor-h{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+.serfor-h a{font-size:13px;font-weight:600}
+.pill{display:inline-block;border-radius:999px;padding:3px 10px;font-weight:800;font-size:13px}
+.serfor-b{color:#333;line-height:1.45}
+.serfor-d{margin-top:6px;background:#fff7e6;border-radius:8px;padding:6px 8px;font-size:13px}
+.clima{background:#eef5ff;border-radius:12px;padding:9px 12px;margin:10px 0;font-size:14px}
+.clima-g{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;margin-top:4px}
+.clima-w{margin-top:6px;font-weight:700;color:#8a3b00;font-size:13.5px}
+#list li.reg-sum{background:var(--soft);border-bottom:0;margin-bottom:6px}
+#list li.reg-sum .s{line-height:1.5}

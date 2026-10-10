@@ -8,9 +8,10 @@
     controlado: { t: "Controlado", c: "#f2c94c" },
     extinguido: { t: "Extinguido", c: "#3fae5a" },
     sin_dato: { t: "Sin dato de estado", c: "#8a8f98" },
+    alerta: { t: "Alerta de SERFOR (por confirmar)", c: "#7b4dff" },
     inferido: { t: "Inferido por satélite", c: "#a259ff" },
   };
-  const ORDER = ["activo", "en_control", "controlado", "sin_dato", "extinguido"];
+  const ORDER = ["activo", "en_control", "alerta", "controlado", "sin_dato", "extinguido"];
   const fmtLima = new Intl.DateTimeFormat("es-PE", { timeZone: "America/Lima", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", hour12: false });
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const title = (s) => String(s || "").toLowerCase().replace(/(^|\s|\()([a-záéíóúñ])/g, (m, a, b) => a + b.toUpperCase());

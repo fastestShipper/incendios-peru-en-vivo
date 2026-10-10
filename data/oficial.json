@@ -1,0 +1,205 @@
+{
+ "generado": "2026-10-10T03:11:44.345528+00:00",
+ "instituciones": [
+  {
+   "slug": "indeci",
+   "nombre": "INDECI",
+   "region": null,
+   "url": "https://www.gob.pe/institucion/indeci/noticias"
+  },
+  {
+   "slug": "serfor",
+   "nombre": "SERFOR",
+   "region": null,
+   "url": "https://www.gob.pe/institucion/serfor/noticias"
+  },
+  {
+   "slug": "senamhi",
+   "nombre": "SENAMHI",
+   "region": null,
+   "url": "https://www.gob.pe/institucion/senamhi/noticias"
+  },
+  {
+   "slug": "minam",
+   "nombre": "MINAM",
+   "region": null,
+   "url": "https://www.gob.pe/institucion/minam/noticias"
+  },
+  {
+   "slug": "regioncusco",
+   "nombre": "Gobierno Regional de Cusco",
+   "region": "CUSCO",
+   "url": "https://www.gob.pe/institucion/regioncusco/noticias"
+  },
+  {
+   "slug": "regionapurimac",
+   "nombre": "Gobierno Regional de Apurímac",
+   "region": "APURIMAC",
+   "url": "https://www.gob.pe/institucion/regionapurimac/noticias"
+  },
+  {
+   "slug": "regionayacucho",
+   "nombre": "Gobierno Regional de Ayacucho",
+   "region": "AYACUCHO",
+   "url": "https://www.gob.pe/institucion/regionayacucho/noticias"
+  },
+  {
+   "slug": "regionpuno",
+   "nombre": "Gobierno Regional de Puno",
+   "region": "PUNO",
+   "url": "https://www.gob.pe/institucion/regionpuno/noticias"
+  },
+  {
+   "slug": "regionjunin",
+   "nombre": "Gobierno Regional de Junín",
+   "region": "JUNIN",
+   "url": "https://www.gob.pe/institucion/regionjunin/noticias"
+  },
+  {
+   "slug": "regionhuancavelica",
+   "nombre": "Gobierno Regional de Huancavelica",
+   "region": "HUANCAVELICA",
+   "url": "https://www.gob.pe/institucion/regionhuancavelica/noticias"
+  },
+  {
+   "slug": "regionpasco",
+   "nombre": "Gobierno Regional de Pasco",
+   "region": "PASCO",
+   "url": "https://www.gob.pe/institucion/regionpasco/noticias"
+  },
+  {
+   "slug": "regionancash",
+   "nombre": "Gobierno Regional de Áncash",
+   "region": "ANCASH",
+   "url": "https://www.gob.pe/institucion/regionancash/noticias"
+  }
+ ],
+ "items": [
+  {
+   "titulo": "En Defensa De La Vida: Gobierno Regional Cusco Refuerza Prevención, Brigadas Comunales Y Trabajo Articulado Ante Incendios Forestales",
+   "resumen": "A la fecha, tres siniestros se encuentran activos en Pucyura, Marangani y Layo",
+   "url": "https://www.gob.pe/institucion/regioncusco/noticias/1454542-en-defensa-de-la-vida-gobierno-regional-cusco-refuerza-prevencion-brigadas-comunales-y-trabajo-articulado-ante-incendios-forestales",
+   "fecha": "2026-10-09T19:13:00+00:00",
+   "institucion": "Gobierno Regional de Cusco",
+   "slug": "regioncusco",
+   "region": "CUSCO"
+  },
+  {
+   "titulo": "Extinguen 7 incendios forestales en Apurímac, Áncash, Ayacucho y San Martín",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/indeci/noticias/1454284-extinguen-7-incendios-forestales-en-apurimac-ancash-ayacucho-y-san-martin",
+   "fecha": "2026-10-09T08:44:00+00:00",
+   "institucion": "INDECI",
+   "slug": "indeci",
+   "region": "APURIMAC"
+  },
+  {
+   "titulo": "Cusco: SERFOR capacita más de 400 brigadistas locales en 26 distritos para prevención de incendios forestales",
+   "resumen": "Profesionales también instruyen a personal de municipalidades en el uso del Sistema de Alerta Temprano utilizando información de focos de calor.",
+   "url": "https://www.gob.pe/institucion/serfor/noticias/1454240-cusco-serfor-capacita-mas-de-400-brigadistas-locales-en-26-distritos-para-prevencion-de-incendios-forestales",
+   "fecha": "2026-10-08T15:11:00+00:00",
+   "institucion": "SERFOR",
+   "slug": "serfor",
+   "region": "CUSCO"
+  },
+  {
+   "titulo": "Un incendio forestal no solo deja cenizas",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/regionapurimac/noticias/1454613-un-incendio-forestal-no-solo-deja-cenizas",
+   "fecha": "2026-10-07T20:51:00+00:00",
+   "institucion": "Gobierno Regional de Apurímac",
+   "slug": "regionapurimac",
+   "region": "APURIMAC"
+  },
+  {
+   "titulo": "Gobierno Regional de Apurímac Coordina Acciones para Fortalecer la Atención ante Incendios Forestales",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/regionapurimac/noticias/1454607-gobierno-regional-de-apurimac-coordina-acciones-para-fortalecer-la-atencion-ante-incendios-forestales",
+   "fecha": "2026-10-06T20:44:00+00:00",
+   "institucion": "Gobierno Regional de Apurímac",
+   "slug": "regionapurimac",
+   "region": "APURIMAC"
+  },
+  {
+   "titulo": "5 incendios forestales en distritos de Cusco fueron extinguidos y otros 6 continúan activos",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/indeci/noticias/1453065-5-incendios-forestales-en-distritos-de-cusco-fueron-extinguidos-y-otros-6-continuan-activos",
+   "fecha": "2026-10-06T12:23:00+00:00",
+   "institucion": "INDECI",
+   "slug": "indeci",
+   "region": "CUSCO"
+  },
+  {
+   "titulo": "En Defensa De La Vida: Gobierno Regional Cusco Exhorta A La Protección Comunitaria Ante Alto Riesgo De Incendios Forestales",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/regioncusco/noticias/1452974-en-defensa-de-la-vida-gobierno-regional-cusco-exhorta-a-la-proteccion-comunitaria-ante-alto-riesgo-de-incendios-forestales",
+   "fecha": "2026-10-05T21:07:00+00:00",
+   "institucion": "Gobierno Regional de Cusco",
+   "slug": "regioncusco",
+   "region": "CUSCO"
+  },
+  {
+   "titulo": "Extinguen 4 incendios forestales en Arequipa, Cusco, Huancavelica y Lima",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/indeci/noticias/1452619-extinguen-4-incendios-forestales-en-arequipa-cusco-huancavelica-y-lima",
+   "fecha": "2026-10-05T09:17:00+00:00",
+   "institucion": "INDECI",
+   "slug": "indeci",
+   "region": "AREQUIPA"
+  },
+  {
+   "titulo": "Arequipa: Serfor informa que incendio forestal en Pocsi está controlado",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/serfor/noticias/1452506-arequipa-serfor-informa-que-incendio-forestal-en-pocsi-esta-controlado",
+   "fecha": "2026-10-04T01:37:00+00:00",
+   "institucion": "SERFOR",
+   "slug": "serfor",
+   "region": "AREQUIPA"
+  },
+  {
+   "titulo": "Cusco: Serfor monitorea evolución de incendio forestal en Urubamba",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/serfor/noticias/1452502-cusco-serfor-monitorea-evolucion-de-incendio-forestal-en-urubamba",
+   "fecha": "2026-10-04T00:55:00+00:00",
+   "institucion": "SERFOR",
+   "slug": "serfor",
+   "region": "CUSCO"
+  },
+  {
+   "titulo": "Serfor realiza monitoreo permanente de incendios forestales y emite alerta a autoridades competentes a nivel nacional",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/serfor/noticias/1452499-serfor-realiza-monitoreo-permanente-de-incendios-forestales-y-emite-alerta-a-autoridades-competentes-a-nivel-nacional",
+   "fecha": "2026-10-04T00:23:00+00:00",
+   "institucion": "SERFOR",
+   "slug": "serfor",
+   "region": null
+  },
+  {
+   "titulo": "Cusco Refuerza Atención Aérea Contra Incendios Forestales En La Región Con Avión Spartan Y Helicóptero MI-17",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/regioncusco/noticias/1452497-cusco-refuerza-atencion-aerea-contra-incendios-forestales-en-la-region-con-avion-spartan-y-helicoptero-mi-17",
+   "fecha": "2026-10-03T23:55:00+00:00",
+   "institucion": "Gobierno Regional de Cusco",
+   "slug": "regioncusco",
+   "region": "CUSCO"
+  },
+  {
+   "titulo": "Instituciones competentes atienden incendios forestales en distritos de Apurímac, Arequipa, Cusco, Huancavelica, Ayacucho, Áncash y Pasco",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/indeci/noticias/1451928-instituciones-competentes-atienden-incendios-forestales-en-distritos-de-apurimac-arequipa-cusco-huancavelica-ayacucho-ancash-y-pasco",
+   "fecha": "2026-10-02T11:50:00+00:00",
+   "institucion": "INDECI",
+   "slug": "indeci",
+   "region": "APURIMAC"
+  },
+  {
+   "titulo": "Extinguen 4 incendios forestales en Puno, Arequipa, Cusco y Ayacucho",
+   "resumen": "",
+   "url": "https://www.gob.pe/institucion/indeci/noticias/1451916-extinguen-4-incendios-forestales-en-puno-arequipa-cusco-y-ayacucho",
+   "fecha": "2026-10-02T01:01:00+00:00",
+   "institucion": "INDECI",
+   "slug": "indeci",
+   "region": "PUNO"
+  }
+ ]
+}
