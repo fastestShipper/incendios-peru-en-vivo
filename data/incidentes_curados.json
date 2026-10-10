@@ -1,0 +1,768 @@
+{
+ "_nota": "Incidentes curados a mano. Cada estado y cifra proviene de la fuente citada. Si no hay dato: null (se muestra 'sin dato'). Estados permitidos: activo, en_control, controlado, extinguido, sin_dato. Ubicación = centroide del distrito salvo que se indique lat/lon.",
+ "actualizado": "2026-10-09T19:30:00-05:00",
+ "incidentes": [
+  {
+   "id": "cus-espinar-pichigua",
+   "nombre": "Espinar: Alto Pichigua y Pichigua",
+   "departamento": "CUSCO",
+   "provincia": "ESPINAR",
+   "distrito": "ALTO PICHIGUA",
+   "estado": "activo",
+   "estado_texto": "\"Todavía no está controlado al cien por ciento\" (periodista Vidal Merma a La República, 9 oct). También afectó Coporaque y Pallpata.",
+   "hectareas": "> 15 000 ha (Alto Pichigua > 10 000 y Pichigua > 5 000, estimación de prensa)",
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-09T07:16:00-05:00",
+   "fuentes": [
+    {
+     "medio": "La República",
+     "titulo": "Cinco muertos y más de 16,000 hectáreas quemadas en Cusco: así avanza el incendio forestal más grave del año",
+     "url": "https://larepublica.pe/sociedad/2026/10/09/dos-muertos-y-mas-de-16000-hectareas-quemadas-en-cusco-asi-avanza-el-incendio-forestal-mas-grave-del-ano-hnews-466000",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "RPP (COEN-INDECI / COER Cusco)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre y se mantienen focos activos en cinco regiones",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "cus-pucyura",
+   "nombre": "Pucyura (Anta)",
+   "departamento": "CUSCO",
+   "provincia": "ANTA",
+   "distrito": "PUCYURA",
+   "estado": "activo",
+   "estado_texto": "COEN (vía EFE, 9 oct): se mantiene activo; extinción a cargo de PNP y serenazgo. El gobernador regional también lo menciona como activo (Canal N).",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "Canal N",
+     "titulo": "Werner Salcedo: Cusco registra tres incendios activos en Pucyura, Layo y Maranganí",
+     "url": "https://canaln.pe/actualidad/werner-salcedo-cusco-registra-tres-incendios-activos-pucyura-layo-y-marangani-n495552",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "cus-santa-teresa",
+   "nombre": "Santa Teresa (La Convención)",
+   "departamento": "CUSCO",
+   "provincia": "LA CONVENCION",
+   "distrito": "SANTA TERESA",
+   "estado": "activo",
+   "estado_texto": "COEN (vía EFE, 9 oct): se mantiene activo. COER Cusco: persisten focos de calor (La República).",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "La República (COER Cusco)",
+     "titulo": "Cusco registra 60 incendios forestales en nueve días y bomberos advierten falta de personal",
+     "url": "https://larepublica.pe/sociedad/2026/10/09/cusco-registra-60-incendios-forestales-en-nueve-dias-y-bomberos-advierten-falta-de-personal-245718",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "cus-layo",
+   "nombre": "Layo (Canas)",
+   "departamento": "CUSCO",
+   "provincia": "CANAS",
+   "distrito": "LAYO",
+   "estado": "activo",
+   "estado_texto": "Gobernador regional Werner Salcedo: incendio activo en Layo (Canal N, 9 oct).",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-09T12:00:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Canal N",
+     "titulo": "Werner Salcedo: Cusco registra tres incendios activos en Pucyura, Layo y Maranganí",
+     "url": "https://canaln.pe/actualidad/werner-salcedo-cusco-registra-tres-incendios-activos-pucyura-layo-y-marangani-n495552",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "cus-marangani",
+   "nombre": "Maranganí (Canchis) – C.C. Huiscachani",
+   "departamento": "CUSCO",
+   "provincia": "CANCHIS",
+   "distrito": "MARANGANI",
+   "estado": "activo",
+   "estado_texto": "COEN (8 oct): activo en la comunidad de Huiscachani. Gobernador regional lo mantiene como activo (Canal N, 9 oct).",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-09T12:00:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Canal N",
+     "titulo": "Werner Salcedo: Cusco registra tres incendios activos en Pucyura, Layo y Maranganí",
+     "url": "https://canaln.pe/actualidad/werner-salcedo-cusco-registra-tres-incendios-activos-pucyura-layo-y-marangani-n495552",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "cus-velille",
+   "nombre": "Velille (Chumbivilcas) – sector Laccaya",
+   "departamento": "CUSCO",
+   "provincia": "CHUMBIVILCAS",
+   "distrito": "VELILLE",
+   "estado": "activo",
+   "estado_texto": "COEN-INDECI (8 oct): siniestro activo en el sector Laccaya.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "cus-oropesa",
+   "nombre": "Oropesa (Quispicanchi)",
+   "departamento": "CUSCO",
+   "provincia": "QUISPICANCHI",
+   "distrito": "OROPESA",
+   "estado": "activo",
+   "estado_texto": "COEN-INDECI (8 oct): incendio iniciado la mañana del 8 de octubre, activo; sin daños a la vida y salud al momento.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "cus-yanatile",
+   "nombre": "Yanatile (Calca)",
+   "departamento": "CUSCO",
+   "provincia": "CALCA",
+   "distrito": "YANATILE",
+   "estado": "activo",
+   "estado_texto": "COEN-INDECI (8 oct): nuevo incendio activo. En Yanatile falleció un adulto mayor (COER Cusco, vía RPP).",
+   "hectareas": null,
+   "fallecidos": 1,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI / COER Cusco)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "cus-huanuquite",
+   "nombre": "Huanoquite (Paruro)",
+   "departamento": "CUSCO",
+   "provincia": "PARURO",
+   "distrito": "HUANOQUITE",
+   "estado": "activo",
+   "estado_texto": "COER Cusco (9 oct): persisten focos de calor; el terreno dificulta el control.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-09T13:11:00-05:00",
+   "fuentes": [
+    {
+     "medio": "La República (COER Cusco)",
+     "titulo": "Cusco registra 60 incendios forestales en nueve días y bomberos advierten falta de personal",
+     "url": "https://larepublica.pe/sociedad/2026/10/09/cusco-registra-60-incendios-forestales-en-nueve-dias-y-bomberos-advierten-falta-de-personal-245718",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "cus-san-pablo",
+   "nombre": "San Pablo (Canchis)",
+   "departamento": "CUSCO",
+   "provincia": "CANCHIS",
+   "distrito": "SAN PABLO",
+   "estado": "activo",
+   "estado_texto": "COER Cusco (9 oct): persisten focos de calor.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-09T13:11:00-05:00",
+   "fuentes": [
+    {
+     "medio": "La República (COER Cusco)",
+     "titulo": "Cusco registra 60 incendios forestales en nueve días y bomberos advierten falta de personal",
+     "url": "https://larepublica.pe/sociedad/2026/10/09/cusco-registra-60-incendios-forestales-en-nueve-dias-y-bomberos-advierten-falta-de-personal-245718",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "cus-pomacanchi",
+   "nombre": "Pomacanchi (Acomayo) – 2 fallecidos",
+   "departamento": "CUSCO",
+   "provincia": "ACOMAYO",
+   "distrito": "POMACANCHI",
+   "estado": "sin_dato",
+   "estado_texto": "Murieron dos hermanos (11 y 18 años) por quemaduras. Estado actual del incendio: sin dato.",
+   "hectareas": null,
+   "fallecidos": 2,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COER Cusco)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    },
+    {
+     "medio": "La República",
+     "titulo": "Cinco muertos y más de 16,000 hectáreas quemadas en Cusco…",
+     "url": "https://larepublica.pe/sociedad/2026/10/09/dos-muertos-y-mas-de-16000-hectareas-quemadas-en-cusco-asi-avanza-el-incendio-forestal-mas-grave-del-ano-hnews-466000",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "cus-colquepata",
+   "nombre": "Colquepata (Paucartambo) – 1 fallecido",
+   "departamento": "CUSCO",
+   "provincia": "PAUCARTAMBO",
+   "distrito": "COLQUEPATA",
+   "estado": "sin_dato",
+   "estado_texto": "Falleció un adulto mayor (COER Cusco). Estado actual: sin dato.",
+   "hectareas": null,
+   "fallecidos": 1,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COER Cusco)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "cus-yanahuara",
+   "nombre": "Yanahuara (Urubamba) – 1 fallecido",
+   "departamento": "CUSCO",
+   "provincia": "URUBAMBA",
+   "distrito": "URUBAMBA",
+   "estado": "sin_dato",
+   "estado_texto": "Falleció un adulto mayor (COER Cusco). Estado actual: sin dato. Ubicación aproximada: centroide del distrito de Urubamba (Yanahuara es una localidad de ese distrito).",
+   "hectareas": null,
+   "fallecidos": 1,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COER Cusco)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "apu-pacobamba",
+   "nombre": "Pacobamba (Andahuaylas)",
+   "departamento": "APURIMAC",
+   "provincia": "ANDAHUAYLAS",
+   "distrito": "PACOBAMBA",
+   "estado": "activo",
+   "estado_texto": "COEN (9 oct): activo desde el jueves 8; subprefectura, gobierno local y pobladores trabajan en control y extinción.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "apu-tapairihua",
+   "nombre": "Tapairihua (Aymaraes) – comunidad Layme",
+   "departamento": "APURIMAC",
+   "provincia": "AYMARAES",
+   "distrito": "TAPAIRIHUA",
+   "estado": "activo",
+   "estado_texto": "COEN-INDECI (8 oct): activo en ladera de difícil acceso.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "apu-cachora",
+   "nombre": "San Pedro de Cachora (Abancay)",
+   "departamento": "APURIMAC",
+   "provincia": "ABANCAY",
+   "distrito": "SAN PEDRO DE CACHORA",
+   "estado": "activo",
+   "estado_texto": "COEN-INDECI (8 oct): incendio activo.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "apu-mara",
+   "nombre": "Mara (Cotabambas)",
+   "departamento": "APURIMAC",
+   "provincia": "COTABAMBAS",
+   "distrito": "MARA",
+   "estado": "activo",
+   "estado_texto": "COEN-INDECI (8 oct): brigadas y serenazgo se replegaron temporalmente por vientos extremos.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "apu-challhuahuacho",
+   "nombre": "Challhuahuacho (Cotabambas)",
+   "departamento": "APURIMAC",
+   "provincia": "COTABAMBAS",
+   "distrito": "CHALLHUAHUACHO",
+   "estado": "extinguido",
+   "estado_texto": "COEN (9 oct): extinguido (parte de 7 incendios extinguidos que suman 124 ha).",
+   "hectareas": null,
+   "fallecidos": 0,
+   "heridos": 0,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "jun-rio-tambo",
+   "nombre": "Río Tambo (Satipo) – CC.NN. Tsyapo, Cutivireni, Pajonal, Tiboreni",
+   "departamento": "JUNIN",
+   "provincia": "SATIPO",
+   "distrito": "RIO TAMBO",
+   "estado": "activo",
+   "estado_texto": "Seis días activo; el fuego sigue propagándose y amenaza otras comunidades (Municipalidad de Río Tambo / Defensa Civil, vía Andina y La República, 9 oct). Helicóptero MI-17 de la FAP con helibalde (INDECI).",
+   "hectareas": "350 ha de bosque primario + 80 ha de cultivos (reporte preliminar de Defensa Civil)",
+   "fallecidos": null,
+   "heridos": null,
+   "notas": "10 viviendas destruidas, 50 familias afectadas.",
+   "fecha_estado": "2026-10-09T14:57:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Agencia Andina",
+     "titulo": "Incendio forestal en la Selva Central: siniestro causa graves daños en distrito Río Tambo",
+     "url": "https://andina.pe/agencia/noticia-incendio-forestal-la-selva-central-siniestro-causa-graves-danos-distrito-rio-tambo-1095319.aspx",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "La República",
+     "titulo": "Río Tambo en emergencia por incendio forestal que arrasa bosques, cultivos y viviendas",
+     "url": "https://larepublica.pe/sociedad/2026/10/09/rio-tambo-en-emergencia-por-incendio-forestal-que-arrasa-bosques-cultivos-y-viviendas-municipio-pide-apoyo-urgente-839376",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "INDECI – COEN",
+     "titulo": "Reporte complementario N.º 13769 – Incendio forestal en Río Tambo (PDF)",
+     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-13769-9OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-R%C3%8DO-TAMBO-JUN%C3%8DN-3.pdf",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "pas-huayllay",
+   "nombre": "Huayllay (Pasco) – Japurín / Gaya, cerca del Bosque de Piedras",
+   "departamento": "PASCO",
+   "provincia": "PASCO",
+   "distrito": "HUAYLLAY",
+   "estado": "activo",
+   "estado_texto": "COER Pasco vía COEN-INDECI (Reporte N.º 8, 9 oct 17:25): \"El incendio se encuentra ACTIVO\". Se reactivó la mañana del 9 de octubre (La República).",
+   "hectareas": "474.7 ha de cobertura natural (INDECI); pobladores estiman > 1 000 ha (prensa)",
+   "fallecidos": 0,
+   "heridos": null,
+   "notas": "4 viviendas destruidas, 10 afectadas; 12 damnificados (INDECI). Amenaza el Santuario Nacional Bosque de Piedras de Huayllay.",
+   "fecha_estado": "2026-10-09T17:25:00-05:00",
+   "fuentes": [
+    {
+     "medio": "INDECI – COEN",
+     "titulo": "Reporte complementario N.º 13800 – Incendio forestal en Huayllay (Reporte N.º 8)",
+     "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13377-3-10-2026-coen-indeci-0030-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-huaylla-pasco/",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "La República",
+     "titulo": "Incendio forestal arrasa más de 1.000 hectáreas y amenaza el Bosque de Piedras de Huayllay en Pasco",
+     "url": "https://larepublica.pe/sociedad/2026/10/09/incendio-forestal-arrasa-mas-de-1000-hectareas-y-amenaza-el-bosque-de-piedras-de-huayllay-en-pasco-784611",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "aya-lucanamarca",
+   "nombre": "Santiago de Lucanamarca (Huanca Sancos) – Casachona Solar",
+   "departamento": "AYACUCHO",
+   "provincia": "HUANCA SANCOS",
+   "distrito": "SANTIAGO DE LUCANAMARCA",
+   "estado": "extinguido",
+   "estado_texto": "Extinguido por 150 pobladores tras más de 48 horas (Defensa Civil de la municipalidad, vía Andina, 9 oct). INDECI lo reportó controlado el 8 oct.",
+   "hectareas": null,
+   "fallecidos": 0,
+   "heridos": 1,
+   "fecha_estado": "2026-10-09T07:39:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Agencia Andina",
+     "titulo": "Incendio forestal en Ayacucho: sofocan fuego en Lucanamarca tras 48 horas de ardua lucha",
+     "url": "https://andina.pe/agencia/noticia-incendio-forestal-ayacucho-sofocan-fuego-lucanamarca-tras-48-horas-ardua-lucha-1095258.aspx",
+     "fecha": "2026-10-09"
+    },
+    {
+     "medio": "INDECI – COEN",
+     "titulo": "Reporte complementario N.º 13767 (PDF)",
+     "url": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.%C2%BA-13767-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTIAGO-DE-LUCANAMARCA-AYACUCHO-2.pdf",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "aya-quinua",
+   "nombre": "Quinua (Huamanga)",
+   "departamento": "AYACUCHO",
+   "provincia": "HUAMANGA",
+   "distrito": "QUINUA",
+   "estado": "extinguido",
+   "estado_texto": "COEN-INDECI (8 oct): declarado extinguido.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "aya-huamanguilla",
+   "nombre": "Huamanguilla (Huanta)",
+   "departamento": "AYACUCHO",
+   "provincia": "HUANTA",
+   "distrito": "HUAMANGUILLA",
+   "estado": "extinguido",
+   "estado_texto": "COEN-INDECI (8 oct): declarado extinguido.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "aya-paras",
+   "nombre": "Paras (Cangallo)",
+   "departamento": "AYACUCHO",
+   "provincia": "CANGALLO",
+   "distrito": "PARAS",
+   "estado": "extinguido",
+   "estado_texto": "COEN (9 oct): extinguido.",
+   "hectareas": null,
+   "fallecidos": 0,
+   "heridos": 0,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "aya-cabana",
+   "nombre": "Cabana (Lucanas)",
+   "departamento": "AYACUCHO",
+   "provincia": "LUCANAS",
+   "distrito": "CABANA",
+   "estado": "extinguido",
+   "estado_texto": "COEN (9 oct): extinguido.",
+   "hectareas": null,
+   "fallecidos": 0,
+   "heridos": 0,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "pun-huacullani",
+   "nombre": "Huacullani (Chucuito) – sector Aurincota",
+   "departamento": "PUNO",
+   "provincia": "CHUCUITO",
+   "distrito": "HUACULLANI",
+   "estado": "en_control",
+   "estado_texto": "COEN-INDECI (8 oct): brigadas continúan trabajos de extinción en Aurincota; sectores Yorocco y Collarijo ya sofocados.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "pun-macari",
+   "nombre": "Macari (Melgar) – 1 fallecido",
+   "departamento": "PUNO",
+   "provincia": "MELGAR",
+   "distrito": "MACARI",
+   "estado": "sin_dato",
+   "estado_texto": "3 oct: falleció un adulto mayor de 82 años durante la emergencia (COEN-INDECI). Estado actual: sin dato.",
+   "hectareas": null,
+   "fallecidos": 1,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COEN-INDECI)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "anc-aija",
+   "nombre": "Aija (Áncash)",
+   "departamento": "ANCASH",
+   "provincia": "AIJA",
+   "distrito": "AIJA",
+   "estado": "extinguido",
+   "estado_texto": "COEN (9 oct): extinguido.",
+   "hectareas": null,
+   "fallecidos": 0,
+   "heridos": 0,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "anc-yauya",
+   "nombre": "Yauya (Carlos Fermín Fitzcarrald)",
+   "departamento": "ANCASH",
+   "provincia": "CARLOS FERMIN FITZCARRALD",
+   "distrito": "YAUYA",
+   "estado": "extinguido",
+   "estado_texto": "COER Áncash (vía RPP, 8 oct): eventos recientes de Yauya y Piscobamba extinguidos.",
+   "hectareas": "≈ 100 ha de pastizales y arbustos (RPP)",
+   "fallecidos": 0,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP",
+     "titulo": "Áncash: incendio forestal afecta 100 hectáreas de pastizales y arbustos en Yauya",
+     "url": "https://rpp.pe/peru/ancash/ancash-incendio-forestal-afecta-100-hectareas-de-pastizales-y-arbustos-en-yauya-noticia-1711438",
+     "fecha": "2026-10-08"
+    },
+    {
+     "medio": "RPP (COER Áncash)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "anc-piscobamba",
+   "nombre": "Piscobamba (Áncash)",
+   "departamento": "ANCASH",
+   "provincia": "MARISCAL LUZURIAGA",
+   "distrito": "PISCOBAMBA",
+   "estado": "extinguido",
+   "estado_texto": "COER Áncash (vía RPP, 8 oct): extinguido.",
+   "hectareas": null,
+   "fallecidos": null,
+   "heridos": null,
+   "fecha_estado": "2026-10-08T21:07:00-05:00",
+   "fuentes": [
+    {
+     "medio": "RPP (COER Áncash)",
+     "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre…",
+     "url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+     "fecha": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "sm-cunumbuqui",
+   "nombre": "Cuñumbuqui (Lamas)",
+   "departamento": "SAN MARTIN",
+   "provincia": "LAMAS",
+   "distrito": "CUNUMBUQUI",
+   "estado": "extinguido",
+   "estado_texto": "COEN (9 oct): extinguido.",
+   "hectareas": null,
+   "fallecidos": 0,
+   "heridos": 0,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "sm-sacanche",
+   "nombre": "Sacanche (Huallaga)",
+   "departamento": "SAN MARTIN",
+   "provincia": "HUALLAGA",
+   "distrito": "SACANCHE",
+   "estado": "extinguido",
+   "estado_texto": "COEN (9 oct): extinguido.",
+   "hectareas": null,
+   "fallecidos": 0,
+   "heridos": 0,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    }
+   ]
+  },
+  {
+   "id": "sm-el-eslabon",
+   "nombre": "El Eslabón (Huallaga)",
+   "departamento": "SAN MARTIN",
+   "provincia": "HUALLAGA",
+   "distrito": "EL ESLABON",
+   "estado": "extinguido",
+   "estado_texto": "COEN (9 oct): extinguido.",
+   "hectareas": null,
+   "fallecidos": 0,
+   "heridos": 0,
+   "fecha_estado": "2026-10-09T12:13:00-05:00",
+   "fuentes": [
+    {
+     "medio": "Forbes Perú / EFE (COEN)",
+     "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+     "url": "https://forbes.pe/actualidad/2026-10-09/coen-tres-incendios-forestales-se-mantienen-activos-y-siete-fueron-extinguidos/",
+     "fecha": "2026-10-09"
+    }
+   ]
+  }
+ ],
+ "resumen_oficial": {
+  "fallecidos_octubre": 6,
+  "fallecidos_texto": "6 fallecidos en octubre: 5 en Cusco y 1 en Puno (COEN-INDECI / COER, vía RPP 8 oct).",
+  "fuente_url": "https://rpp.pe/peru/actualidad/incendios-forestales-en-peru-2026-seis-muertos-y-focos-activos-en-cinco-regiones-noticia-1711550",
+  "hectareas_texto": "Cusco: > 16 000 ha afectadas en 2026 según COER/RPP; el COER (9 oct, La República) cita > 8 000 ha y 280 incendios en el año. Las cifras difieren entre fuentes.",
+  "hectareas_fuente_url": "https://larepublica.pe/sociedad/2026/10/09/cusco-registra-60-incendios-forestales-en-nueve-dias-y-bomberos-advierten-falta-de-personal-245718"
+ }
+}

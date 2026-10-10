@@ -1,0 +1,365 @@
+{
+ "generado": "2026-10-10T00:48:27.942598+00:00",
+ "noticias": [
+  {
+   "titulo": "Junín: incendio forestal destruye más de 250 hectáreas y pone en riesgo viviendas y cultivos asháninkas",
+   "medio": "Diario Correo",
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxORGs5WllKNlE0RVhTeUNvRWM0OEFVcmoxeE5YSkE0MWlCandWZGVrUk1HZUplYkJOa1lZZHJRcncyN2hNQ3kxVkd3cHY5VHhlTWVWeEV4WnNZWFQ4U3JGT2NMblg2Unh1elg1aS1weDY4WTRCVm51OGFnZDdwSVlxVjMyWFloYnZRRW82ZTZLUnRPOUVPYUVBaEJQZGdRaHpibmthUE5EdHFwQjZHLXVmNGdOSl9lY0p2cGNSY3ZqaFVuYWREYzFocl9PdVZILXVhQmZjZ01Ba2h4Zld3WXRsa3EtQmJBcDDSAfsBQVVfeXFMTTd0Q2trdzc2cGlkdmNBcEQ5VkJhaFZOekc3QmZNS0VjTzEzZ3V4bWV2Zk96XzhoZEh6aVk4RnhXaVdxeEY1RlBDOERWbHNwYjVkTzB5T3ZDbnRWdHF5MTZsZWl5UG1nTmd4bzVjVkpfdTRBUzlKeUFFRjM1OWtmRkRmTFM4ZFdUNDk4WGEwZWlBSWlFdERFczZacmlISzhudjk5c1kwWWhndkNsMmh5WTEzUkhibHAtcS1lcGpvVmR5U1NySDM3a2NGTFhrekF6ejROZ1FVVmNzRkNkR2FKaEVuMlBLS2c1WWdjRlh4cWVpdG5KY0FPb0FLcUE?oc=5",
+   "fecha": "2026-10-10T00:26:11+00:00"
+  },
+  {
+   "titulo": "Se registra 5 muertos y más de 16 mil hectáreas afectadas por incendios forestales",
+   "medio": "Gaceta Perú TV",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdjNPWUxIODVaTkFOOWRUMDdXU3JhbDRXbEZEWFZlZEJhYlppV3JFRkltdWhuUkwwU3lHeGx5NkhMUzR4WHltN25FckxaY1I0WVJEbTFrZHYtMHNLRTZmc2JKVXgtZnB6U01pRFlVNFZRT2plRXRkU2lIYkMtSy1tVF81Z3hOX2wzQTctUDA4WFRKcG51dXFjX2pyaUotZVhwa1pQaTZtaXZWdndmMC0yY090a0l2b1h1LVN3?oc=5",
+   "fecha": "2026-10-09T23:09:14+00:00"
+  },
+  {
+   "titulo": "Junín: emergencia por incendio forestal en comunidad asháninka afecta 350 hectáreas",
+   "medio": "Actualidad Ambiental",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcU5fM1A5NmU2Uy16ZXV3aGk1S3VyaE8xc3Q3UDdUOXpVUkd3ZnFvbHlRY0hiTWNoWnpLZmRIWHFLOUpic0NkV1pwVnVEUG5Cb283dDZHSkZGNTUxM3BicVZvLVgzY3labXlTc0Nxckg3eW4tNnJTamZlenBibFVjT0hTZWdNZDRTT3o3TEZUeDVCNWdxaExlMTNvRi02UHl5UTBwNXVTOWQwLTVIR2hWVlJUT29NRFBta3c?oc=5",
+   "fecha": "2026-10-09T22:58:15+00:00"
+  },
+  {
+   "titulo": "Incendio forestal arrasa 250 hectáreas en Junín y amenaza las viviendas de la comunidad asháninka de Cutivireni",
+   "medio": "Exitosa Noticias",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcXhfa0xNVFZOOWFZcTltOENaTVFuLWFRMmxsZERnVXBsTTZnWElsUU10RmxNRkZoRTBuYl9XVkRXUXB0OXVMc0htZUxxN19RMlhjS1M3bEF0Mjh0M3RXaVpTd29Fa0FKX1JlM011NWh3WmxjWFdieFlXbnlIQzU2RjVoTEFZd2liZGVsV3VVb2ZNaDdjYWt6TU1Pd3pjRjRVX2tCUXF6bEhlOHhLQVVsSW15X2kxLVZnRGJ6YTZGUEdiUXpuWEd2NkRuejhiWXRUZ3BtZnRaNXNSQ0hjUzBra2hpOA?oc=5",
+   "fecha": "2026-10-09T22:10:00+00:00"
+  },
+  {
+   "titulo": "Cusco: Incendios forestales dejan cinco fallecidos y 8.000 hectáreas afectadas",
+   "medio": "Canal N",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORTZXa0dfMml0ZmpDRXR0TmRMdlJpLTlVTlVseEM4cGpzSXkydGNNenpSWG1rcl81ZWh1a3dxblg3NHR0Qnd0SkZQQ3NXVkl2NXdIcUhHM1FhTTEzQ2d0S0I3bE13Tkw1SUFUeWJIQ0ZSUTd2eHpWRFU3YnRPRm1mczJHakNSV28xTlFKaFVMajNOY2poR0owdzA2VQ?oc=5",
+   "fecha": "2026-10-09T22:01:44+00:00"
+  },
+  {
+   "titulo": "Cusco: Tres incendios forestales activos y cinco fallecidos",
+   "medio": "América TV",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcEpKc29pQjVPTW1mUnRXaTJybFFTcHY4b0g0eEtGc3lKdG1oa0lnMUJHZVM2UE5sQU5hSDhYaGE3TWdMcmZvb2xoQWtTLWZiNktHYlU4ODQ3dUY4aUlEYS15OWxKT29pTl9ZTUpWQ1RBTnBkeGpZZE9tTGlGcS1DcHZVSEZfZTdOOExCZWNjVGxFYndSVFlWNGMxc0xQQmJCbFRGOS1hdW1rRkt4dndFMEFhSjk4a2oxWExmY3NtYUhjb1lh0gHEAUFVX3lxTE5wSkpzb2lCNU9NbWZSdFdpMnJsUVNwdjhvSDR4S0ZzeUp0bWhrSWcxQkdlUzZQTmxBTmFIOFhoYTdNZ0xyZm9vbGhBa1MtZmI2S0diVTg4NDd1RjhpSURhLXk5bEpPb2lOX1lNSlZDVEFOcGR4allkT21MaUZxLUNwdlVIRl9lN044TEJlY2NUbEVid1JUWVY0YzFzTFBCYkJsVEY5LWF1bWtGS3h2d0UwQWFKOThrajFYTGZjc21hSGNvWWE?oc=5",
+   "fecha": "2026-10-09T22:01:25+00:00"
+  },
+  {
+   "titulo": "24 HORAS VIVO: Incendios Forestales dejan cinco fallecidos en Cusco",
+   "medio": "www.apnoticias.pe",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQc1E0SjhpOUtHb1kxcm8wRUUwZ3RRbThUb3ExSW9UeVpnRGlZY3RzdjNkUzV3Zy1TRmpsWGNCVnB1Qi1Cb3pDa2VodVBjOUVBa2ZNRnZtYlVDc3JlMXNJMGRUZFlhMHFva1ZkUW5QQnRkSEt2UUY3dHpnSmVya0dsMEhmT18zOEpyMTY5SHRJT0tCZDdvOEdCZHR2c1pLeEpWWUFOS0R5Sjc?oc=5",
+   "fecha": "2026-10-09T21:50:21+00:00"
+  },
+  {
+   "titulo": "Incendios forestales en la región Cusco dejan...",
+   "medio": "Panamericana TV",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNHF0c2xpR0ZGWkVwcFNTalJnWlVGdklTRWViNEMxa0JsQlc1Um0xYzg2VXE5cnFfdzZjSzkwdmRUYkh3bFExbDAyNWEwd2Nja2Z5RmNTcmRoTUVpYUNXZlRvMDRDMzd1cktteWZ0aGtJZTN1b3JkLW02eTVaemFKMnhvUTI4a29iSmlnaGxvZ2dLcUFCdHVOd1k1T3Fvd1Z0YVZwRWxnVU93QU03YU9fazIwWlotQ05Nb3fSAboBQVVfeXFMTzRxdHNsaUdGRlpFcHBTU2pSZ1pVRnZJU0VlYjRDMWtCbEJXNVJtMWM4NlVxOXJxX3c2Y0s5MHZkVGJId2xRMWwwMjVhMHdjY2tmeUZjU3JkaE1FaWFDV2ZUbzA0QzM3dXJLbXlmdGhrSWUzdW9yZC1tNnk1WnphSjJ4b1EyOGtvYkppZ2hsb2dnS3FBQnR1TndZNU9xb3dWdGFWcEVsZ1VPd0FNN2FPX2syMFpaLUNOTW93?oc=5",
+   "fecha": "2026-10-09T21:44:12+00:00"
+  },
+  {
+   "titulo": "Cusco: reportan incendio forestal cerca del Santuario Histórico de Machupicchu [VIDEO]",
+   "medio": "RPP Noticias",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVmVfNVJQNy1lVVp3cjNWTEdtT1dubFZhdl8wVGZENkJlYzV4Y01JUGEtZjNDUnM4aVJqOHZIMjRjZFRzdUhKb1dlci13clFJOVc4VVV6dDF3OGtmekRiRG9rSmNUUHhzeTk0bS1YZTVtdEJmd0FyYjhFR2hvbV9wV0Jwa2V4cFhWVnpOZTR1WTRndW9CRVI1Umg5R3dzSkU4dm1sc1dOdGFFVFdVNHdrdWNwaVJLQ0FudUhkU3UwUXJ1eEVXb1JQWDFLXy1SNWNf?oc=5",
+   "fecha": "2026-10-09T21:41:44+00:00"
+  },
+  {
+   "titulo": "Incendios forestales en Junín arrasan más de 250 hectáreas de bosque y amenazan viviendas y cultivos de comunidades asháninkas",
+   "medio": "Infobae",
+   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNQ3FGOUZLblNpZ3l3QkVPTHdvUzlranJFOGM1TFE4WEE4Ui1rbXgwb2Y4MS16Sy03bm5Ha0lGaTY4bS1OOXBwQTh0dHI1UFBQbF92SjhubU10dU1EVHNrZnRaaEdzRmFlOG1zbDRCWGYyUTZoSWtWbm9NQkJDVVRUR1dNb2dDYm1BWUpQV0tiT1NmRVBZNTZWR1BqcndkNTdZRWpVeGhLR3h2SGpNRm1CT2MwZXh2WkUtRkwxVy1OSERmYWpjX1A0TkdUdXNHYlFNcmJsdXczUVI4S0stU3o0akREbmh2eHZtUlVRSGxqX1prckFfTklWZHhSRdIBlgJBVV95cUxPMGc3VFBiSktYUlpHcmVGemZVN0tXZVNzTkVkckZTUXB3aEZzaHJQalZObWlmNUZRTFdOVkIyTFh0cDc4SW5oMXkyMHU1QzItamFoUXJ3NFVaVEFGeXMyeEFFUVFzWmhUdFpuRVJTUUZkZDktQWRCaGZpV0JKcEZ3UDllbWthazNGdFg2cExOQUt0cnI3WDFSMV9JVmVCNG0zSndCRUV4UERoX0xKWlI5OUJtZ2czN0F5M3hCUmtJTnVkNnJ3RjNkVWV0MGlHY0NwUkRFOGxQWDhaeVZxRFpoQUVzV2lQSFJ6UzFEMnVhdndSa0pZOVNyYm5ZQ3B0d1czY2JqamRiaVpmTF9GRGR4WDVmbnNaZw?oc=5",
+   "fecha": "2026-10-09T21:14:00+00:00"
+  },
+  {
+   "titulo": "Cusco: cinco incendios forestales activos y 10 personas hospitalizadas",
+   "medio": "Evidencia.pe",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOY2V5WE1ud0lVT28tcXBmejdFWW5wZnVQTFJJWjB3N1k1cHRJZlhDTFJrS3dfc2VEX193RWkzNHFtLTFiejJpbWVzaFp1anFpTHI0am1CWEVwRndyakxTQlNkWC1KbWlycFREUlljT3NaOVA4aVIwRUJkU0NlUEVzeGpabG9RZnRnWFl4X9IBjAFBVV95cUxOY2V5WE1ud0lVT28tcXBmejdFWW5wZnVQTFJJWjB3N1k1cHRJZlhDTFJrS3dfc2VEX193RWkzNHFtLTFiejJpbWVzaFp1anFpTHI0am1CWEVwRndyakxTQlNkWC1KbWlycFREUlljT3NaOVA4aVIwRUJkU0NlUEVzeGpabG9RZnRnWFl4Xw?oc=5",
+   "fecha": "2026-10-09T21:03:22+00:00"
+  },
+  {
+   "titulo": "Incendio forestal arrasa más de 250 hectáreas en comunidad asháninka de Cutivireni, Junín",
+   "medio": "Diario Ahora",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSFpXWEFwVjBkTG5SU2x5cDVtSzNxMTBYNTRrY0J2VGNwM0hsQ29NQ1BFVS1nVGRBbWI5ZzJ2R0tQY1ZEZmpvV2w3R29mV1ZjRWx3WGE2WG9POG1XZzFfdHRDR1ZZMWNjekJlNG5obzN2VFNqSlM0THV6V2JGXzh1RnhRNV85eGc?oc=5",
+   "fecha": "2026-10-09T20:58:38+00:00"
+  },
+  {
+   "titulo": "Crisis en Cusco: especialista en Gestión de Riesgos advierte \"no quedan recursos logísticos\" contra los incendios forestales",
+   "medio": "Exitosa Noticias",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOX1ZWNWcza0pxVDlPdDE3MWZFT1EzWEoxNElYVmZLYTJSazRxdWNmVm16RGROWlZ5cHQ3clRSLXRaYWczYVpXckhab3d2QW9wdzZOMXhnRFBkVzJXaGVRazYwZUViNGVWTS1GblIySDdLZDdRNmtPYW5oRnJ0dS1CMkNDMzNVcGlqaFFZM0JmQUI5SWVvWmV4Q2wxYzd4WUtKd1pGaG1fWUlaSkczYXFUQV9mN3NsTjZBM3JydENrRm9HaUR4MHAzbXYxazFhOFZ6dTFJcENCZlpCSnd5dDQ2dDgtNlk3Mzk1?oc=5",
+   "fecha": "2026-10-09T20:21:00+00:00"
+  },
+  {
+   "titulo": "Incendio forestal en Junín amenaza a comunidades asháninkas y arrasa más de 250 hectáreas de bosque",
+   "medio": "Infobae",
+   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPczh1NFYxci1URjdJQWtWaUNIMVl0bzVPTEJiWTU1akN3ZU5qM3pwcWNXSG9NZll3clF1SGpxVlF0Nlo5eklSQ1c1aWo5Wkw3SU40MnVrSnJQT2Y0XzQ1dVp6cUhQVHFxck9JWG5rRWVKbjlGVjNaUk1ZM3BSVDBkRjZiaEx5Q05DVjJ6bEJTWEpQNWlHdUpHaWJjdDBEeFNsSDRsODVtbFJ2SVBOWFBiUnR5SFVPMjMxWDJ5cWRlT0o0bnNkXzNhMXhtRldlYlJzWUl2cFllVHRwTEhL?oc=5",
+   "fecha": "2026-10-09T20:06:09+00:00"
+  },
+  {
+   "titulo": "Cusco: incendios forestales afectan más de 16.000 hectáreas y dejan cinco fallecidos",
+   "medio": "Peru Construye",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWTByWjZjdlhFUFBxaTZSai1HWHFfQ2hfa0tjWFVqRjBWemE2cTNYWi1rYlpzR1J4VnlMTjRTZ0lLN3ZYYXN4WW1WREVvc0lZUWcxaHZWUHJhWXZ1WkIxeS1kcU80eXJsckxFa0NyV2t0NUszYUVCQXFhU2N5SEtaaVFxZmVXcTlPUnV5Y0JUbG81QUhBWE4taVhQLTk?oc=5",
+   "fecha": "2026-10-09T19:33:28+00:00"
+  },
+  {
+   "titulo": "Devastador incendio forestal en Pasco amenaza el Santuario Bosque de Piedras de Huayllay",
+   "medio": "Agencia Andina",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPamw0bFJyaW1KU25sZ19TTnBST2NFbHkxUGRPWEZFNXFnN1hpak4xYTQ0US0tcDNhVDNzZU9jbS1RbThRendaNmViUGZLNzQza2JjWHByVlRYN3BvWHM0eFFzdm5wb0tyQnVOdWhEQUFYMUZNdHNlMDNTVTJhZ0UtV3RDeFdpVGplS2o4WmFCYWQ3ekNzcno2MnBrdFo2ZGQ4c3g4TGYxTnNYT3RZaXlIdlZsV29SY1FDYWZSWWw4YXo?oc=5",
+   "fecha": "2026-10-09T19:32:53+00:00"
+  },
+  {
+   "titulo": "Gobernador de Cusco: Tres incendios forestales permanecen activos en Pucyura, Layo y Maranganí",
+   "medio": "Canal N",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMHowcWlkaTVjTHFhRGpaQ0EzM01BaVhJc3pfNk42eUJrVjkzMkJ5bDBUMFBwQUo3LVJrVF8xQ2c1VWZ6cERBXzVUeHhTZk9WSlRsM3lzWTFIekM5YldEaHZmaTExQU8wTTNCSmJubUhGQ3dLWlhIOW9kT2hpa01NRG50SFhvUUZUb1NMODlnTDlJcVhUNXpaNFRfZlE1X0tISFVScTBZVG90R2IxWmd0RnpCckdqNTZaeWc?oc=5",
+   "fecha": "2026-10-09T19:05:55+00:00"
+  },
+  {
+   "titulo": "COEN: tres incendios forestales se mantienen activos y siete fueron extinguidos",
+   "medio": "Forbes Perú",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQkV0RUV0dWRYM3N4VHFtMmVaNjFNUjltN1R1WVdpQkZBdVByMy1CUFJHVVBJOFZUSzdtWDJYNWJ4YlNnR0RhVF9QdDlaVjlGbHZQVzlqV3psNk5jdG90SzM0a0otbUJITHFCSG9Qbnh6TUxwUUxSN1U3dEEzQUxmcnJGRkpjcUJwRHpVcTI2SmZuVzB5dVk4X0gtQjRPbkppNVlTVzlFSVYwN2Fjek84M0V4XzV1RFNZNk1v?oc=5",
+   "fecha": "2026-10-09T18:25:06+00:00"
+  },
+  {
+   "titulo": "Tres incendios forestales se mantienen activos en Perú y siete fueron extinguidos",
+   "medio": "ABC",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQzJvT3VFTjltME1UYUdqSHV4MUJVQldyMU1WUXkyNUtSaVpmekc5UGg4d3Z2TDJVMjlQcVlGTlFwNVRISFBLME9sZlFKbEREREppYU9ITnRjd0xwR0NtQVM3R2ZCNlQ4UzJPcFRjVzg2WmFvNlNabkt4ZW5wYmhzTUpCemZNaE9LZnlweG1lWEFtQWsyV0hhNE1pRjQ4WGgtcDI0UWFB?oc=5",
+   "fecha": "2026-10-09T18:18:46+00:00"
+  },
+  {
+   "titulo": "Cusco registra 60 incendios forestales en nueve días y bomberos advierten falta de personal",
+   "medio": "La República",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQSzJXQ1AyS3ZVRHZ5dEl3MGRXMVJLOHRGLUNoRUNESUJxVFdsUlhTRUtsVjRRSjB0aENfaThrNER6V1hUV3VwZDFzWnBaLTQtRHlMU2xBaUx6QmZqY014dVhMVzd6bWx1bFRYY1lXVTJZeHlIeV9vVUxXbVR4RUJsNUtpZ3ZwdllJNWYwTUxVZnZRNjJYc3lSU0gzMXh1TFhVaWF4bUF4SHBTWGxEbTNmamloYUhNMnVjSlBPblJxX1pvenNpejllbFNMYzVjT0RsODVITHBsVlfSAd4BQVVfeXFMUFR2VjJmNm9xUFRHODZGUnM2SmE0UVZmdnpXMGtRUV9iTFlDSW92Rm51RWZaSlJXc0JwSEZPZ0phbFBBdWZ1Y05TRE1xUDIwOGlSdU55TlNXV0NSeXJjRWJHc1k2WEs4MjdYRTc3djZpVk81akp6TGQya0xDTXU4LXNVeW1HM2o5Y193Ulg3MmdPXzdFeVBfVmtMc3NrSWRhaGVwVDZyWnYweVRzWDVuRjZIYU5rZnBfNkdEUm1YOURyWGlHOUJNZ2JtZWV0MDVtc2p6YXpoMUlmNnFleVp3?oc=5",
+   "fecha": "2026-10-09T18:11:30+00:00"
+  },
+  {
+   "titulo": "Río Tambo en emergencia por incendio forestal que arrasa bosques, cultivos y viviendas: municipio pide apoyo urgente",
+   "medio": "La República",
+   "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPRkNqZWhKQlpqaU5VcThtWjZoNnplcWllRkY0RUFlV0xCd2VsUGM3d0pkU0ducmJYVGhnbGlnaUtONlBnbXVsQlJkVFRQbG82Q3M2UWNGOXRreUJ5UXZYOVZSX3pqSm1kNVdPU2p5ME9VTUNqeWtNeDY3RFBwWUg1LXVNUWdBemdJRFVuemhybnpVTzd5VnpHUTN4aFVRYWRqcjZnSm9FR3RpYTVTT19iZmRpejVWNnRVU0Q3Y3Rwa1FXV1NlNEtDY09rTHVlaFRGRmJYbEt0Y1MwOXRQeXdTOVBQSWV4WHhGVGRZSzk3NEN4WWFJZnBr0gH8AUFVX3lxTFBmRW1VYUZpRFlWZ1dLV3dUQkUzN3JuV3hhNUswamRsTjBLeF9vVHFQck5WSzM3emh4OWZ3X3hBOUxkTFp2cmp4TVZpb2g3MHFSX0doZDlVTXhCUjVUSXIyQzdhdU1TaXFQYW94bWsyYW5NUkh6OUZEVnR2MmlJdFBYaXVuNkxlN3pLWklqa00yNEo2N1B0cUZDSGd6NHRrN3ZKZUplUDFKOENfY0VEeTd1ZS1rYmV4aDVnVzZwSE9jTGswQU9tMFlRdmE3b0xhdU8wVkY1UlZxNmp2TF9vS05mc3ZZYU83VEVjalhUN2l1YXNHazZjWFliT2ZBNA?oc=5",
+   "fecha": "2026-10-09T16:33:02+00:00"
+  },
+  {
+   "titulo": "Incendios forestales en Cusco: Municipalidad organiza colecta de alimentos, frazadas y agua para afectados",
+   "medio": "La República",
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNWnhZVWtzcGlMczU3OUNmdndFSlVjeWtRTDJkSndlQ3ozMGxOZU1BbFRmSWdlYWhuNExmZXV2dWN1Z2o5T21xdERkWVN6YmNpSjQ5ZnE1djNESU5vQU9OemV5YV9PTjF3eFhQejM4MmJfbkJZQlZZajhEZmZSM3F6MHZaSjQ5VEI1bkNQZ1BCY3hqdkFhU1dYWldBUXIwVnQzeFhLakt4MXZ2akliQkc5OXplMjJ1TXZ5MFRNbnlLX21XSkFzWmw1OWdudUdnRlA3RVJDT1duUE9ISmoyeHR4cTc0Z0lkUVdYZURvUEZkb9IB7wFBVV95cUxNWnhZVWtzcGlMczU3OUNmdndFSlVjeWtRTDJkSndlQ3ozMGxOZU1BbFRmSWdlYWhuNExmZXV2dWN1Z2o5T21xdERkWVN6YmNpSjQ5ZnE1djNESU5vQU9OemV5YV9PTjF3eFhQejM4MmJfbkJZQlZZajhEZmZSM3F6MHZaSjQ5VEI1bkNQZ1BCY3hqdkFhU1dYWldBUXIwVnQzeFhLakt4MXZ2akliQkc5OXplMjJ1TXZ5MFRNbnlLX21XSkFzWmw1OWdudUdnRlA3RVJDT1duUE9ISmoyeHR4cTc0Z0lkUVdYZURvUEZkbw?oc=5",
+   "fecha": "2026-10-09T16:01:54+00:00"
+  },
+  {
+   "titulo": "Apurímac: piden ayuda para sofocar incendio forestal que pone en peligro a sus habitantes",
+   "medio": "RPP Noticias",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQTjNkN0I2LVFuMjBzV3pVQWMyNTJvSS1OOEQxcXdONjJRWVp5dTNCMXdGbVg2eW5wOXdXRS1JY0RyWDk2SjhZNnd3c0ZVU04zOVJMUEl0TWd6SlhZdUhHS3Q4YjRMWnBJQmFkelB6UTh4czNFS2tTdGF2d2FDcDZaVms5cGFTU056NW1ILXJoUzVWdzJvYkJud1Brc2ZwR3RaMTVTWHptNDBoOGlIa25wWlNkdjd2aHhidXBjbVNibnlqV1EwSjg4cGhRTGpWTTZpbmEzb2hMSQ?oc=5",
+   "fecha": "2026-10-09T16:01:24+00:00"
+  },
+  {
+   "titulo": "Incendio forestal arrasa más de 1.000 hectáreas y amenaza el Bosque de Piedras de Huayllay en Pasco",
+   "medio": "La República",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOVE9LbDVmS1pMajV2VG9yTVRDYjM0eEdqaENtb3ZSdHNRdlU5cEpaQjRpdjVuN1Y5VS1ndTlsNldlZmd1RHFIRDZGTmJLWDlaZ2ZHUE1nWkwyaHRESkctV2owdndqZzJlRzA4dTRBcTIxUnhvVGxRd3drYkpDanotS1drTGJOeEJxNHVFS1FKWkIxNlVCc0J4ZFR5ZnVkaC1yUm4xeWdCd1hydDFuTXYtQzlDSXBCVTREUkFzY25XX1ZzMGR6ZnFGVGRyVkp3WTBlZFhyZ2tZTFFCR3R5RVFrUllR0gHnAUFVX3lxTE15cE9pSkJZZWlCVFptRkFldk9LWWt5TWw4ZVVBVkFURW5CRVFKMUtldHliNWh4MUcxLTlHeV9DVXM5UFBZT094TjNvd3RpeGpGYjdZYVdOV3FBZkFpUWhhVEFiaGl6aHFfbVY2dTRGdzBNSjlpMzRRQVJralpERGFqS2RlT3ZhaUJIQzlaQmdTZXJleVoxRlkxZ05VX24yYU9IbXhxSFdWUVdkUEJfQm1pS3VOOGozdFpuaUNGa1prSkI2M05OWWp1bWNmREs4dlFBX3dodlVvSnRqOUtQSXJVZllLVXpGdw?oc=5",
+   "fecha": "2026-10-09T15:02:55+00:00"
+  },
+  {
+   "titulo": "Perú: incendios forestales dejan seis fallecidos y afectan cinco regiones %",
+   "medio": "La Razón",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPdFp2Q1RlY2REVWtaTjd3LUl0MUxFRDB5X1QyTVFLdUY5RW1TRTZ0Q2d5WHhLT25KRVN0V2R1XzdQVzZvVGpqV3lUR1d6RDNzZld6ZV9qR1BIMnhfRkQ2SVZvd24zM3drcWI5SUlYRk5DS1Rac1FiU2ptcDZBUS00UXhUY0xGRHlmaFhHdWY0Vk1tZlRwUl9z?oc=5",
+   "fecha": "2026-10-09T15:00:40+00:00"
+  },
+  {
+   "titulo": "Siete incendios forestales activos en Ayacucho: ¿Cuáles son las zonas más afectadas?",
+   "medio": "ATV.pe",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9pcW5oWm1fVHluRFBxeGp5c3U3dFh2QU5reTYtOWNLT00zdjF0ZloyNkNpOWVqcEswcnJuQVBvajhITm5hYkM3c2RjM3BPbTNyODYwWUQ0Y1pxcGVBVXZueWV3bDF4SmhPaUJMbThMblJEYVJIMXo4?oc=5",
+   "fecha": "2026-10-09T14:25:29+00:00"
+  },
+  {
+   "titulo": "Incendios forestales afectan pastizales en Pasco y bomberos desesperados piden ayuda",
+   "medio": "ATV.pe",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBhOU94enFCdVd4NlFVbjBEeGt3MURGcWp4Z1M1LU1EdDJnWVpYZ2VObi1YajVSX0htRVBiR1h4aUFrdmRlQ0U1MWVIRE42ckhKQmRkVEdKU3RpSDRrN3VmaUs1T0doQi0zRXk5UngzM2Q?oc=5",
+   "fecha": "2026-10-09T14:02:52+00:00"
+  },
+  {
+   "titulo": "Ayacucho: Sofocan incendio forestal en Lucanamarca tras 48 horas de combate -",
+   "medio": "Perú Informa",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX21xZjhQWWpoajBYNFRZdWExNzktb0h2clU1bTU0SVBsMlIwSW1OU1JHUDVJSUdQcTd0U200RVRVdTF1cm1ZSDFrTHM4S293Z0VOSERMX0V1R0tYNzFUUFhjSWJRWG5iSmNFM0NnMnVBRHpzTkd0dGZwaTVnbWYwQmJjV2ZTdFBzQ3dVNFNJZTV3VFZDUDZBd2U0NURpU21GR203bkt3?oc=5",
+   "fecha": "2026-10-09T14:01:58+00:00"
+  },
+  {
+   "titulo": "Seis incendios forestales siguen activos en Cusco: reportan cinco fallecidos en la región",
+   "medio": "ATV.pe",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9qV3NIMEY5aElQTnJQaTJxMkFRZEN6eENJR0ZCMExOR1VTazdMakVCQlhzSnlzUHpwbkYtcUFJUzZ0UlQyUlczbThsX2VJMXVZVU1GVWdKczJGVEZLMmFHQ0h4ck45UU93MFJJR0tmaDZBOTA?oc=5",
+   "fecha": "2026-10-09T13:45:53+00:00"
+  },
+  {
+   "titulo": "Incendio en Pasco amenaza el Santuario de Huayllay: estiman más de 1.000 hectáreas afectadas",
+   "medio": "altavoz.pe",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQODZXZkZjVlZtMk45ZWQ5M0taR1VYZGhweGlBTFBKUjlhTjVDVjBHd193Y1BMX2MySjhQYkpjMktVeUtYbkpmR3EzZDFXWU42TW1pT0RDWnk0Y3g0NjY5bHhURmU3R0FyaFd2TGw5S3otcHpyMWtlWWk1ZzVWd2FlZmRnSnJ4Yy1vSkQ5V1N5dWJ1c3ZZYmhxeXhiRHVsUnU3Z3lvSXJpOE5HQzBMdjRkWl9IQnVkVk52OHI0?oc=5",
+   "fecha": "2026-10-09T13:45:24+00:00"
+  },
+  {
+   "titulo": "Cusco: incendios forestales dejan cinco muertos y arrasan más de 16.000 hectáreas",
+   "medio": "soltv peru",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOU5JM2VfUzRGQWxqMUg3TXRreHRhbjZrejZ0akpTRUw0WDM3Ylp1ME1wb05ZRGhadkszT1VHRHRNZGJsMmstTDdhMnFLRThQbWd0dUwwN2ZONHp1NkMydWdpS3RfMEdnRmlUd29wQlBaV3FkcS1kSWFuLVlPdTJJYTJvSXN1WGJ5ZHdj?oc=5",
+   "fecha": "2026-10-09T13:41:01+00:00"
+  },
+  {
+   "titulo": "Incendio forestal en Ayacucho: sofocan fuego en Lucanamarca tras 48 horas de ardua lucha",
+   "medio": "Agencia Andina",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQaFpSOUZtdlRjMWVBdFdqTmFXZlpEcFZWbmhWXzBxdFFLeFZscHhfV1FZd0FhQVo3Nmg4dmVfSTRxSE5rZmR2dmVwWjR3ZlNpWkdWODQ4Qm56MFB0N0xEU3JhMWZwX29PRmJjMjlkSzFBU003QWpNakdRY0FHZzJjaldWczhNejAtYW1UVzNaQ0hXM1g0QzNqVlZxZVpJTjlhZXR0b1R0a0U0cU5nSzRaME5oMnZCMVdoUVUtZ183SE9DcWd0?oc=5",
+   "fecha": "2026-10-09T12:39:00+00:00"
+  },
+  {
+   "titulo": "Cinco muertos y más de 16,000 hectáreas quemadas en Cusco: así avanza el incendio forestal más grave del año",
+   "medio": "La República",
+   "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQRGRWb05pQWZic1JWQ282UWgzNUdwVkpzUm0zU3A4LUNob25ZYlQyS3JsR2dLQkxrUFU4MWM3ekR1QUlJOGY3ODVJRWFYbkpTNFgtR3JZMkVOU1U3S3NhTldTQUs1dVhuZzIxaWZGblcyWkE5UVlXNU9UczJWUWhteEd4LUxVaTN0a1VuaUxOcFg0dWgzb3Q3bmNJMndwaW5fRTlFd2VfTjkydGlZODd5VFgzeW81bUlZWVl2bWJubzl3UGIwMDgyT0tPYTdfdkxiVDBUUjk3NXY3d0lENDZTSklzd1diVlZ5SVRJQzNDMjVSd9IB9wFBVV95cUxPSURiR1RaT1JNZUlIc0lnbHJvMzI2dkZ2UUdTWGgzQk01Mkg5VGVpR2QwMWZOWjBaR3ctbnpxQVZRWUoxVmc5NENVaXVkYzd2empqaFpmTXV2dkp0b1NVdUVBdDZTZGV6S09hbkF6R2FLOTBWQU9ycUMwUTBxcGVCVk80NGJ4eEpXU1FxbTY0YTJGMVkwRlZWYzc0WFRFci1qNlFaZXVNRXFBVkRYdWZOZGtWX291U2wyVnVCdnpzY0ZrN05TTG9ybE9JcGVMeG1WbXAtWk85bVpReWlPdWw5UVl1SjBsU2gzQU9VOE9wd19LU2VXY0d3?oc=5",
+   "fecha": "2026-10-09T12:16:16+00:00"
+  },
+  {
+   "titulo": "Serfor programa capacitar a más de 400 brigadistas para prevenir incendios forestales en Cusco",
+   "medio": "AP Noticias",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQ1FCNnNVR2FXUi1RLUxuUGRiejI3NUtQckhWSW5sM0JseEFpRXE1aW80TFhhSDdLem1iM3BUOFBRUkQ2RHBtUUdfYTAzRHREd3Z2QXV5UzJkeExIUDhZTUlLOVVOdnppal82bVpEY3NEY2RZOFgxaWtiU1RQOWNUS1JhYVFGQkRTaEMwZ3c2dk9pSDRJdlJ5Rm9rVkJMWnZLTTdFQldUS3BpM21CaDlxMUpHNkhDYjl2WkVwRGU2QlhsU0JHbXln?oc=5",
+   "fecha": "2026-10-09T11:28:00+00:00"
+  },
+  {
+   "titulo": "Apurímac: incendio forestal arrasa viviendas y cultivos y pobladores piden ayuda urgente – Diario Sin",
+   "medio": "Diario Sin Fronteras",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZlQ0dEVuU1E1UmdtUnpjcURXeG5pZ2tjQ0x0QUw2VkZ2Yk1FYWMydWY5Q0EtQmlST2thQ3pTUFBib0RPNlVyaF9XVXZienl6ZGY4S1oydF9SWWhuSUZYTlVZXzR3Q2FrTENaeUh2M0Q2Zmx1U0VqS1E0WllSendZZU9aTjJmMnVOdTQ3UkJmZnEtNVcwaW1ZbHU0czlEczlib0tzVUxJYjVCN3ZjZGJFNGZiR2pkN2RyeTY2cDFhU19DN0pYdXlNZlJ5ZFBiQdIB0wFBVV95cUxQWTRTUWtfNEhCZW9vYmpxd09WQ1JRbldQakRZV1NkTU5zSGx3T0sxWllnbHJ3Rk1CYUpRMmMwN080aEJ1TzMtc2lIV3V0ZkRnbjJLLUNtVDdqTEVZWTVJVDlmVjYyZktpUl9EZTYwMnJaVDVyWWRCOFloMm5pOWpxekQzdWlreUtXWnFtN2NHMXB6UFNVUnY4RjFERGZucjdZNk00bkZmZkh4NkVGd2lWUzNHcUpBMFNhVFlTYXRFT1hSRElKZllfbG5OMVlYSDVKb1R3?oc=5",
+   "fecha": "2026-10-09T04:28:53+00:00"
+  },
+  {
+   "titulo": "Cusco: Tres incendios forestales siguen activos",
+   "medio": "América TV",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQS3JfU3FiZndZZjlFQ3RqaF91al9uOGRxSDFjSF9Sb21zYjZuUk1mWlBIY0R2SkxVUGhJNE85VlJuaU8tTFdjdG0tbUNQWnVtTEtVRHQ2bWNLVDYwVkx3UVNURDlET29FSGJuRjJ6OHVDU09SdlAyR0Vjc1lWTXAxdkZGaVJDSkw0QzMwVWNoTVNFMUhSbDIwU3d4S2JUUEp0VlkyckszcDctREhEcnAydzJTVdIBuAFBVV95cUxQYXB0d3lLeE94ZHFXQ0hhN3Z2R1QwbVlIQl84ZVAxNWJlTVlWVXZzT2w5anZtRkdETmpyQVl0RXpfam8tYml5di11RUN3b0l6bmNlUk1MRENfREpldERMblBSak9vU1EzekJxYUdlQXpIRklJcWVZYnBYNWpROENpaUZGZ2dqR0tBYlNkaWhvOHpkQkFkU010cGg0ODlDWERZOWRJMkVFY01abm5Jam82Qkk5ZUF6TExw?oc=5",
+   "fecha": "2026-10-09T04:25:07+00:00"
+  },
+  {
+   "titulo": "Incendios forestales dejan seis fallecidos en lo que va octubre y continúan activos en cinco regiones",
+   "medio": "Diario Correo",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMkJQcG9KdVZWX2xZelhLYk9JbHBUT1FQd1BGMlRERnM3VEx4MWNabU9Nb1lMT2ZrMDFTZVBiMGZoOTFrTU16YUN6NWstUWtRVlc3VHVBdUtvOVdFX1F2NzVtSmU3dWJqVHhKS2EyU21GNkZwVTBwbl9XRl9UMEd6ZGJkdF96amZUdk9xdFhwNk4zTXU1VWxYU2w0X3dZRldXSUo2S0hJck9KSXY1YmVacjhMMXp3bDFJRFVVbExQMzFMZDhERXNYTmtLRVZwN0hwZVFKNndn0gHqAUFVX3lxTE5HRC1taDNxcU1YYVIxQ3lhZk1rRi1DcHFwLVhwdzlSS3JPcUNXOGlhWmVySkZHNjRJLWpXNGQ2T19KMVFqeWFlNmVLUkZhNmZ0NFB0VHNjOHRqam9MeVlwc2NMT3p4ZnllT1hKWTFxMWk2dzVzSm0yUzVuSkxJYXpzNjJEaDZTQVdKRzh0aGxpVVpqeXEyTWkzU3dwckpKVVNIUEJENVFjZzlZVzI2TXMzN3VJSl9xODFpajFVdy1BeHRSellwZHdkeXY4OWlYUWp2ajl5cWxFX1lPdWxuRVUxTERWcExIQVBDZw?oc=5",
+   "fecha": "2026-10-09T03:57:10+00:00"
+  },
+  {
+   "titulo": "Incendios forestales en Perú dejan seis muertos y mantienen focos activos en cinco regiones",
+   "medio": "El Comercio Perú",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQcXBGcS1TNldEZ2NNRU50X1BnZEIxQzBlX0M5aWFhQ0EtamFtUmhNdVdjVzRMMnQtcHBfckJVVV9vLWNDX3luVG9PWWZLd3hZLU0tQkNPTkhKdlNzMDRiX2JacC04dTdOenIwdGtXenNZZ3ZUQjBYS2hEUXhFZGRDQTBfZVlYQm1iU29lUFVMXzZJQWNTOTVFaVJJUjBleVpsZ2dlSjBaTFJEQUlRZTdWcTBVbGVTaWdRcmZzSzNwSFVpX3NSUmFmQzg4enMtdVpz0gHkAUFVX3lxTE9oSVNuZHA3V3NBVFItX0tFSTNmaVpIZUxqa0U4WWpfckxSSnVsQ2RWZWpWNnJ1NnhxNFpHNUlDYm5RNUZlOWZ1elh6cnFwS2xBeW1vQk9lMi1MeENXdGJOYXY5ZUYwMEZQMUdsQTVqSWV1S0VMb1BBZjVmdEMweHNhRlVKUzNOSUNncEtyWlZtY0M1Uk1FcExOd0NTQURxbUNKX0lScld0UXNCQnRUQW93c0VEMUhLVEwxbnV2SW8xVGkteDJxWXEwaTUyV1hZY3ZPLWU0YTdhdHgzZHlIV3ZLNkgySg?oc=5",
+   "fecha": "2026-10-09T02:42:47+00:00"
+  },
+  {
+   "titulo": "Serfor fortalece la respuesta ante incendios forestales con la preparación de 400 brigadistas en Cusco",
+   "medio": "Perú Informa",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVDZLRmE2QUJMNHRUeXBVWlYtMmxQRndiTll3bU9MM1NUeGpsMXY4bVpGdlZLQWxIRkQ1WTlZQTFmd0hvRWdWblFMQk5QeWNoUjhTMWRrdjk1OER3cXRUdUY5M0ZJekROdVFBMGhiUjBwcXlkeHVwWDZzMlJrb0gwS0p0MmstYmo4Q1FINUNNekNrc0tyMkpScF9EeDdOU1dxcTRKMzgzcC1lLWRWT1lGNDhmQ2RGellWRFgwTm9GbVRJMzB6OEFBRWpEZw?oc=5",
+   "fecha": "2026-10-09T02:20:10+00:00"
+  },
+  {
+   "titulo": "Incendios forestales dejan seis muertos en lo que va de octubre y se mantienen focos activos en cinco regiones",
+   "medio": "RPP Noticias",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQ240d29fZUFsNnZnVHozN3Bab2lHU2xlMF9YdnlTVXhLcWVVTm82UE9DUTNzLXhXRURfdTlJalJacU9jWFZmTHA3dDR4aGdVOVpYWTFwOE1PSk9EdDRVb1djV29hQk1zLXFLNDA4d2ZINE5qWTRhQ1owSmNwQUdWZDZRWVFxUnNSTTdzS0VNZ0kxRnlhTTRCMldCbk9zb2pmNm93WGtCVTQtTHVxRm5FV0lqanp0QmM1RE8wN3JfYTJaOE5RWlE?oc=5",
+   "fecha": "2026-10-09T02:07:54+00:00"
+  },
+  {
+   "titulo": "Más de 400 brigadistas se preparan ante los incendios forestales en Cusco: Serfor capacitará a personal de 26 distritos de la región",
+   "medio": "Infobae",
+   "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNX2RxUjBsbVJJSl9MOTFrUUtFSVhmNVp4dzJKelFpdFhxQV8zVDZzSkdwLTh6UV85VjFzMURRbkhzc0tJdERqSHQ0dENHRzRKWlNUYWNnRmZvLUh6U1V4cEJNRVA3VXZlM0FoOC1MeEJGOF81YTZ1NzByVk9Vb3FsNlZKWlVZQWxRUkpoM0oxVS1idGpKZllEX2VpUTJQSk1QWmgzc3RBWE8zbG0tZHVUTjEzcUNoZEV4c0N0WTJkdzNmcURxdzJxNXpkVVhYT2pEbVJ4eGxtU1dKc1dpV1JELTBlRDh3Q1BuMmo5X21kRjc3ZlRUcjZ6aTc1aGNpcmNYT0HSAZwCQVVfeXFMUFdnd05LLUFCZWE1RlRHNmRpNUJRX1hQTUJMZzBwVlBCUkVQMEpZTnlPUm51eThwOTJTdGdCRjZNSURmZUZEeHAtMll5bnQ2OHZBZUl2b2I4VnRDWkNHVWdtb0RoNldob3FqcjNFaTlDVXR1TjRxUVV0a3J6WlNPU3J4RnVEdXJENDg2azVqcVBLZHFWLVFQMDJXOWRWc0RZNEFTLVR2cHY1LWwtMUxPdzMwRk9ZR0RXdkx4WVpvN1VGblFTSGJ6eG03UmVsUll0Qk0tZGI5cGdUZnp1UzNZRnhhSS10dk1BQ1JHZmNwMDZfel9vSFV5aEtwWXk5LXRYaUpvRUtuSHRtXzZhQ045ZTNPT1hDN2Jmb3hUeko?oc=5",
+   "fecha": "2026-10-09T01:17:00+00:00"
+  },
+  {
+   "titulo": "Junín: Bomberos de Huancayo reportan fallas en su única máquina contra incendios y una ambulancia inoperativa",
+   "medio": "RPP Noticias",
+   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOQWFCSEh2dHdVdU1nSG5EbjlLbXpnRTcyamFFbmxkSG8zTDF6VTV3ME9OaUdfQTBEeXdnbTNhdk0wRFdjVzlaT0VMNWtyS3R1cFpDRURueVFNN1NPTnE5RWV0SmVXVEcxWTh6SkdzVDJyRTlad2YzdkpCc2ZHQU03dU15cldsUGFVRzgwU3RNX0xNcVF3OUwtQXFKUGhNQ3lVNDZyUE5HLVl3d3Foc18wYmxXSmJHaXFmMWlJc3dpSGhEd2VFMFVHZmw3aG92cGN6Z0cwR2VOdFJpcDgtdURLVC1wNzY?oc=5",
+   "fecha": "2026-10-09T00:30:29+00:00"
+  },
+  {
+   "titulo": "Lambayeque: brigadas extinguen incendio forestal en el distrito de Cañaris",
+   "medio": "Agencia Andina",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTWU1X09wZTVPakc1ZGl5VlloNk1fd0lvOU5OaHF4U0h3bHhOUXdxcmNNTDNyTEdYZ1owWFFVaUhoTVJkUHZ4emJibXN3MjVIaHNuUFlaYXpTYXVzR1QxbVZwWFRWa21najFobDlucXozdUN4cWx1YkRySWlBVUhpTTFkLWdtVXNsOU9RRkdWU0h3UG9NNHd1Q0hWVG92TXdYTS1sbjJLcXpxOVJnYkxfcmd1YXc?oc=5",
+   "fecha": "2026-10-09T00:28:37+00:00"
+  },
+  {
+   "titulo": "Cusco: Continúan los incendios forestales en la pronvicia de Canchis",
+   "medio": "Canal N",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRWVJTUtvUzlCTGFTM2ZYS0pNQ2YzV2hYVEd1Tl9qTy1Bak1rb3Y0N0paV3FSdjNoQ1JaLUFTNXdrV2NRUjd1NFRHaGlQb05VYWxneDJPb1c3SE9QX3pzd1NEbWpJOUEwQlhPQ09xWmpkQ2NiTUg0TC0zdlc0UlpnalBZMnlBSWpMT0hYWmtWbWRpR3c?oc=5",
+   "fecha": "2026-10-08T23:57:03+00:00"
+  },
+  {
+   "titulo": "Continúan los incendios forestales en Cusco: autoridades reportan 283 emergencias",
+   "medio": "Canal N",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNWTlaY0p3NzMtZU4xZFZlUkFPOExtZV9uejB1TDBXMENJWEFSbzZpaFVTT2FoUGdURTV1SGF0aVRSZ1lpZzhiMEVxZXJ5YThaRUtseUFISUI0U0xBQkJ2UzFDclllR0ZMOGpUSV8teGFBVFA0NmppaWFTRmlSRzF1eVVPOVY3OVJteVVkVHFn?oc=5",
+   "fecha": "2026-10-08T23:56:20+00:00"
+  },
+  {
+   "titulo": "Cusco: Serfor capacita a más de 400 brigadistas para prevenir incendios forestales",
+   "medio": "Agencia Andina",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSkRRNTY3alozZ0I1V1NSMzNkOUhTMmVJUGcxN0JxTW16MER5SjVzNVJSOFFQWkU3emFIcEhUbHJHck9Hd3hJT09pRzIyM05iS3JGenlCUDJYZ2U5QURNSVN5YnN5SDVpYzh3RVhVMzRSNVZRb3RENTktVmFpV0JQWE02WlhjQ09fZGdDZzNCenVvM1VLdC1WN1NVUDE2VjBtWkl0bzBnUXVmRUoySF9vV2RoWUphaWNHUjlWMzRkZGdIVkE?oc=5",
+   "fecha": "2026-10-08T23:36:00+00:00"
+  },
+  {
+   "titulo": "Cusco: Serfor capacitará a más de 400 brigadistas para prevenir incendios forestales",
+   "medio": "El Comercio Perú",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOMFZQYTZoQTQ2Tm1ldVQzMFQ2Umo5T1N0a1RjRnZsSGJWcFY0NElJQWx0QTVTS0h2dVJUTERaX0UyUDZFUkJqVTNMeDdsZlI1b3FVTnJ6bEpLRXQxT2NPM2tQNnlXS0lZV28xdjV4R1JRY1pYTHliRXpZajJiLVJrczdZVFJJZnBOZ0FKRHo3RWpUaFlsd2VWSm43VHhIbUI1T3dURDRvUFUzSVZNVFE5TnpKNGlWSlBLdTlNVUlFRi02bXpJSlhfNXAtZ282QdIB4gFBVV95cUxPTzl2eE9tQnI0OFRKdkE0anBYQ1ozU3FOWEJBUUUwQVktUVotREhRem1ZMktBODA0clVpQ3p6MWlsZmllSkNQUmRHRGVGVE5fRjRPYjNoNS1LWU5PeTRybDl1ZjBHTlpHZi1uSHJacmY1R1VuLVFXS2N4YldrUUh4enZfblZ5V1ZsclhwUF8yQnRqbzV5anhjNUFENGdTVW9ocG9BTExVM1p5czBfc2JnYktpdkZ0VmVuVVp5QnRTS1I2WVotNGdwbnlUeV9pYXlfMi00NTFPTkhoZ3VybTRHYlhn?oc=5",
+   "fecha": "2026-10-08T23:29:39+00:00"
+  },
+  {
+   "titulo": "Arequipa: incendio forestal alarma a pobladores...",
+   "medio": "Panamericana TV",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPdzdjOFFkUVZrVmp2YVFmSG4ybmEyYTE0aVZjelJvcFlFNFhBcjFWSmZzM05DS0NkLWxmVnpHc1pHRmlUakE4R29JeE9JQTJ6Z3V5WlVBSExIZGVhdGw1RGJGdXF5cXA0SG1tMEttOGs4aVU4UXN6S0wtWXcxVWtFYWJpRUtiS2N6RTFpOU5GRzczY2w0WUNJ0gGcAUFVX3lxTFA3cmZPQ1VNMm5GRjdOOEdHbm5PdVdCNHdRbVF3Z0FqNkZJenhmZGk1XzlPZnEwdnFzcnN2V0hZOGZUOXNwRWVyaVk2R2lLQlU5NWtqQTI1R0FLald1YTZnZUdxdWxGc0V5Q0pfNTBNMk9WZDB0YlJHQ1R2eVdUXzhXT2NCNzlRd0ZieEczSU9HeVFoRU5YeGxTYzVGYw?oc=5",
+   "fecha": "2026-10-08T22:52:02+00:00"
+  },
+  {
+   "titulo": "¡Fuego sigue arrasando! Incendios forestales golpean a 7 regiones dejando heridos y animales muertos (VIDEO)",
+   "medio": "El Búho.pe",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWTRXOGJSSnVZQlBkQ0lGM0tJalRyWEgwUmtiNlBhZmxOMnAyMHNmb0ZaWlkxeU5OZ1BLM0V0MFVhYVl4UDl3eUI0NFVDejRrTUVhdUdkcEhwN2hoSzBtTWtUd1VvdzJfWmNuRmotN0RZU2RzN1V4bm1nb3FMcHB6c0g3QUt2T3M2cU0ybUFrMzhtUGN2eEdHMWR0Tll5YVlNQ2hWSXlxZWZWb0xJV2FpTTBXY0MxbklyZWlGQ0pEZ1F1ckp0M0dWNG5qYw?oc=5",
+   "fecha": "2026-10-08T22:19:37+00:00"
+  },
+  {
+   "titulo": "Incendios forestales arrasan Cusco y seis regiones, además denuncian votos golondrinos | PASÓ EN EL PERÚ (VIDEO)",
+   "medio": "El Búho.pe",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOU3JRNG1GWjc1bk1USEJ0OFgxTEVWNURMOEZkendNSmxrN1htWHFUaHhRZHhuaV9kcEFNUWhWVmJ1UEdSamUtODRtUjgwQVJ4dXJ4cmtGTlotWVU1c1Z6djhlWjBKcVh6ZTBDSXpMWUltZzZGQk9EVGxDYkxEOGNTZHlsV0N3enhiaGxvdlZRM2thZ2tKeEhQRVAyTENZY2s0YW1LX2VRSWRENjBuQkFBV2lkUS1wcnpkRXYxdnNNVXJCcmthUGhOcW9XOVYxQlU?oc=5",
+   "fecha": "2026-10-08T22:09:58+00:00"
+  },
+  {
+   "titulo": "Arequipa: incendio forestal amenaza patrimonio cultural de Perú y alerta a pobladores | Correo",
+   "medio": "www.apnoticias.pe",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQSHlLRXFQU1hhRi03Sm02RGd0djQydFlJMFJDNEJzWEdKNk94cFhBelJqSEVfcUI5OGg0dWM1VDRsS2RwMWZlOUNrS2RFc1BiRHVnQ3FfYWlHTTB3M2JucmRGZ0M3Z0QtS0E1UVRPTkxMMHRIbWIxYjJBTXQ4clo5VEpjN01qMVZEVWE0U1dJZEE4SzlXS1dDS0pfeGxyUk05NHpvd3o5WnBnY2RWVl9qYW5VZWQ5eVJzVmpjemJPUHhNT1VsdzRPanhR?oc=5",
+   "fecha": "2026-10-08T21:59:57+00:00"
+  },
+  {
+   "titulo": "Incendios forestales en Cusco dejan cinco fallecidos y más de 16,000 hectáreas afectadas",
+   "medio": "Agencia Andina",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQS19mOEtDNzU2UVNZQ1M5eEpvS01oX1RBQTBxZ1pNeTlmcDJCNDlmdEFPMkxGWm9IZTVyRWlmNXdVZmE5a0JGR0lvaWVxWkZ0U016aTl6WGtvOTN3a1dLZ20tX0xqMjZ2V0xlNl9sbk5xZElzUzd5WFpRTnM3SWZxT01ZRlZXWUZtTjJKQjUxNHotUUprU3ZZSzlvRW9VQVMxUXA3OHJxUlplNS1DUDk1bXludHVTVjNQalpCUHhrUnJvSFlrbVl3?oc=5",
+   "fecha": "2026-10-08T21:07:19+00:00"
+  },
+  {
+   "titulo": "¡Lloran por sus animales! | Desesperación en Cusco por incendios forestales que no dan tregua (VIDEO)",
+   "medio": "El Búho.pe",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNkh2dC1uZXhYNzhOMHBXclJ6ck5TaW5vWFRfaXZkZElUQ3g0eGZHN0V3MERZRFk5cnl1M0ozcmgwNi1xNEhLaWVrVTZpZE5EaWdQd3pVX1hDbmp3Y0lsTlIzUUh5aUlyUnBHOHljRjNPbEZuSkNWVXNybFJaNlRsellib2ZyVnZ6aUl0WjVwVzlwZGVRVU1MU2hsVDJkZnU1b3p1UFMzcXJIcVl1TTZQNHU4OEYxRl9NcXVZSjhKcw?oc=5",
+   "fecha": "2026-10-08T20:38:36+00:00"
+  },
+  {
+   "titulo": "Incendios en Cusco dejan cinco fallecidos y más de 16.000 hectáreas afectadas (VIDEO)",
+   "medio": "Perú 21",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOU1FqcG9GOEt5bjFBZzFsSms5UmtWS1JlVW52ZXkyWU11em9sV3lWeWtqX05TQlhKVHNxRHlLVk9ieFFCUFl2YkdsVTdWQlVKb2VXaTVudUpTb2diVGFMVUFPX3h2VDZPSnI0OTIwLUVIbVdITmlqU1otcEtrWEo4cHluenhNTUxaNll3dEhSY2dBS2JTeERxYg?oc=5",
+   "fecha": "2026-10-08T20:19:13+00:00"
+  },
+  {
+   "titulo": "Cusco enfrenta seis incendios forestales activos %",
+   "medio": "La Razón",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9Cd3NHZDN4ZWUyN3VWamhGbmxUemswYTFLbEpMdVBmZnFxNWo1SGNvckp6T21faXVRSnRLQ1FoQzZDMi15OHFtY01jRXNEa1BTak1sVTY2VHdTVFpiYlBGekF4YXgzUnFtNndmc2dWVEtqeDVwc3Aw?oc=5",
+   "fecha": "2026-10-08T19:03:47+00:00"
+  },
+  {
+   "titulo": "Alerta en Junín: Bomberos se quedan sin su único vehículo contra incendios: falla la bomba de agua",
+   "medio": "Investiga",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMUVYc080ZTZmSzA2UmJpNjRPZDFJc0JlOWY2ODdUWEg3Umx2Ni1Pck9TcXJCcmhweDRRRkZsaW5meXVhTXBNRHJfSkJ5cFJnb2t6Nnd1TFVIQzNNU1N5R1ViQ05nQllaSVhTclFpdWZLNmpTVDNPVUYzU1FXaVl6cjNHckpYWUdqOWZvWS1QRklOZ3MyY0NMQzlUajBIYkdXejd2ZFNoaVpKRjN2cGVUVktqcHkxMjIxZmc?oc=5",
+   "fecha": "2026-10-08T18:22:26+00:00"
+  },
+  {
+   "titulo": "Incendios forestales en Cusco dejan cinco fallecidos y afectan más de 16 mil hectáreas",
+   "medio": "Radio Yaraví Arequipa",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNX1duNWhsT1RDUkhhU1NlYzBPbjBjdkVSYzJ1aXBOeXhRMGhtc0thVXRaeDJQSkxIcGhJLTkyM1RVTS0zSEZPSTJwN3JzRVc2LXJqaUZ3allvNUJQNFgwRFpZQjFkcmtLM2R6M3lfZlA5VGYxalVHY3E3VEdHc0ViQm9KdGVLcXJpUkgzbUlEY1dsbDZVY01vR1dXSlVxRmE5UmR2WFBob1BBT1FiSFRzTThhazNrN0tpR0l6QURZR0NuX01LWGtYT290Zw?oc=5",
+   "fecha": "2026-10-08T16:48:57+00:00"
+  },
+  {
+   "titulo": "El Niño y falta de lluvias elevan riesgo de incendios forestales en sierra y selva: Cusco ya registra cinco fallecidos",
+   "medio": "La República",
+   "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcmlnQjhZRks5LXBmZHJwTDdYajJxX01JWk1Gd1VLbVZsRHdUUExNLXJuSzJjRlhpQng0RUVudHBYSnhwaFNYU1hsY0dJSHhqakFNcklrTl9uWUNwc1liOWJFTmdOYnZWNmU1TFRsLS1CY0hybkFGV245MDM2QndvQzc5U2FKMjVBZXl5N3ZiWGtzdm5MajhRc1lBRk9jWENYVVZFeG5mOF9pcWViSnRTdjZjMjBtalpRUXRadE5MMVl5YzNWWDN1TDBJZWJXVkhVWktUOVE2LXA1NHFoZjhHMXRBVHJBSG5SLUktMWFnN3N0czhJT2tJVUVHa9IBgAJBVV95cUxNazVkaEpJTFNVNkptTnN2TDJIUUkzZ0ZDVUlzbFZLeUhNNUc5Q0VoU0R6eDhoaGJBYXZDOUdxdnNBcExsbGpiY2tOZmxNdmhibjBRdGR0VHhSM0Y2SkNKX3VUenZrNUE5UTBhR21DOGYtZWFyalBvR2o2QVdYcE9neDFvU1JKMmN3TER4eFhmQk1pWVE3Mk9fME9ZaW1NNkdmVWZQSVdibGw0c2tpMmtBVVFzdWNpSUdJa2I2QjlnN1RGbTdxV2VwTG5rU1NSOTV0NVNuUEgzQzduMVpTV051QVlxUkZMcUZJSFQtMXI5OEV6dGhEcFNfc1dBekwzM1VK?oc=5",
+   "fecha": "2026-10-08T15:53:55+00:00"
+  },
+  {
+   "titulo": "Incendio forestal se complica en Áncash: Fuertes vientos y caída de rocas dificultan apagar las llamas",
+   "medio": "Perú 21",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZUFLS0EzekN0TTBCcS1UV0pBZ1UtVG45eS02UmhkUzMtSjQtNkQ4RzQ5UF9zVi1kNUJGeS0xaUQtamZiVUNVX0NWU09sMmVEUUMtZHhLdGNLcXpFandvYmctZTVMdlFNRmluV01UOVhCdGxQRUpfN2E3YV9aZnFVU2dXajJCSGE3c1E?oc=5",
+   "fecha": "2026-10-08T15:45:20+00:00"
+  },
+  {
+   "titulo": "Cusco: Incendios forestales dejan cinco fallecidos y dañan más de 16 mil hectáreas de vegetación",
+   "medio": "Perú Informa",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONkdKS0dkUk14UUF4SDFpWDJ0dUprQVhQbzY0U3pRbVJHYXJHdmZlMGVCWHRFS2xkVDRXY2VBa2Z0bjZ1LXlOd2FlaFJQaUdkTjhqaW02ZTlDVENCTXJTNUlOQ0tyTGlwUkdlOVR2cnRGNURSU1RQVEh0eXhnQWdvUUs3d3RHUWI0a0ItY1N6VXdJMF9HUXh4cUcwR2RKQ213b0JXZnJZWkNycHZqa3RXbGt6RVZocjNRNUI2NFdWazBEZw?oc=5",
+   "fecha": "2026-10-08T14:54:55+00:00"
+  }
+ ]
+}
