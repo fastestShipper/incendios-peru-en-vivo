@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-10T01:32:16.171100+00:00",
+ "generado": "2026-10-10T02:25:52.079779+00:00",
  "fuente": "https://portal.indeci.gob.pe/emergencias/",
  "reportes": [
   {
@@ -887,7 +887,17 @@
    "fecha": "2026-10-08T20:20:00-05:00",
    "reporte_n": 2,
    "distrito": "CHUQUIBAMBILLA",
-   "departamento": "APURÍMAC"
+   "departamento": "APURÍMAC",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13751-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-CHUQUIBAMBILLA-APURÍMAC-2.pdf",
+   "v": 2,
+   "actualizado": "2026-10-08T20:20:00-05:00",
+   "inicio": "2026-10-06T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "APURÍMAC",
+    "provincia": "GRAU",
+    "distrito": "CHUQUIBAMBILLA",
+    "sector": "PATAYPAMPA"
+   }
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13750 – 8/10/2026 /COEN – INDECI / 20:10 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE PUCYURA – CUSCO",
@@ -897,7 +907,12 @@
    "fecha": "2026-10-08T20:10:00-05:00",
    "reporte_n": 1,
    "distrito": "PUCYURA",
-   "departamento": "CUSCO"
+   "departamento": "CUSCO",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13750-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PUCYURA-CUSCO-1.pdf",
+   "v": 2,
+   "estado": "activo",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "inicio": "2026-10-08T00:00:00-05:00"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13748 – 8/10/2026 /COEN – INDECI / 19:30 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE MOLLEPATA – CUSCO",
@@ -907,7 +922,20 @@
    "fecha": "2026-10-08T19:30:00-05:00",
    "reporte_n": 1,
    "distrito": "MOLLEPATA",
-   "departamento": "CUSCO"
+   "departamento": "CUSCO",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13748-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-MOLLEPATA-CUSCO-1.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "actualizado": "2026-10-08T19:30:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "CUSCO",
+    "provincia": "ANTA",
+    "distrito": "MOLLEPATA",
+    "sector": null
+   },
+   "hectareas": "1 ha de cobertura natural (tabla de daños INDECI)"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13747 – 8/10/2026 / COEN-INDECI / 18:35 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE TAPAIRIHUA – APURÍMAC",
@@ -917,7 +945,18 @@
    "fecha": "2026-10-08T18:35:00-05:00",
    "reporte_n": 1,
    "distrito": "TAPAIRIHUA",
-   "departamento": "APURÍMAC"
+   "departamento": "APURÍMAC",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13747-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-TAPAIRIHUA-APURÍMAC-1.pdf",
+   "v": 2,
+   "estado": "activo",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "inicio": "2026-10-05T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "APURÍMAC",
+    "provincia": "AYMARAES",
+    "distrito": "TAPAIRIHUA",
+    "sector": "LAYME"
+   }
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13743-8/10/2026 / COEN-INDECI / 17:55 HORAS (Reporte N.° 2) INCENDIO FORESTAL EN EL DISTRITO DE HUARAZ- ÁNCASH",
@@ -927,7 +966,20 @@
    "fecha": "2026-10-08T17:55:00-05:00",
    "reporte_n": 2,
    "distrito": "HUARAZ",
-   "departamento": "ÁNCASH"
+   "departamento": "ÁNCASH",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/09/REPORTE-COMPLEMENTARIO-N.º-13743-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUARAZ-ÁNCASH-2.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "actualizado": "2026-10-08T17:55:00-05:00",
+   "inicio": "2026-09-28T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "ÁNCASH",
+    "provincia": "HUARAZ",
+    "distrito": "HUARAZ",
+    "sector": null
+   },
+   "hectareas": "65 ha de cobertura natural (tabla de daños INDECI)"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13742 – 8/10/2026 / COEN – INDECI / 17:50 HORAS (Reporte N.° 4) INCENDIO FORESTAL EN EL DISTRITO DE ACORIA – HUANCAVELICA",
@@ -937,7 +989,19 @@
    "fecha": "2026-10-08T17:50:00-05:00",
    "reporte_n": 4,
    "distrito": "ACORIA",
-   "departamento": "HUANCAVELICA"
+   "departamento": "HUANCAVELICA",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13742-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-ACORIA-HUANCAVELICA-4.pdf",
+   "v": 2,
+   "actualizado": "2026-10-02T21:20:00-05:00",
+   "inicio": "2026-10-01T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "HUANCAVELICA",
+    "provincia": "HUANCAVELICA",
+    "distrito": "ACORIA",
+    "sector": null
+   },
+   "hectareas": "10.5 ha de cobertura natural (tabla de daños INDECI)",
+   "heridos": 1
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13741 – 8/10/2026/ COEN – INDECI / 17:45 HORAS (Reporte N.° 1) INCENDIO FORESTAL EN EL DISTRITO DE PUCARÁ – JUNÍN",
@@ -947,7 +1011,20 @@
    "fecha": "2026-10-08T17:45:00-05:00",
    "reporte_n": 1,
    "distrito": "PUCARÁ",
-   "departamento": "JUNÍN"
+   "departamento": "JUNÍN",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13741-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PUCARÁ-JUNÍN-1.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "actualizado": "2026-10-08T17:45:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "JUNÍN",
+    "provincia": "HUANCAYO",
+    "distrito": "PUCARÁ",
+    "sector": "BARRIO 28 DE JULIO"
+   },
+   "hectareas": "1 ha de cobertura natural (tabla de daños INDECI)"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13740 – 8/10/2026 /COEN – INDECI / 17:40 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE OROPESA – CUSCO",
@@ -957,7 +1034,19 @@
    "fecha": "2026-10-08T17:40:00-05:00",
    "reporte_n": 1,
    "distrito": "OROPESA",
-   "departamento": "CUSCO"
+   "departamento": "CUSCO",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13740-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-OROPESA-CUSCO-1.pdf",
+   "v": 2,
+   "estado": "activo",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "actualizado": "2026-10-08T17:40:00-05:00",
+   "inicio": "2026-10-08T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "CUSCO",
+    "provincia": "QUISPICANCHI",
+    "distrito": "OROPESA",
+    "sector": "CERRO RACCHI"
+   }
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13739 – 8/10/2026 / COEN-INDECI / 17:35 HORAS (Reporte N° 2) INCENDIO FORESTAL EN EL DISTRITO DE YARINACOCHA – UCAYALI",
@@ -967,7 +1056,20 @@
    "fecha": "2026-10-08T17:35:00-05:00",
    "reporte_n": 2,
    "distrito": "YARINACOCHA",
-   "departamento": "UCAYALI"
+   "departamento": "UCAYALI",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13739-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-YARINACOCHA-UCAYALI-2.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio se encuentra extinguido.",
+   "actualizado": "2026-10-08T17:35:00-05:00",
+   "inicio": "2026-10-06T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "UCAYALI",
+    "provincia": "CORONEL PORTILLO",
+    "distrito": "YARINACOCHA",
+    "sector": "LAS AMÉRICAS"
+   },
+   "hectareas": "5.5 ha de cobertura natural (tabla de daños INDECI)"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.º 13738 – 8/10/2026 / COEN – INDECI / 17:30 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE HUACULLANI – PUNO",
@@ -977,7 +1079,19 @@
    "fecha": "2026-10-08T17:30:00-05:00",
    "reporte_n": 1,
    "distrito": "HUACULLANI",
-   "departamento": "PUNO"
+   "departamento": "PUNO",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13738-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-HUACULLANI-PUNO-1.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio se encuentra extinguido.",
+   "actualizado": "2026-10-08T17:30:00-05:00",
+   "inicio": "2026-10-07T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "PUNO",
+    "provincia": "CHUCUITO",
+    "distrito": "HUACULLANI",
+    "sector": "COLLARIJO"
+   }
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13737 – 8/10/2026 / COEN – INDECI / 17:25 HORAS (Reporte N° 3) INCENDIO FORESTAL EN EL DISTRITO DE PAMPAMARCA – AREQUIPA",
@@ -987,7 +1101,20 @@
    "fecha": "2026-10-08T17:25:00-05:00",
    "reporte_n": 3,
    "distrito": "PAMPAMARCA",
-   "departamento": "AREQUIPA"
+   "departamento": "AREQUIPA",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13737-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-PAMPAMARCA-AREQUIPA-2.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio forestal se encuentra extinguido.",
+   "actualizado": "2026-10-08T17:25:00-05:00",
+   "inicio": "2026-10-01T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "AREQUIPA",
+    "provincia": "LA UNION",
+    "distrito": "PAMPAMARCA",
+    "sector": "SECSENCAYLLA"
+   },
+   "hectareas": "5 ha de cobertura natural (tabla de daños INDECI)"
   },
   {
    "titulo": "REPORTE COMPLEMENTARIO N.° 13735 – 8/10/2026 / COEN – INDECI / 16:55 HORAS (Reporte N° 03) INCENDIO FORESTAL EN EL DISTRITO DE SAYLA – AREQUIPA",
@@ -997,37 +1124,19 @@
    "fecha": "2026-10-08T16:55:00-05:00",
    "reporte_n": 3,
    "distrito": "SAYLA",
-   "departamento": "AREQUIPA"
-  },
-  {
-   "titulo": "REPORTE COMPLEMENTARIO N.º 13734 – 8/10/2026/ COEN – INDECI / 16:50 HORAS (Reporte N.º 4) INCENDIO FORESTAL EN EL DISTRITO DE RECUAY – ÁNCASH",
-   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13374-2-10-2026-coen-indeci-2355-horas-reporte-n-o-2-incendio-forestal-en-el-distrito-de-recuay-ancash/",
-   "tipo": "complementario",
-   "numero": 13734,
-   "fecha": "2026-10-08T16:50:00-05:00",
-   "reporte_n": 4,
-   "distrito": "RECUAY",
-   "departamento": "ÁNCASH"
-  },
-  {
-   "titulo": "REPORTE COMPLEMENTARIO N.º 13733 – 8/10/2026 / COEN – INDECI / 16:45 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE SONDORILLO – PIURA",
-   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13733-8-10-2026-coen-indeci-1645-horas-reporte-n-o-1-incendio-forestal-en-el-distrito-de-sondorillo-piura/",
-   "tipo": "complementario",
-   "numero": 13733,
-   "fecha": "2026-10-08T16:45:00-05:00",
-   "reporte_n": 1,
-   "distrito": "SONDORILLO",
-   "departamento": "PIURA"
-  },
-  {
-   "titulo": "REPORTE COMPLEMENTARIO N.º 13732 – 8/10/2026/ COEN – INDECI / 16:15 HORAS (Reporte N.º 1) INCENDIO FORESTAL EN EL DISTRITO DE CÁTAC – ÁNCASH",
-   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13732-8-10-2026-coen-indeci-1615-horas-reporte-n-o-1-incendio-forestal-en-el-distrito-de-catac-ancash/",
-   "tipo": "complementario",
-   "numero": 13732,
-   "fecha": "2026-10-08T16:15:00-05:00",
-   "reporte_n": 1,
-   "distrito": "CÁTAC",
-   "departamento": "ÁNCASH"
+   "departamento": "AREQUIPA",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-COMPLEMENTARIO-N.º-13735-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SAYLA-AREQUIPA-3.pdf",
+   "v": 2,
+   "estado": "extinguido",
+   "estado_texto": "incendio se encuentra extinguido.",
+   "inicio": "2026-09-30T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "AREQUIPA",
+    "provincia": "LA UNIÓN",
+    "distrito": "SAYLA",
+    "sector": "YANAYA"
+   },
+   "hectareas": "4 ha de cobertura natural (tabla de daños INDECI)"
   },
   {
    "titulo": "REPORTE PRELIMINAR N.° 1012 – 8/10/2026 / COEN – INDECI / 23:30 HORAS INCENDIO FORESTAL EN EL DISTRITO DE SANTO TOMÁS DE PATA – HUANCAVELICA",
@@ -1037,7 +1146,18 @@
    "fecha": "2026-10-08T23:30:00-05:00",
    "reporte_n": null,
    "distrito": "SANTO TOMÁS DE PATA",
-   "departamento": "HUANCAVELICA"
+   "departamento": "HUANCAVELICA",
+   "pdf": "https://portal.indeci.gob.pe/wp-content/uploads/2026/10/REPORTE-PRELIMINAR-N.º-1012-8OCT2026-INCENDIO-FORESTAL-EN-EL-DISTRITO-DE-SANTO-TOMAS-DE-PATA-HUANCAVELICA.pdf",
+   "v": 2,
+   "estado": "activo",
+   "estado_texto": "incendio forestal se encuentra activo.",
+   "inicio": "2026-10-08T00:00:00-05:00",
+   "ubicacion": {
+    "departamento": "HUANCAVELICA",
+    "provincia": "ANGARAES",
+    "distrito": "SANTO TOMÁS DE PATA",
+    "sector": "CHUPACC"
+   }
   }
  ]
 }

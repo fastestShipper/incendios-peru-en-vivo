@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+# Vigía del mapa de incendios (corre en el servidor cada 2 minutos). Avisa por Telegram si los datos
+# dejan de actualizarse, si el sitio no responde, si el actualizador falla seguido o si una fuente
+# lleva varias corridas fallando. Se instala en /usr/local/sbin/incendios-watchdog con
+# incendios-watchdog.service + .timer.
+set -u
+DATA=/srv/incendios-data
+STATE_DIR=/var/lib/incendios-watchdog
+STALE_S=${INC_STALE_S:-1500}          # 25 min sin datos nuevos (el ciclo es de 10) = atrasado
+REPEAT_S=${INC_REPEAT_S:-1800}        # mientras siga mal, repite el aviso cada 30 minutos
+SRC_FAILS=${INC_SRC_FAILS:-3}         # corridas seguidas fallando para avisar de una fuente
+URL=https://peruvian.dev/incendios/data/meta.json
+mkdir -p "$STATE_DIR"
+# Recién instalado: hasta que no haya una primera corrida no hay nada que vigilar.
+[ -s "$DATA/meta.json" ] || exit 0
+
+send() { hermes send -t telegram "🔥 Incendios Perú · $1" >/dev/null 2>&1 || logger -t incendios-watchdog "no se pudo avisar: $1"; }
+
+# edad de los datos, estado de la última corrida y fuentes con fallos seguidos
+read -r AGE RUN_OK RUN_FAILS < <(python3 - "$DATA/meta.json" "$DATA/health.json" <<'PY'
+import json, sys, time
+from datetime import datetime
+try:
+    m = json.load(open(sys.argv[1], encoding='utf-8'))
+    age = int(time.time() - datetime.fromisoformat(m['generado']).timestamp())
+except Exception:
+    age = 999999
+try:
+    h = json.load(open(sys.argv[2], encoding='utf-8'))
+    print(age, 'ok' if h.get('ok') else 'fail', int(h.get('fallos_seguidos') or 0))
+except Exception:
+    print(age, 'ilegible', 0)
+PY
+)
+HTTP=$(curl -s -o /dev/null -w '%{http_code}' --max-time 15 "$URL" || echo 000)
+UNIT_FAILED=$(systemctl is-failed incendios-update.service 2>/dev/null || true)
+
+now=$(date +%s)
+problem=""
+if [ "$HTTP" != "200" ]; then problem="el sitio no responde (HTTP $HTTP en $URL)"
+elif [ "$AGE" -gt "$STALE_S" ]; then problem="los datos llevan $((AGE / 60)) min sin actualizarse (última corrida: $RUN_OK, $RUN_FAILS fallos seguidos, unidad: ${UNIT_FAILED:-?}). Mira: journalctl -u incendios-update -n 50"
+elif [ "$RUN_OK" = "fail" ] && [ "$RUN_FAILS" -ge 2 ]; then problem="el actualizador lleva $RUN_FAILS corridas fallando (todas las fuentes caídas); se sirven los datos de hace $((AGE / 60)) min"
+fi
+
+last_alert=$(cat "$STATE_DIR/last_alert" 2>/dev/null || echo 0)
+was_bad=$(cat "$STATE_DIR/bad" 2>/dev/null || echo "")
+if [ -n "$problem" ]; then
+  if [ -z "$was_bad" ] || [ $((now - last_alert)) -ge "$REPEAT_S" ]; then
+    send "⚠️ $problem"
+    echo "$now" > "$STATE_DIR/last_alert"
+  fi
+  echo "$problem" > "$STATE_DIR/bad"
+elif [ -n "$was_bad" ]; then
+  send "✅ el mapa volvió a actualizarse (datos de hace $((AGE / 60)) min)"
+  rm -f "$STATE_DIR/bad"
+fi
+
+# fuentes que fallan varias corridas seguidas (un aviso al caer y otro al recuperarse)
+python3 - "$DATA/health.json" "$STATE_DIR/fuentes" "$SRC_FAILS" <<'PY' | while IFS= read -r -d '' msg; do send "$msg"; done
+import json, sys, os
+try:
+    h = json.load(open(sys.argv[1], encoding='utf-8'))
+except Exception:
+    sys.exit(0)
+state_file, limit = sys.argv[2], int(sys.argv[3])
+try:
+    bad = set(json.load(open(state_file)))
+except Exception:
+    bad = set()
+new_bad = set()
+for k, v in (h.get('fuentes') or {}).items():
+    n = int(v.get('fallos_seguidos') or 0)
+    if not v.get('ok') and n >= limit:
+        new_bad.add(k)
+        if k not in bad:
+            sys.stdout.write(f"🟠 la fuente «{k}» lleva {n} corridas fallando: {str(v.get('detalle') or '')[:160]}\0")
+for k in bad - new_bad:
+    sys.stdout.write(f"🟢 la fuente «{k}» volvió a responder.\0")
+json.dump(sorted(new_bad), open(state_file, 'w'))
+PY
+exit 0

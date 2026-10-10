@@ -9,7 +9,11 @@ Mapa web **no oficial** que reúne en un solo lugar:
 
 **Interfaz 3D (three.js).** Muestra un Perú en relieve con sus regiones y nombres. Los incendios aparecen como columnas de fuego, y su altura crece con las hectáreas reportadas. Los puntos de calor satelitales forman una capa sutil. Arriba hay un titular en lenguaje simple ("Ahora hay N incendios activos en M regiones") y debajo una leyenda de 4 colores. También tiene un botón **Ver mi región**, la lista **Incendios más graves ahora** y tarjetas simples con lugar, estado, hectáreas, desde cuándo, qué hacer, teléfonos 116 y 115, y noticias. Los datos técnicos (FRP, sensor, confianza, todas las fuentes) están detrás de **Ver datos técnicos**. Si el dispositivo no tiene WebGL, se muestra la lista y un enlace al [mapa 2D clásico](mapa-2d.html) (Leaflet).
 
-Se actualiza solo. GitHub Actions regenera los datos cada ~20 minutos y la página revisa cada 2 minutos si hay datos nuevos, sin que tengas que recargarla.
+Se actualiza solo. El actualizador corre **cada 10 minutos** y la página revisa **cada minuto** si hay datos nuevos, sin que tengas que recargarla. Sitio principal: **<https://peruvian.dev/incendios/>**.
+
+**Novedades.** La pestaña *Novedades* es un feed que se genera solo comparando cada actualización con la anterior: nuevos incendios reportados, cambios de estado (de activo a controlado, etc.), nuevos reportes de INDECI, cifras de hectáreas o víctimas que cambian, nuevas agrupaciones de calor vistas por satélite y titulares de prensa. Cada novedad enlaza a su fuente y, si es de un incendio, lo centra en el mapa. Las que llegan mientras tienes la página abierta se marcan como nuevas y aparece un aviso.
+
+**Estado del monitoreo.** La píldora de arriba muestra de cuándo son los datos y cuándo llega la próxima actualización; al tocarla se ve la salud de cada fuente, la duración de las corridas y la tendencia de las últimas 48 h. También hay una página aparte, [`estado.html`](estado.html), con el historial de 7 días.
 
 > ⚠️ **Aviso.** Esta herramienta es informativa y **no es una fuente oficial**. En una emergencia sigue las indicaciones de [INDECI / COEN](https://portal.indeci.gob.pe/emergencias/), del Cuerpo General de Bomberos Voluntarios del Perú y de tu gobierno local.
 >
@@ -38,27 +42,37 @@ Se actualiza solo. GitHub Actions regenera los datos cada ~20 minutos y la pági
 
 ## Frecuencia de actualización
 
-- **Servidor:** el workflow `.github/workflows/actualizar.yml` corre cada 20 minutos (cron `*/20 * * * *`). GitHub puede retrasar las ejecuciones programadas en horas de alta demanda. También corre con cada push a `main` y a mano desde *Actions → Run workflow*.
+- **Servidor propio (peruvian.dev/incendios):** un timer de systemd corre `scripts/update.py` cada 10 minutos (`deploy/server/incendios-update.timer`). Un vigía (`incendios-watchdog`, cada 2 minutos) avisa por Telegram si los datos llevan más de 25 minutos sin renovarse, si el sitio no responde, si el actualizador falla dos corridas seguidas o si una fuente lleva tres corridas fallando.
+- **GitHub Pages (espejo):** el workflow `.github/workflows/actualizar.yml` corre con cron `*/10 * * * *`, pero GitHub suele retrasar o saltarse ejecuciones programadas. También corre con cada push a `main` y a mano desde *Actions → Run workflow*.
 - **Satélites:** FIRMS publica cada pasada unas 3 h después de la observación, como máximo. Cada satélite VIIRS/MODIS pasa sobre Perú unas 2 veces al día.
-- **Navegador:** la página consulta `data/meta.json` cada 2 minutos y cuando vuelves a la pestaña. Si hay datos nuevos, redibuja el mapa sin recargar.
+- **Navegador:** la página consulta `data/meta.json` (2 KB) cada minuto y cuando vuelves a la pestaña. Solo si cambió baja el resto; primero carga `firms_24h.json` (unos 120 KB) y los 7 días completos (1,6 MB) solo si los pides en *Ver datos técnicos*.
 
 ## Estructura
 
 ```
-index.html               página principal: mapa 3D (three.js r170, incluido en assets/vendor, sin compilación)
-assets/app3d.js          escena 3D, tarjetas, lista por gravedad, región y actualización automática
-assets/style.css         estilos (primero para celulares)
-mapa-2d.html             mapa 2D clásico (Leaflet), también sirve de respaldo sin WebGL
+index.html               página principal: mapa 3D (three.js r170, incluido en assets/vendor, sin compilación ni CDN)
+assets/app3d.js          escena 3D, tarjetas, lista por gravedad, feed de novedades, estado del monitoreo, región, compartir
+assets/style.css         estilos (primero para celulares); fuente Archivo en assets/fonts
+estado.html              página de estado del monitoreo (assets/estado.js, assets/style-estado.css)
+mapa-2d.html             mapa 2D clásico (Leaflet, en assets/vendor/leaflet), también sirve de respaldo sin WebGL
 assets/app-2d.js, assets/style-2d.css
+manifest.json            para «añadir a la pantalla de inicio»
 scripts/update.py        actualizador (Python estándar + pdftotext)
+deploy/run.sh            publica en el servidor; deploy/server/ trae el script de despliegue, las unidades systemd, el vigía y el snippet de nginx
 data/incidentes_curados.json   incidentes cargados a mano, con fuentes
 data/firms.json          focos satelitales en Perú (7 días)      ← generado
+data/firms_24h.json      solo las últimas 24 h (carga inicial)   ← generado
 data/indeci.json         últimos reportes COEN de incendio forestal ← generado
 data/incidentes.json     incidentes fusionados + inferidos        ← generado
 data/noticias.json       titulares                                ← generado
+data/novedades.json      feed de novedades (diferencias entre corridas, 7 días) ← generado
+data/historial.json      conteos por corrida (7 días)             ← generado
+data/health.json         salud del actualizador: duración, fallos seguidos por fuente, últimas corridas ← generado
 data/meta.json           conteos, hora de generación, estado de fuentes ← generado
 data/ref/                límites departamentales y centroides distritales
 ```
+
+Con `INCENDIOS_OUT=/otra/carpeta` el actualizador escribe los archivos generados fuera de `data/` (así corre en el servidor como un usuario sin permisos sobre el código). Devuelve código 1 si ninguna fuente respondió; en ese caso conserva `meta.json` para que la página y el vigía noten el atraso.
 
 ## Correrlo localmente
 
@@ -80,7 +94,9 @@ Si la API falla, el script vuelve solo a los CSV públicos.
 
 ## Desplegar
 
-**GitHub Pages (recomendado).** Ve a *Settings → Pages → Source: GitHub Actions*. El mismo workflow actualiza los datos y publica el sitio, y los datos que genera en cada ejecución **no** se suben al repositorio, para que no crezca con cada actualización (el repositorio solo trae una instantánea inicial del 9 de octubre de 2026). Entre ejecuciones se conservan con `actions/cache`.
+**Servidor propio (como peruvian.dev/incendios).** Una sola vez, como root: `scp -r deploy/server lima:/tmp/incendios-server && ssh lima 'bash /tmp/incendios-server/install.sh'` crea el usuario `incendios`, instala `incendios-update.timer` (cada 10 min), `incendios-watchdog.timer` (cada 2 min), el script `/usr/local/sbin/incendios-deploy` y el snippet de nginx `/incendios/` (con CSP estricta: todo se sirve desde el propio sitio, salvo las teselas del mapa 2D). Después, cada publicación es `bash deploy/run.sh`: valida el paquete, activa la versión nueva con un rename atómico en `/srv/incendios`, copia el actualizador a `/opt/incendios` y lanza una corrida. Los datos viven en `/srv/incendios-data`. Un archivo de datos que aún no existe responde `{}` con 200, para que ninguna petición de la página termine en 404 (CrowdSec). Clave opcional de FIRMS en `/etc/incendios/env`.
+
+**GitHub Pages (espejo).** Ve a *Settings → Pages → Source: GitHub Actions*. El mismo workflow actualiza los datos y publica el sitio, y los datos que genera en cada ejecución **no** se suben al repositorio, para que no crezca con cada actualización (el repositorio solo trae una instantánea inicial del 9 de octubre de 2026). Entre ejecuciones se conservan con `actions/cache`.
 
 **Otro hosting estático** (Vercel, Netlify, Cloudflare Pages): sirve la carpeta raíz tal cual y programa `python3 scripts/update.py` en un cron que vuelva a publicar.
 

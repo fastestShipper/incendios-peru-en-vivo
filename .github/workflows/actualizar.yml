@@ -2,7 +2,7 @@ name: Actualizar datos y publicar
 
 on:
   schedule:
-    - cron: "*/20 * * * *"   # cada 20 minutos (GitHub puede retrasarlo unos minutos)
+    - cron: "*/10 * * * *"   # cada 10 minutos (GitHub suele retrasar los programados; el sitio principal corre en servidor propio)
   workflow_dispatch:
   push:
     branches: [main]
@@ -52,7 +52,7 @@ jobs:
       - name: Preparar sitio
         run: |
           mkdir -p _site
-          cp -r index.html mapa-2d.html assets data .nojekyll _site/
+          cp -r index.html mapa-2d.html estado.html manifest.json assets data .nojekyll _site/
           rm -rf _site/data/cache
           cat _site/data/meta.json
 

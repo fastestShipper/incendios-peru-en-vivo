@@ -1,0 +1,11 @@
+[Unit]
+Description=Incendios Perú - actualizar datos cada 10 minutos
+
+[Timer]
+OnCalendar=*:0/10
+RandomizedDelaySec=30
+AccuracySec=10s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

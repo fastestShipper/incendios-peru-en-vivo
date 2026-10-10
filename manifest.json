@@ -1,0 +1,14 @@
+{
+  "name": "Incendios forestales en Perú – mapa en vivo",
+  "short_name": "Incendios Perú",
+  "description": "Mapa 3D en vivo de incendios forestales en Perú, con fuentes oficiales y satélites de la NASA. No oficial.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1524",
+  "theme_color": "#0b1524",
+  "lang": "es",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

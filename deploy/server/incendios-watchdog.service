@@ -1,0 +1,7 @@
+[Unit]
+Description=Incendios Perú - vigía (datos al día, sitio arriba, fuentes)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/incendios-watchdog
+TimeoutStartSec=60

@@ -2,12 +2,27 @@
 """Actualizador de datos de incendios-peru-en-vivo.
 
 Descarga detecciones satelitales NASA FIRMS, reportes del COEN-INDECI y titulares
-de prensa, y genera los JSON estáticos que consume el mapa (carpeta data/).
-Solo usa la librería estándar de Python + `pdftotext` (poppler-utils) para leer
-los PDF de INDECI. Uso: python3 scripts/update.py
+de prensa, y genera los JSON estáticos que consume el mapa. Solo usa la librería
+estándar de Python + `pdftotext` (poppler-utils) para leer los PDF de INDECI.
+
+Uso: python3 scripts/update.py
 Variables de entorno opcionales:
-  FIRMS_MAP_KEY  -> clave gratuita de FIRMS (https://firms.modaps.eosdis.nasa.gov/api/map_key/)
-  INDECI_PAGES   -> páginas del listado de emergencias a revisar (por defecto 4)
+  FIRMS_MAP_KEY            -> clave gratuita de FIRMS (https://firms.modaps.eosdis.nasa.gov/api/map_key/)
+  INDECI_PAGES             -> páginas del listado de emergencias a revisar (por defecto 4)
+  INCENDIOS_OUT            -> carpeta de salida (por defecto data/). Las referencias (data/ref) y los
+                              incidentes curados siempre se leen de data/.
+  INCENDIOS_INTERVALO_MIN  -> cada cuántos minutos corre el programador (solo informativo; 10)
+  INCENDIOS_VERSION        -> versión publicada (se muestra en meta.json y health.json)
+
+Archivos generados (en INCENDIOS_OUT):
+  firms.json        focos de calor de 7 días        firms_24h.json  solo las últimas 24 h (carga rápida)
+  indeci.json       últimos reportes COEN            incidentes.json incidentes fusionados + inferidos
+  noticias.json     titulares                        meta.json       conteos, hora, estado de fuentes
+  novedades.json    feed de novedades (diferencias entre corridas)
+  historial.json    serie de conteos por corrida (7 días)
+  health.json       salud del actualizador: duración, fallos seguidos por fuente, últimas corridas
+
+Código de salida: 0 si entró algún dato fresco; 1 si todas las fuentes fallaron (meta.json no se toca).
 """
 import csv, html, io, json, math, os, re, subprocess, sys, tempfile, time, unicodedata
 import urllib.request, urllib.parse
@@ -15,16 +30,34 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
-CACHE = os.path.join(DATA, "cache")
+DATA = os.path.join(ROOT, "data")                                   # referencias + curados (solo lectura)
+OUT = os.path.abspath(os.environ.get("INCENDIOS_OUT") or DATA)      # salida
+CACHE = os.path.join(OUT, "cache")
 LIMA = timezone(timedelta(hours=-5))
-UA = "Mozilla/5.0 (incendios-peru-en-vivo; +https://github.com/) Python-urllib"
+UA = "Mozilla/5.0 (incendios-peru-en-vivo; +https://github.com/fastestShipper/incendios-peru-en-vivo) Python-urllib"
 NOW = datetime.now(timezone.utc)
-STATUS = {}  # estado de cada fuente para meta.json
+INTERVALO_MIN = int(os.environ.get("INCENDIOS_INTERVALO_MIN", "10"))
+STATUS = {}   # estado de cada fuente para meta.json / health.json
+TIMING = {}   # segundos por fuente
+T0 = time.monotonic()
+
+
+def version():
+    v = os.environ.get("INCENDIOS_VERSION", "").strip()
+    if v:
+        return v
+    try:
+        with open(os.path.join(ROOT, "VERSION"), encoding="utf-8") as f:
+            return f.read().strip() or "dev"
+    except Exception:
+        return "dev"
+
+
+VERSION = version()
 
 
 def log(*a):
-    print(*a, file=sys.stderr, flush=True)
+    print(datetime.now(timezone.utc).strftime("%H:%M:%S"), *a, file=sys.stderr, flush=True)
 
 
 def get(url, timeout=60, binary=False, tries=3):
@@ -67,10 +100,26 @@ def dump(path, obj, pretty=False):
     os.replace(tmp, path)
 
 
+def out(name):
+    return os.path.join(OUT, name)
+
+
 def km(lat1, lon1, lat2, lon2):
     p = math.pi / 180
     a = 0.5 - math.cos((lat2 - lat1) * p) / 2 + math.cos(lat1 * p) * math.cos(lat2 * p) * (1 - math.cos((lon2 - lon1) * p)) / 2
     return 12742 * math.asin(math.sqrt(a))
+
+
+class timed:
+    """Mide cuánto tarda una fuente (para health.json)."""
+    def __init__(self, key):
+        self.key = key
+
+    def __enter__(self):
+        self.t = time.monotonic()
+
+    def __exit__(self, *a):
+        TIMING[self.key] = round(time.monotonic() - self.t, 1)
 
 
 # ----------------------------------------------------------------- geografía
@@ -85,6 +134,18 @@ for f in DEPS["features"]:
     ys = [pt[1] for r in rings for pt in r]
     DEP_POLYS.append((f["properties"]["NOMBDEP"], (min(xs), min(ys), max(xs), max(ys)), rings))
 PERU_BBOX = (-81.5, -18.5, -68.5, 0.1)
+REG = {"AMAZONAS": "Amazonas", "ANCASH": "Áncash", "APURIMAC": "Apurímac", "AREQUIPA": "Arequipa", "AYACUCHO": "Ayacucho",
+       "CAJAMARCA": "Cajamarca", "CALLAO": "Callao", "CUSCO": "Cusco", "HUANCAVELICA": "Huancavelica", "HUANUCO": "Huánuco",
+       "ICA": "Ica", "JUNIN": "Junín", "LA LIBERTAD": "La Libertad", "LAMBAYEQUE": "Lambayeque", "LIMA": "Lima", "LORETO": "Loreto",
+       "MADRE DE DIOS": "Madre de Dios", "MOQUEGUA": "Moquegua", "PASCO": "Pasco", "PIURA": "Piura", "PUNO": "Puno",
+       "SAN MARTIN": "San Martín", "TACNA": "Tacna", "TUMBES": "Tumbes", "UCAYALI": "Ucayali"}
+EST_W = {"activo": "fuego activo", "en_control": "lo están controlando", "controlado": "controlado", "extinguido": "apagado",
+         "sin_dato": "sin información del estado", "inferido": "posible fuego (satélite)"}
+EST_RANK = {"extinguido": 0, "controlado": 1, "sin_dato": 2, "inferido": 2, "en_control": 3, "activo": 4}
+
+
+def reg_name(r):
+    return REG.get(r, (r or "").title())
 
 
 def in_ring(x, y, ring):
@@ -138,6 +199,7 @@ FIRMS_API_SOURCES = {
     "VIIRS NOAA-21": "VIIRS_NOAA21_NRT", "MODIS Terra/Aqua": "MODIS_NRT",
 }
 SAT_NAMES = {"N": "S-NPP", "N20": "NOAA-20", "N21": "NOAA-21", "T": "Terra", "A": "Aqua", "1": "NOAA-20", "J1": "NOAA-20", "J2": "NOAA-21"}
+FIRMS_CAMPOS = ["lat", "lon", "t_unix_utc", "satelite", "confianza", "frp_mw", "dia_noche", "departamento", "sensor"]
 
 
 def firms_rows(name):
@@ -160,12 +222,22 @@ def firms_rows(name):
     return list(csv.DictReader(io.StringIO(txt))), "feed público FIRMS 7d (Sudamérica)"
 
 
+def write_firms(firms):
+    """Escribe firms.json (7 días) y firms_24h.json (carga inicial rápida del mapa)."""
+    now_ts = NOW.timestamp()
+    dump(out("firms.json"), firms)
+    dump(out("firms_24h.json"), {"generado": firms["generado"], "campos": FIRMS_CAMPOS,
+                                 "puntos": [p for p in firms["puntos"] if now_ts - p[2] <= 86400]})
+
+
 def update_firms():
     pts, seen = [], set()
     cutoff = NOW - timedelta(days=7)
     for name in FIRMS_PUBLIC:
+        key = f"FIRMS {name}"
         try:
-            rows, how = firms_rows(name)
+            with timed(key):
+                rows, how = firms_rows(name)
             n = 0
             for r in rows:
                 try:
@@ -200,24 +272,21 @@ def update_firms():
                 frp = float(r.get("frp") or 0)
                 pts.append([round(lat, 4), round(lon, 4), int(dt.timestamp()), sat, conf, round(frp, 1), r.get("daynight", ""), dep, "MODIS" if "MODIS" in name else "VIIRS"])
                 n += 1
-            STATUS[f"FIRMS {name}"] = {"ok": True, "detalle": f"{n} detecciones en Perú (7 días) · {how}"}
-            log("FIRMS", name, n)
+            STATUS[key] = {"ok": True, "detalle": f"{n} detecciones en Perú (7 días) · {how}"}
+            log("FIRMS", name, n, f"{TIMING.get(key)}s")
         except Exception as e:
-            STATUS[f"FIRMS {name}"] = {"ok": False, "detalle": str(e)[:200]}
+            STATUS[key] = {"ok": False, "detalle": str(e)[:200]}
             log("FIRMS error", name, e)
     if not any(v["ok"] for k, v in STATUS.items() if k.startswith("FIRMS")):
-        old = load(os.path.join(DATA, "firms.json"), None)
+        old = load(out("firms.json"), None)
         if old:
             log("FIRMS: todas las fuentes fallaron; se conservan datos anteriores")
+            write_firms(old)
             return old
     pts.sort(key=lambda p: p[2])
-    out = {
-        "generado": NOW.isoformat(),
-        "campos": ["lat", "lon", "t_unix_utc", "satelite", "confianza", "frp_mw", "dia_noche", "departamento", "sensor"],
-        "puntos": pts,
-    }
-    dump(os.path.join(DATA, "firms.json"), out)
-    return out
+    firms = {"generado": NOW.isoformat(), "campos": FIRMS_CAMPOS, "puntos": pts}
+    write_firms(firms)
+    return firms
 
 
 # ----------------------------------------------------------------- 2. INDECI
@@ -229,7 +298,7 @@ TITLE_RE = re.compile(
 
 
 def parse_listing(page_html):
-    out = []
+    out_ = []
     for href, inner in re.findall(r'<a[^>]+href="(https://portal\.indeci\.gob\.pe/emergencias/[^"]+)"[^>]*>(.*?)</a>', page_html, re.S):
         t = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", inner))).strip()
         if "INCENDIO FORESTAL" not in t.upper():
@@ -248,9 +317,9 @@ def parse_listing(page_html):
                 dt = datetime(int(y), int(d), int(mo), int(hh), int(mm), tzinfo=LIMA)
             except ValueError:
                 continue
-        out.append({"titulo": t, "url": href, "tipo": tipo.lower(), "numero": int(num), "fecha": dt.isoformat(),
-                    "reporte_n": int(repn) if repn else None, "distrito": dist.strip(), "departamento": dep.strip()})
-    return out
+        out_.append({"titulo": t, "url": href, "tipo": tipo.lower(), "numero": int(num), "fecha": dt.isoformat(),
+                     "reporte_n": int(repn) if repn else None, "distrito": dist.strip(), "departamento": dep.strip()})
+    return out_
 
 
 def pdf_text(url):
@@ -345,7 +414,7 @@ def update_indeci():
         STATUS["INDECI emergencias"] = {"ok": len(items) > 0, "detalle": f"error parcial: {str(e)[:150]}"}
         log("INDECI listing error", e)
     if not items:
-        return load(os.path.join(DATA, "indeci.json"), {"reportes": []}).get("reportes", [])
+        return load(out("indeci.json"), {"reportes": []}).get("reportes", [])
     # último reporte por (departamento, distrito)
     groups = {}
     for it in items:
@@ -372,11 +441,13 @@ def update_indeci():
             fetched += 1
         except Exception as e:
             log("INDECI report error", it["url"], e)
+    if fetched:
+        STATUS["INDECI emergencias"]["detalle"] += f" · {fetched} PDF leídos"
     # limitar caché
     keep = {str(i["numero"]) for i in latest}
     cache = {k: v for k, v in cache.items() if k in keep}
     dump(os.path.join(CACHE, "indeci_reportes.json"), cache, pretty=True)
-    dump(os.path.join(DATA, "indeci.json"), {"generado": NOW.isoformat(), "fuente": INDECI_LIST, "reportes": latest}, pretty=True)
+    dump(out("indeci.json"), {"generado": NOW.isoformat(), "fuente": INDECI_LIST, "reportes": latest}, pretty=True)
     return latest
 
 
@@ -389,7 +460,7 @@ NEWS_KEYWORDS = ("incendi", "fuego", "quema", "llamas", "brigad", "hectáreas")
 
 
 def update_news():
-    seen, out = set(), []
+    seen, out_ = set(), []
     ok = False
     for q in NEWS_QUERIES:
         url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": q, "hl": "es-419", "gl": "PE", "ceid": "PE:es-419"})
@@ -414,16 +485,16 @@ def update_news():
                     dt = NOW
                 if medio.lower() == "facebook":
                     continue
-                out.append({"titulo": title, "medio": medio, "url": it.findtext("link"), "fecha": dt.isoformat()})
+                out_.append({"titulo": title, "medio": medio, "url": it.findtext("link"), "fecha": dt.isoformat()})
         except Exception as e:
             log("news error", e)
-    STATUS["Google Noticias RSS"] = {"ok": ok, "detalle": f"{len(out)} titulares"}
+    STATUS["Google Noticias RSS"] = {"ok": ok, "detalle": f"{len(out_)} titulares"}
     if not ok:
-        return load(os.path.join(DATA, "noticias.json"), {"noticias": []}).get("noticias", [])
-    out.sort(key=lambda x: x["fecha"], reverse=True)
-    out = out[:60]
-    dump(os.path.join(DATA, "noticias.json"), {"generado": NOW.isoformat(), "noticias": out}, pretty=True)
-    return out
+        return load(out("noticias.json"), {"noticias": []}).get("noticias", [])
+    out_.sort(key=lambda x: x["fecha"], reverse=True)
+    out_ = out_[:60]
+    dump(out("noticias.json"), {"generado": NOW.isoformat(), "noticias": out_}, pretty=True)
+    return out_
 
 
 # ----------------------------------------------------------------- 4. Fusión
@@ -542,34 +613,218 @@ def build_incidents(firms, indeci):
     return incs, clusters[:80], cur.get("resumen_oficial", {})
 
 
+# ----------------------------------------------------------------- 5. Novedades (feed)
+def ha_corta(s):
+    m = re.search(r"\d+(?:[.,]\d+)?", str(s or "").replace(" ", ""))
+    if not m:
+        return s
+    gt = "más de " if str(s).strip().startswith(">") else ""
+    n = m.group(0).replace(",", ".")
+    try:
+        n = f"{float(n):,.0f}".replace(",", " ") if float(n) >= 1000 else n
+    except ValueError:
+        pass
+    return f"{gt}{n} ha"
+
+
+def src_url(i):
+    for f in i.get("fuentes") or []:
+        if f.get("url"):
+            return f["url"]
+    return None
+
+
+def nombre_corto(i):
+    m = re.match(r"^(.+?) \((.+?)\) – (.+)$", str(i.get("nombre", "")))
+    if m and m.group(1).lower() == m.group(3).lower():
+        return f"{m.group(1)} ({m.group(2)})"
+    return i.get("nombre", "")
+
+
+def build_novedades(prev_inc, incs, clusters, prev_news, news):
+    """Eventos nuevos entre la corrida anterior y esta. Cada uno lleva tipo, texto, región, nivel y enlace."""
+    ev = []
+
+    def add(tipo, texto, region=None, inc=None, url=None, nivel="medio", t=None, medio=None):
+        ev.append({"t": t or NOW.isoformat(), "tipo": tipo, "texto": texto, "region": region, "inc": inc,
+                   "url": url, "nivel": nivel, "medio": medio})
+
+    if prev_inc is None:
+        # primera corrida: no hay con qué comparar; se siembran solo las últimas noticias
+        for n in news[:10]:
+            add("noticia", n["titulo"], url=n.get("url"), nivel="bajo", t=n.get("fecha"), medio=n.get("medio"))
+        add("sistema", "Empieza el monitoreo automático: datos cada 10 minutos.", nivel="bajo")
+        return ev
+    pi = {i["id"]: i for i in prev_inc.get("incidentes", [])}
+    pk = {(i["departamento"], i["distrito"]): i for i in prev_inc.get("incidentes", [])}
+    for i in incs:
+        p = pi.get(i["id"]) or pk.get((i["departamento"], i["distrito"]))
+        nom, reg, est = nombre_corto(i), i["departamento"], i.get("estado", "sin_dato")
+        if not p:
+            add("nuevo", f"Nuevo incendio reportado: {nom} · {EST_W.get(est, est)}", reg, i["id"], src_url(i),
+                "alto" if est in ("activo", "en_control") else "medio")
+            continue
+        pe = p.get("estado", "sin_dato")
+        primera_lectura = pe == "sin_dato" and est != "sin_dato"
+        if pe != est:
+            worse = EST_RANK.get(est, 2) > EST_RANK.get(pe, 2)
+            if primera_lectura:
+                add("estado", f"Ya se leyó el reporte de INDECI: {nom} está «{EST_W.get(est, est)}»", reg, i["id"], src_url(i),
+                    "alto" if est in ("activo", "en_control") else "bajo")
+            else:
+                add("estado", f"{nom}: pasó de «{EST_W.get(pe, pe)}» a «{EST_W.get(est, est)}»", reg, i["id"], src_url(i),
+                    "alto" if worse else "bajo")
+        prev_urls = {f.get("url") for f in p.get("fuentes") or []}
+        nuevos = [f for f in i.get("fuentes") or [] if f.get("url") not in prev_urls and str(f.get("medio", "")).startswith("INDECI") and "(PDF)" not in f.get("medio", "")]
+        for f in nuevos[:1]:
+            add("reporte", f"INDECI publicó un nuevo reporte sobre {nom}", reg, i["id"], f.get("url"), "medio")
+        if (i.get("fallecidos") or 0) > (p.get("fallecidos") or 0):
+            add("victimas", f"{nom}: se reportan {i['fallecidos']} personas fallecidas", reg, i["id"], src_url(i), "alto")
+        if i.get("hectareas") and i.get("hectareas") != p.get("hectareas") and not (primera_lectura and not p.get("hectareas")):
+            add("dato", f"{nom}: ahora se reportan {ha_corta(i['hectareas'])} afectadas", reg, i["id"], src_url(i), "bajo")
+    prev_inf = prev_inc.get("inferidos") or []
+    for c in clusters:
+        if c["focos_24h"] < 5:
+            continue
+        if any(km(c["lat"], c["lon"], q["lat"], q["lon"]) <= 6 for q in prev_inf):
+            continue
+        add("satelite", f"Los satélites ven una nueva agrupación de calor en {reg_name(c['departamento'])} ({c['focos_24h']} puntos en 24 h), sin confirmar",
+            c["departamento"], c["id"], f"https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@{c['lon']:.3f},{c['lat']:.3f},10z", "medio")
+    seen = {norm(n.get("titulo", ""))[:80] for n in (prev_news or [])}
+    nuevas = [n for n in news if norm(n.get("titulo", ""))[:80] not in seen]
+    for n in nuevas[:15]:
+        add("noticia", n["titulo"], url=n.get("url"), nivel="bajo", t=n.get("fecha"), medio=n.get("medio"))
+    return ev
+
+
+def write_novedades(nuevos):
+    prev = load(out("novedades.json"), {"ultimo_n": 0, "items": []})
+    n = int(prev.get("ultimo_n") or 0)
+    items = list(prev.get("items") or [])
+    # evita repetir el mismo evento (p. ej. jitter en la lectura de un PDF) dentro de 6 h
+    cutoff6 = (NOW - timedelta(hours=6)).isoformat()
+    recientes = {(e["tipo"], e["texto"]) for e in items if (e.get("t") or "") >= cutoff6 or e.get("tipo") == "noticia"}
+    added = 0
+    for e in nuevos:
+        if (e["tipo"], e["texto"]) in recientes:
+            continue
+        n += 1
+        e["n"] = n
+        items.append(e)
+        added += 1
+    cutoff = (NOW - timedelta(days=7)).isoformat()
+    items = [e for e in items if (e.get("t") or "") >= cutoff]
+    items.sort(key=lambda e: (e.get("t") or "", e.get("n") or 0), reverse=True)
+    items = items[:400]
+    dump(out("novedades.json"), {"generado": NOW.isoformat(), "ultimo_n": n, "items": items}, pretty=True)
+    return n, added
+
+
+# ----------------------------------------------------------------- 6. Salud e historial
+def write_health(ok_run, conteos):
+    prev = load(out("health.json"), {})
+    pf = prev.get("fuentes") or {}
+    fuentes = {}
+    for k, v in STATUS.items():
+        q = pf.get(k) or {}
+        fuentes[k] = {"ok": v["ok"], "detalle": v["detalle"], "duracion_s": TIMING.get(k),
+                      "fallos_seguidos": 0 if v["ok"] else int(q.get("fallos_seguidos") or 0) + 1,
+                      "ultima_ok": NOW.isoformat() if v["ok"] else q.get("ultima_ok")}
+    dur = round(time.monotonic() - T0, 1)
+    n_ok = sum(1 for v in STATUS.values() if v["ok"])
+    corridas = list(prev.get("corridas") or [])[-143:]
+    corridas.append({"t": NOW.isoformat(), "duracion_s": dur, "ok": ok_run, "fuentes_ok": n_ok, "fuentes_total": len(STATUS),
+                     "focos_24h": conteos.get("focos_24h"), "activos": conteos.get("incidentes_activos")})
+    health = {
+        "generado": NOW.isoformat(), "ok": ok_run, "duracion_s": dur, "intervalo_min": INTERVALO_MIN, "version": VERSION,
+        "fallos_seguidos": 0 if ok_run else int(prev.get("fallos_seguidos") or 0) + 1,
+        "ultima_ok": NOW.isoformat() if ok_run else prev.get("ultima_ok"),
+        "fuentes": fuentes, "corridas": corridas,
+    }
+    dump(out("health.json"), health, pretty=True)
+    return health
+
+
+def write_historial(conteos):
+    h = load(out("historial.json"), {"campos": [], "puntos": []})
+    pts = list(h.get("puntos") or [])
+    pts.append([int(NOW.timestamp()), conteos["focos_24h"], conteos["incidentes_activos"], len(conteos["regiones_activas"]),
+                conteos["agrupaciones_satelitales"], conteos["fallecidos_reportados"]])
+    cutoff = int((NOW - timedelta(days=7)).timestamp())
+    pts = [p for p in pts if p[0] >= cutoff]
+    dump(out("historial.json"), {"generado": NOW.isoformat(), "intervalo_min": INTERVALO_MIN,
+                                 "campos": ["t_unix", "focos_24h", "incidentes_activos", "regiones_activas", "inferidos", "fallecidos_reportados"],
+                                 "puntos": pts})
+
+
+def lock():
+    """Evita dos corridas a la vez (POSIX). En Windows no hace nada."""
+    try:
+        import fcntl
+    except ImportError:
+        return None
+    os.makedirs(OUT, exist_ok=True)
+    f = open(os.path.join(OUT, ".update.lock"), "w")
+    try:
+        fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        log("ya hay una corrida en marcha; salgo")
+        sys.exit(0)
+    return f
+
+
+# ----------------------------------------------------------------- main
 def main():
+    _lk = lock()
     os.makedirs(CACHE, exist_ok=True)
+    log(f"inicio · versión {VERSION} · salida {OUT}")
+    prev_inc = load(out("incidentes.json"), None)
+    prev_news = (load(out("noticias.json"), {}) or {}).get("noticias")
     firms = update_firms()
-    indeci = update_indeci()
-    news = update_news()
+    with timed("INDECI emergencias"):
+        indeci = update_indeci()
+    with timed("Google Noticias RSS"):
+        news = update_news()
     incs, clusters, resumen = build_incidents(firms, indeci)
     now_ts = NOW.timestamp()
     f24 = [p for p in firms["puntos"] if now_ts - p[2] <= 86400]
     activos = [i for i in incs if i["estado"] in ("activo", "en_control")]
-    meta = {
-        "generado": NOW.isoformat(),
-        "generado_lima": NOW.astimezone(LIMA).strftime("%d/%m/%Y %H:%M"),
-        "conteos": {
-            "focos_24h": len(f24),
-            "focos_7d": len(firms["puntos"]),
-            "incidentes": len(incs),
-            "incidentes_activos": len(activos),
-            "regiones_activas": sorted({i["departamento"] for i in activos}),
-            "fallecidos_reportados": sum(i.get("fallecidos") or 0 for i in incs),
-            "agrupaciones_satelitales": len(clusters),
-        },
-        "resumen_oficial": resumen,
-        "fuentes": STATUS,
+    conteos = {
+        "focos_24h": len(f24),
+        "focos_7d": len(firms["puntos"]),
+        "incidentes": len(incs),
+        "incidentes_activos": len(activos),
+        "regiones_activas": sorted({i["departamento"] for i in activos}),
+        "fallecidos_reportados": sum(i.get("fallecidos") or 0 for i in incs),
+        "agrupaciones_satelitales": len(clusters),
+        "incidentes_por_estado": {e: sum(1 for i in incs if i["estado"] == e) for e in ("activo", "en_control", "controlado", "extinguido", "sin_dato")},
     }
-    dump(os.path.join(DATA, "incidentes.json"), {"generado": NOW.isoformat(), "incidentes": incs, "inferidos": clusters}, pretty=True)
-    dump(os.path.join(DATA, "meta.json"), meta, pretty=True)
-    log(json.dumps(meta["conteos"], ensure_ascii=False))
+    firms_ok = any(v["ok"] for k, v in STATUS.items() if k.startswith("FIRMS"))
+    indeci_ok = STATUS.get("INDECI emergencias", {}).get("ok", False)
+    fresh = firms_ok or indeci_ok
+    ultimo_n, added = write_novedades(build_novedades(prev_inc, incs, clusters, prev_news, news))
+    if fresh:
+        dump(out("incidentes.json"), {"generado": NOW.isoformat(), "incidentes": incs, "inferidos": clusters}, pretty=True)
+        write_historial(conteos)
+        meta = {
+            "generado": NOW.isoformat(),
+            "generado_lima": NOW.astimezone(LIMA).strftime("%d/%m/%Y %H:%M"),
+            "intervalo_min": INTERVALO_MIN,
+            "proxima_estimada": (NOW + timedelta(minutes=INTERVALO_MIN)).isoformat(),
+            "duracion_s": round(time.monotonic() - T0, 1),
+            "version": VERSION,
+            "novedades_n": ultimo_n,
+            "conteos": conteos,
+            "resumen_oficial": resumen,
+            "fuentes": STATUS,
+        }
+        dump(out("meta.json"), meta, pretty=True)
+    else:
+        log("ninguna fuente respondió: meta.json se conserva para que se note el atraso")
+    health = write_health(fresh, conteos)
+    log(json.dumps({**conteos, "novedades_nuevas": added, "duracion_s": health["duracion_s"], "ok": fresh}, ensure_ascii=False))
+    return 0 if fresh else 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

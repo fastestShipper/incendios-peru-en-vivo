@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+# Publica el sitio y el actualizador en el servidor a partir de un tar.gz que llega por la entrada estándar.
+# Se instala en /usr/local/sbin/incendios-deploy (ver install.sh) y lo llama deploy/run.sh:
+#
+#   tar -czf - index.html mapa-2d.html estado.html manifest.json assets data/ref data/incidentes_curados.json scripts/update.py VERSION \
+#     | ssh lima /usr/local/sbin/incendios-deploy site
+#
+# Extrae en una carpeta nueva, la valida, activa el sitio cambiando un enlace simbólico con un rename
+# atómico y copia el código del actualizador a /opt/incendios. Luego lanza una corrida para que los
+# datos reflejen el código y los incidentes curados nuevos. Si algo falla, lo publicado no se toca.
+set -Eeuo pipefail
+umask 022
+
+MODE="${1:-}"
+REL=/srv/incendios-releases        # versiones del sitio
+LIVE=/srv/incendios                # enlace simbólico a la versión activa (nginx sirve desde aquí)
+CODE=/opt/incendios                # actualizador (scripts/, data/ref, data/incidentes_curados.json)
+KEEP=3
+
+die() { echo "incendios-deploy: $*" >&2; exit 1; }
+
+only_plain_files() {
+  if find "$1" \( -type l -o -type b -o -type c -o -type p -o -type s \) -print -quit | grep -q .; then
+    die "el paquete trae enlaces o archivos especiales; se rechaza"
+  fi
+}
+valid_json() { python3 -c 'import json,sys; json.load(open(sys.argv[1], encoding="utf-8"))' "$1" 2>/dev/null; }
+
+[ "$MODE" = "site" ] || die "uso: incendios-deploy site  (tar.gz por la entrada estándar)"
+
+mkdir -p "$REL" "$CODE"
+find "$REL" -maxdepth 1 -name '.stage.*' -mmin +30 -exec rm -rf {} + 2>/dev/null || true
+
+stage=$(mktemp -d "$REL/.stage.XXXXXX")
+trap 'rm -rf "$stage"' EXIT
+tar -xzf - -C "$stage" --no-same-owner --no-same-permissions
+only_plain_files "$stage"
+
+# Lo mínimo para que el sitio y el actualizador funcionen.
+for f in index.html mapa-2d.html estado.html manifest.json assets/app3d.js assets/style.css assets/estado.js \
+         assets/vendor/three/three.module.min.js assets/vendor/three/addons/OrbitControls.js assets/vendor/three/addons/CSS2DRenderer.js \
+         assets/vendor/leaflet/leaflet.js assets/fonts/archivo-latin.woff2 \
+         data/ref/departamentos.geojson data/ref/distritos.json data/incidentes_curados.json scripts/update.py VERSION; do
+  [ -s "$stage/$f" ] || die "falta $f; se conserva la versión anterior"
+done
+for f in manifest.json data/ref/departamentos.geojson data/ref/distritos.json data/incidentes_curados.json; do
+  valid_json "$stage/$f" || die "$f no es JSON válido; se conserva la versión anterior"
+done
+python3 -m py_compile "$stage/scripts/update.py" || die "scripts/update.py no compila; se conserva la versión anterior"
+rm -rf "$stage/scripts/__pycache__"
+# Todo lo que index.html carga de assets/ tiene que venir en el paquete.
+grep -o 'assets/[A-Za-z0-9._/-]*' "$stage/index.html" | sort -u | while read -r a; do
+  [ -s "$stage/$a" ] || die "index.html pide $a y no viene en el paquete"
+done
+
+chown -R root:root "$stage"
+find "$stage" -type d -exec chmod 0755 {} +
+find "$stage" -type f -exec chmod 0644 {} +
+
+name="$(date -u +%Y%m%dT%H%M%S)-$$"
+mv "$stage" "$REL/$name"
+trap - EXIT
+
+# 1) sitio: rename atómico del enlace
+ln -s "$REL/$name" "$LIVE.next"
+mv -T "$LIVE.next" "$LIVE"
+
+# 2) actualizador: copia del código y las referencias (el usuario incendios solo lee aquí; escribe en /srv/incendios-data)
+mkdir -p "$CODE/scripts" "$CODE/data/ref"
+cp -p "$REL/$name/scripts/update.py" "$CODE/scripts/update.py.new" && mv -f "$CODE/scripts/update.py.new" "$CODE/scripts/update.py"
+cp -p "$REL/$name/data/ref/"* "$CODE/data/ref/"
+cp -p "$REL/$name/data/incidentes_curados.json" "$CODE/data/incidentes_curados.json.new" && mv -f "$CODE/data/incidentes_curados.json.new" "$CODE/data/incidentes_curados.json"
+cp -p "$REL/$name/VERSION" "$CODE/VERSION"
+chmod 0755 "$CODE/scripts/update.py"
+
+# 3) limpieza de versiones viejas
+ls -1d "$REL"/20* 2>/dev/null | sort | head -n -"$KEEP" | xargs -r rm -rf
+
+echo "incendios-deploy: publicada $name (versión $(cat "$CODE/VERSION"))"
+# 4) una corrida ya, para que los datos reflejen el código nuevo (el timer sigue cada 10 min)
+if systemctl list-unit-files incendios-update.service >/dev/null 2>&1; then
+  systemctl start --no-block incendios-update.service && echo "incendios-deploy: actualización lanzada (journalctl -u incendios-update -f)"
+fi

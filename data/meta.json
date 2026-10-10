@@ -1,11 +1,16 @@
 {
- "generado": "2026-10-10T01:32:16.171100+00:00",
- "generado_lima": "09/10/2026 20:32",
+ "generado": "2026-10-10T02:25:52.079779+00:00",
+ "generado_lima": "09/10/2026 21:25",
+ "intervalo_min": 10,
+ "proxima_estimada": "2026-10-10T02:35:52.079779+00:00",
+ "duracion_s": 27.4,
+ "version": "test2",
+ "novedades_n": 25,
  "conteos": {
-  "focos_24h": 1577,
-  "focos_7d": 21264,
-  "incidentes": 67,
-  "incidentes_activos": 22,
+  "focos_24h": 1576,
+  "focos_7d": 21244,
+  "incidentes": 64,
+  "incidentes_activos": 23,
   "regiones_activas": [
    "ANCASH",
    "APURIMAC",
@@ -18,7 +23,14 @@
    "PUNO"
   ],
   "fallecidos_reportados": 7,
-  "agrupaciones_satelitales": 80
+  "agrupaciones_satelitales": 80,
+  "incidentes_por_estado": {
+   "activo": 22,
+   "en_control": 1,
+   "controlado": 1,
+   "extinguido": 34,
+   "sin_dato": 6
+  }
  },
  "resumen_oficial": {
   "fallecidos_octubre": 6,
@@ -42,11 +54,11 @@
   },
   "FIRMS MODIS Terra/Aqua": {
    "ok": true,
-   "detalle": "1089 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)"
+   "detalle": "1069 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)"
   },
   "INDECI emergencias": {
    "ok": true,
-   "detalle": "89 reportes de incendio forestal en 4 páginas"
+   "detalle": "70 reportes de incendio forestal en 4 páginas · 13 PDF leídos"
   },
   "Google Noticias RSS": {
    "ok": true,

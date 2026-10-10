@@ -1,0 +1,24 @@
+[Unit]
+Description=Incendios Perú - actualizar datos (NASA FIRMS, INDECI, noticias)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=incendios
+Group=incendios
+WorkingDirectory=/opt/incendios
+Environment=INCENDIOS_OUT=/srv/incendios-data
+Environment=INCENDIOS_INTERVALO_MIN=10
+Environment=PYTHONUNBUFFERED=1
+# Opcional: FIRMS_MAP_KEY=... (clave gratuita de FIRMS) en /etc/incendios/env
+EnvironmentFile=-/etc/incendios/env
+ExecStart=/usr/bin/python3 /opt/incendios/scripts/update.py
+TimeoutStartSec=8min
+Nice=10
+IOSchedulingClass=idle
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/srv/incendios-data
+NoNewPrivileges=yes

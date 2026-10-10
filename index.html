@@ -4,26 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Incendios forestales en Perú – mapa en vivo</title>
-<meta name="description" content="¿Dónde hay incendios forestales en Perú ahora? Mapa 3D en vivo con fuentes oficiales (INDECI) y satélites de la NASA. No oficial.">
+<meta name="description" content="¿Dónde hay incendios forestales en Perú ahora? Mapa 3D en vivo con fuentes oficiales (INDECI) y satélites de la NASA, actualizado cada 10 minutos, con un feed de novedades. No oficial.">
 <meta property="og:title" content="Incendios forestales en Perú – mapa en vivo">
-<meta property="og:description" content="Mira en un mapa 3D dónde hay fuego activo, qué se está controlando y qué ya se apagó. Con fuentes.">
-<meta name="theme-color" content="#0d1726">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<meta property="og:description" content="Mira en un mapa 3D dónde hay fuego activo, qué se está controlando y qué ya se apagó. Con fuentes y novedades cada 10 minutos.">
+<meta name="theme-color" content="#0b1524">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
-<script type="importmap">
-{ "imports": {
-  "three": "./assets/vendor/three/three.module.min.js",
-  "three/addons/": "./assets/vendor/three/addons/"
-} }
-</script>
 </head>
 <body>
 <div id="scene" aria-label="Mapa 3D del Perú con los incendios"></div>
 
+<div id="loader" role="status"><div class="bar"><i></i></div><span>Cargando el mapa…</span></div>
+
 <header id="top">
-  <div id="headline" role="status" aria-live="polite">Cargando datos…</div>
+  <div class="brand-row">
+    <span id="live" class="live" title="Los datos se actualizan solos cada 10 minutos"><i></i>EN VIVO</span>
+    <button id="status-btn" class="status-pill" aria-label="Ver estado del monitoreo"><i id="status-dot"></i><span id="status-txt">Conectando…</span></button>
+  </div>
+  <h1 id="headline" role="status" aria-live="polite">Cargando datos…</h1>
   <div id="subline"></div>
-  <div id="updated"></div>
   <div id="legend" aria-label="Leyenda">
     <span><i class="lg activo"></i>Fuego activo</span>
     <span><i class="lg en_control"></i>Lo están controlando</span>
@@ -34,43 +36,66 @@
   <div id="hint" hidden><span id="hint-t">👆 Toca un fuego para ver qué pasa.</span><button id="hint-x" aria-label="Cerrar ayuda">✕</button></div>
 </header>
 
+<div id="stale" hidden role="alert"></div>
 
 <div id="tools">
   <label class="pick">
     <span>📍 Ver mi región</span>
     <select id="region" aria-label="Elegir región"><option value="">Todo el Perú</option></select>
   </label>
-  <button id="reset" title="Volver a ver todo el Perú">⟲ Ver todo</button>
+  <button id="reset" title="Volver a ver todo el Perú">⟲ <span>Ver todo</span></button>
+  <button id="share" title="Compartir este mapa">↗ <span>Compartir</span></button>
 </div>
 
-
-<section id="panel" aria-label="Incendios más graves">
+<section id="panel" aria-label="Incendios y novedades">
   <button id="grab" aria-label="Mostrar u ocultar la lista"><span></span></button>
-  <h2 id="list-title">🔥 Incendios más graves ahora</h2>
-  <ol id="list"></ol>
-  <p class="more"><button id="show-all" class="link">Ver todos los incendios</button></p>
-  <div class="phones">
-    <b>¿Ves fuego o humo cerca?</b> Llama:
-    <a class="tel" href="tel:116">🚒 116 Bomberos</a>
-    <a class="tel" href="tel:115">🛟 115 Defensa Civil</a>
-  </div>
-  <details id="tech">
-    <summary>Ver datos técnicos</summary>
-    <div class="tech-body">
-      <p>Puntos de calor de satélites NASA FIRMS en el mapa:</p>
-      <div class="seg" role="radiogroup" aria-label="Periodo de puntos de calor">
-        <label><input type="radio" name="win" value="24" checked> 24 h</label>
-        <label><input type="radio" name="win" value="48"> 48 h</label>
-        <label><input type="radio" name="win" value="168"> 7 días</label>
-        <label><input type="radio" name="win" value="0"> Ocultar</label>
-      </div>
-      <p id="tech-stats"></p>
-      <p>Con los datos técnicos activados puedes tocar un punto de calor para ver satélite, sensor, confianza y potencia (FRP). Las tarjetas también muestran el texto original de cada fuente.</p>
-      <p id="sources-status"></p>
-      <p><a href="mapa-2d.html">Mapa 2D clásico</a> · <a href="https://github.com/fastestShipper/incendios-peru-en-vivo" target="_blank" rel="noopener">Código y metodología</a></p>
+  <nav class="tabs" role="tablist" aria-label="Secciones">
+    <button role="tab" data-tab="fuegos" aria-selected="true" id="tab-btn-fuegos">🔥 Incendios</button>
+    <button role="tab" data-tab="novedades" aria-selected="false" id="tab-btn-novedades">Novedades <span id="nov-badge" class="badge" hidden>0</span></button>
+  </nav>
+
+  <div id="tab-fuegos" role="tabpanel" aria-labelledby="tab-btn-fuegos">
+    <h2 id="list-title">Incendios más graves ahora</h2>
+    <ol id="list"></ol>
+    <p class="more"><button id="show-all" class="link">Ver todos los incendios</button></p>
+    <div class="phones">
+      <b>¿Ves fuego o humo cerca?</b> Llama:
+      <a class="tel" href="tel:116">🚒 116 Bomberos</a>
+      <a class="tel alt" href="tel:115">🛟 115 Defensa Civil</a>
     </div>
-  </details>
-  <p class="disclaimer">Mapa <b>no oficial</b>. Los datos vienen de INDECI/COEN, gobiernos regionales, prensa y satélites de la NASA. Sigue siempre a <a href="https://portal.indeci.gob.pe/emergencias/" target="_blank" rel="noopener">INDECI</a> y a los Bomberos.</p>
+    <details id="tech">
+      <summary>Ver datos técnicos</summary>
+      <div class="tech-body">
+        <p>Puntos de calor de satélites NASA FIRMS en el mapa:</p>
+        <div class="seg" role="radiogroup" aria-label="Periodo de puntos de calor">
+          <label><input type="radio" name="win" value="24" checked> 24 h</label>
+          <label><input type="radio" name="win" value="48"> 48 h</label>
+          <label><input type="radio" name="win" value="168"> 7 días</label>
+          <label><input type="radio" name="win" value="0"> Ocultar</label>
+        </div>
+        <p id="tech-stats"></p>
+        <p>Con los datos técnicos activados puedes tocar un punto de calor para ver satélite, sensor, confianza y potencia (FRP). Las tarjetas también muestran el texto original de cada fuente. Las regiones se pintan más rojizas cuanto más calor satelital tienen en 24 h.</p>
+        <p id="sources-status"></p>
+        <p><a href="mapa-2d.html">Mapa 2D clásico</a> · <a href="estado.html">Estado del monitoreo</a> · <a href="https://github.com/fastestShipper/incendios-peru-en-vivo" target="_blank" rel="noopener">Código y metodología</a></p>
+      </div>
+    </details>
+    <p class="disclaimer">Mapa <b>no oficial</b>. Los datos vienen de INDECI/COEN, gobiernos regionales, prensa y satélites de la NASA. Sigue siempre a <a href="https://portal.indeci.gob.pe/emergencias/" target="_blank" rel="noopener">INDECI</a> y a los Bomberos.</p>
+  </div>
+
+  <div id="tab-novedades" role="tabpanel" aria-labelledby="tab-btn-novedades" hidden>
+    <div class="feed-head">
+      <h2>Novedades</h2>
+      <span id="feed-upd"></span>
+    </div>
+    <div class="chips" id="feed-filter" role="group" aria-label="Filtrar novedades">
+      <button data-f="" class="on">Todo</button>
+      <button data-f="incendios">Incendios</button>
+      <button data-f="noticia">Noticias</button>
+      <button data-f="satelite">Satélite</button>
+    </div>
+    <ol id="feed"></ol>
+    <p class="disclaimer">Las novedades se generan solas comparando cada actualización con la anterior: nuevos reportes, cambios de estado, cifras, agrupaciones de calor y titulares. Cada una enlaza a su fuente.</p>
+  </div>
 </section>
 
 <div id="card-wrap" hidden>
@@ -85,6 +110,7 @@
   <p>Abajo tienes la lista de incendios. También puedes usar el <a href="mapa-2d.html">mapa 2D</a>.</p>
 </div>
 
+<div id="toast" hidden></div>
 <div id="tip" hidden></div>
 <script type="module" src="assets/app3d.js"></script>
 </body>

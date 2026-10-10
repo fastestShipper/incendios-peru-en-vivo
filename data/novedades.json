@@ -1,0 +1,281 @@
+{
+ "generado": "2026-10-10T02:25:52.079779+00:00",
+ "ultimo_n": 25,
+ "items": [
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "estado",
+   "texto": "Santo Tomás De Pata (Huancavelica) – Chupacc: pasó de «sin información del estado» a «fuego activo»",
+   "region": "HUANCAVELICA",
+   "inc": "indeci-1012",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-1012-8-10-2026-coen-indeci-2330-horas-incendio-forestal-en-el-distrito-de-santo-tomas-de-pata-huancavelica/",
+   "nivel": "alto",
+   "medio": null,
+   "n": 25
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "dato",
+   "texto": "Sayla (Arequipa) – Yanaya: ahora se reportan 4 ha afectadas",
+   "region": "AREQUIPA",
+   "inc": "indeci-13735",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13214-1-10-2026-coen-indeci-0045-horas-reporte-n-01-incendio-forestal-en-el-distrito-de-sayla-arequipa/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 24
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "estado",
+   "texto": "Sayla (Arequipa) – Yanaya: pasó de «sin información del estado» a «apagado»",
+   "region": "AREQUIPA",
+   "inc": "indeci-13735",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13214-1-10-2026-coen-indeci-0045-horas-reporte-n-01-incendio-forestal-en-el-distrito-de-sayla-arequipa/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 23
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "dato",
+   "texto": "Pampamarca (Arequipa) – Secsencaylla: ahora se reportan 5 ha afectadas",
+   "region": "AREQUIPA",
+   "inc": "indeci-13737",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-0951-1-10-2026-coen-indeci-1420-horas-incendio-forestal-en-el-distrito-de-pampamarca-arequipa/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 22
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "estado",
+   "texto": "Pampamarca (Arequipa) – Secsencaylla: pasó de «sin información del estado» a «apagado»",
+   "region": "AREQUIPA",
+   "inc": "indeci-13737",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-0951-1-10-2026-coen-indeci-1420-horas-incendio-forestal-en-el-distrito-de-pampamarca-arequipa/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 21
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "dato",
+   "texto": "Yarinacocha (Ucayali) – Las Américas: ahora se reportan 5.5 ha afectadas",
+   "region": "UCAYALI",
+   "inc": "indeci-13739",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13679-7-10-2026-coen-indeci-2215-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-yarinacocha-ucayali/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 20
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "estado",
+   "texto": "Yarinacocha (Ucayali) – Las Américas: pasó de «sin información del estado» a «apagado»",
+   "region": "UCAYALI",
+   "inc": "indeci-13739",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13679-7-10-2026-coen-indeci-2215-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-yarinacocha-ucayali/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 19
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "dato",
+   "texto": "Pucará (Junín) – Barrio 28 De Julio: ahora se reportan 1 ha afectadas",
+   "region": "JUNIN",
+   "inc": "indeci-13741",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13741-8-10-2026-coen-indeci-1745-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-pucara-junin/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 18
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "estado",
+   "texto": "Pucará (Junín) – Barrio 28 De Julio: pasó de «sin información del estado» a «apagado»",
+   "region": "JUNIN",
+   "inc": "indeci-13741",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-o-13741-8-10-2026-coen-indeci-1745-horas-reporte-n-1-incendio-forestal-en-el-distrito-de-pucara-junin/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 17
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "dato",
+   "texto": "Acoria (Huancavelica): ahora se reportan 10.5 ha afectadas",
+   "region": "HUANCAVELICA",
+   "inc": "indeci-13742",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-complementario-n-13296-2-10-2026-coen-indeci-0125-horas-reporte-n-01-incendio-forestal-en-el-distrito-de-acoria-huancavelica/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 16
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "dato",
+   "texto": "Huaraz (Áncash): ahora se reportan 65 ha afectadas",
+   "region": "ANCASH",
+   "inc": "indeci-13743",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-0936-29-9-2026-coen-indeci-0120-horas-incendio-forestal-en-el-distrito-de-huaraz-ancash/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 15
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "estado",
+   "texto": "Huaraz (Áncash): pasó de «sin información del estado» a «apagado»",
+   "region": "ANCASH",
+   "inc": "indeci-13743",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-0936-29-9-2026-coen-indeci-0120-horas-incendio-forestal-en-el-distrito-de-huaraz-ancash/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 14
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "dato",
+   "texto": "Mollepata (Cusco): ahora se reportan 1 ha afectadas",
+   "region": "CUSCO",
+   "inc": "indeci-13748",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-1005-7-10-2026-coen-indeci-2140-horas-incendio-forestal-en-el-distrito-de-mollepata-cusco/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 13
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "tipo": "estado",
+   "texto": "Mollepata (Cusco): pasó de «sin información del estado» a «apagado»",
+   "region": "CUSCO",
+   "inc": "indeci-13748",
+   "url": "https://portal.indeci.gob.pe/emergencias/reporte-preliminar-n-o-1005-7-10-2026-coen-indeci-2140-horas-incendio-forestal-en-el-distrito-de-mollepata-cusco/",
+   "nivel": "bajo",
+   "medio": null,
+   "n": 12
+  },
+  {
+   "t": "2026-10-10T02:23:23.023890+00:00",
+   "tipo": "sistema",
+   "texto": "Empieza el monitoreo automático: datos cada 10 minutos.",
+   "region": null,
+   "inc": null,
+   "url": null,
+   "nivel": "bajo",
+   "medio": null,
+   "n": 11
+  },
+  {
+   "t": "2026-10-10T01:32:53+00:00",
+   "tipo": "noticia",
+   "texto": "Devastador incendio forestal en Pasco amenaza el Santuario Bosque de Piedras de Huayllay",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPamw0bFJyaW1KU25sZ19TTnBST2NFbHkxUGRPWEZFNXFnN1hpak4xYTQ0US0tcDNhVDNzZU9jbS1RbThRendaNmViUGZLNzQza2JjWHByVlRYN3BvWHM0eFFzdm5wb0tyQnVOdWhEQUFYMUZNdHNlMDNTVTJhZ0UtV3RDeFdpVGplS2o4WmFCYWQ3ekNzcno2MnBrdFo2ZGQ4c3g4TGYxTnNYT3RZaXlIdlZsV29SY1FDYWZSWWw4YXo?oc=5",
+   "nivel": "bajo",
+   "medio": "Agencia Andina",
+   "n": 1
+  },
+  {
+   "t": "2026-10-10T00:26:11+00:00",
+   "tipo": "noticia",
+   "texto": "Junín: incendio forestal destruye más de 250 hectáreas y pone en riesgo viviendas y cultivos asháninkas",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxORGs5WllKNlE0RVhTeUNvRWM0OEFVcmoxeE5YSkE0MWlCandWZGVrUk1HZUplYkJOa1lZZHJRcncyN2hNQ3kxVkd3cHY5VHhlTWVWeEV4WnNZWFQ4U3JGT2NMblg2Unh1elg1aS1weDY4WTRCVm51OGFnZDdwSVlxVjMyWFloYnZRRW82ZTZLUnRPOUVPYUVBaEJQZGdRaHpibmthUE5EdHFwQjZHLXVmNGdOSl9lY0p2cGNSY3ZqaFVuYWREYzFocl9PdVZILXVhQmZjZ01Ba2h4Zld3WXRsa3EtQmJBcDDSAfsBQVVfeXFMTTd0Q2trdzc2cGlkdmNBcEQ5VkJhaFZOekc3QmZNS0VjTzEzZ3V4bWV2Zk96XzhoZEh6aVk4RnhXaVdxeEY1RlBDOERWbHNwYjVkTzB5T3ZDbnRWdHF5MTZsZWl5UG1nTmd4bzVjVkpfdTRBUzlKeUFFRjM1OWtmRkRmTFM4ZFdUNDk4WGEwZWlBSWlFdERFczZacmlISzhudjk5c1kwWWhndkNsMmh5WTEzUkhibHAtcS1lcGpvVmR5U1NySDM3a2NGTFhrekF6ejROZ1FVVmNzRkNkR2FKaEVuMlBLS2c1WWdjRlh4cWVpdG5KY0FPb0FLcUE?oc=5",
+   "nivel": "bajo",
+   "medio": "Diario Correo",
+   "n": 2
+  },
+  {
+   "t": "2026-10-09T23:25:00+00:00",
+   "tipo": "noticia",
+   "texto": "Junín: incendio forestal en Río Tambo destruye 350 hectáreas de bosque primario y deja a 50 familias sin hogar",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxONHhNZFF4TDJMYnlhMzR2M0k4QnhMb1VxeFpjUTM3ZFpyeW9ELWxhTlQ0Yk1jM2hTcU10cWNkbU1aOXZubWxfZ0ViUGU1UlZSR244RjZqYmxJbHltbUktYnpEWTNob0pPbEMxVnRLcWpOb1Z0M0RqZXFjYXd4Ml9oa2lfb3cxOXBNZ3NaT243QV90VUtFeWpNMVY1SmtWUGRZU3MxYzR1ZC1QTE5RMnY0WXVJQXhlLUluLVVMS0lRcUVhRTlMU1lUb3g3M0FxQmlwSURBQ3NQb1NES2VIUFZyVQ?oc=5",
+   "nivel": "bajo",
+   "medio": "Exitosa Noticias",
+   "n": 3
+  },
+  {
+   "t": "2026-10-09T23:09:14+00:00",
+   "tipo": "noticia",
+   "texto": "Se registra 5 muertos y más de 16 mil hectáreas afectadas por incendios forestales",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdjNPWUxIODVaTkFOOWRUMDdXU3JhbDRXbEZEWFZlZEJhYlppV3JFRkltdWhuUkwwU3lHeGx5NkhMUzR4WHltN25FckxaY1I0WVJEbTFrZHYtMHNLRTZmc2JKVXgtZnB6U01pRFlVNFZRT2plRXRkU2lIYkMtSy1tVF81Z3hOX2wzQTctUDA4WFRKcG51dXFjX2pyaUotZVhwa1pQaTZtaXZWdndmMC0yY090a0l2b1h1LVN3?oc=5",
+   "nivel": "bajo",
+   "medio": "Gaceta Perú TV",
+   "n": 4
+  },
+  {
+   "t": "2026-10-09T22:58:15+00:00",
+   "tipo": "noticia",
+   "texto": "Junín: emergencia por incendio forestal en comunidad asháninka afecta 350 hectáreas",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcU5fM1A5NmU2Uy16ZXV3aGk1S3VyaE8xc3Q3UDdUOXpVUkd3ZnFvbHlRY0hiTWNoWnpLZmRIWHFLOUpic0NkV1pwVnVEUG5Cb283dDZHSkZGNTUxM3BicVZvLVgzY3labXlTc0Nxckg3eW4tNnJTamZlenBibFVjT0hTZWdNZDRTT3o3TEZUeDVCNWdxaExlMTNvRi02UHl5UTBwNXVTOWQwLTVIR2hWVlJUT29NRFBta3c?oc=5",
+   "nivel": "bajo",
+   "medio": "Actualidad Ambiental",
+   "n": 5
+  },
+  {
+   "t": "2026-10-09T22:10:00+00:00",
+   "tipo": "noticia",
+   "texto": "Incendio forestal arrasa 250 hectáreas en Junín y amenaza las viviendas de la comunidad asháninka de Cutivireni",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcXhfa0xNVFZOOWFZcTltOENaTVFuLWFRMmxsZERnVXBsTTZnWElsUU10RmxNRkZoRTBuYl9XVkRXUXB0OXVMc0htZUxxN19RMlhjS1M3bEF0Mjh0M3RXaVpTd29Fa0FKX1JlM011NWh3WmxjWFdieFlXbnlIQzU2RjVoTEFZd2liZGVsV3VVb2ZNaDdjYWt6TU1Pd3pjRjRVX2tCUXF6bEhlOHhLQVVsSW15X2kxLVZnRGJ6YTZGUEdiUXpuWEd2NkRuejhiWXRUZ3BtZnRaNXNSQ0hjUzBra2hpOA?oc=5",
+   "nivel": "bajo",
+   "medio": "Exitosa Noticias",
+   "n": 6
+  },
+  {
+   "t": "2026-10-09T22:01:44+00:00",
+   "tipo": "noticia",
+   "texto": "Cusco: Incendios forestales dejan cinco fallecidos y 8.000 hectáreas afectadas",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORTZXa0dfMml0ZmpDRXR0TmRMdlJpLTlVTlVseEM4cGpzSXkydGNNenpSWG1rcl81ZWh1a3dxblg3NHR0Qnd0SkZQQ3NXVkl2NXdIcUhHM1FhTTEzQ2d0S0I3bE13Tkw1SUFUeWJIQ0ZSUTd2eHpWRFU3YnRPRm1mczJHakNSV28xTlFKaFVMajNOY2poR0owdzA2VQ?oc=5",
+   "nivel": "bajo",
+   "medio": "Canal N",
+   "n": 7
+  },
+  {
+   "t": "2026-10-09T22:01:25+00:00",
+   "tipo": "noticia",
+   "texto": "Cusco: Tres incendios forestales activos y cinco fallecidos",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSTZlZF9FMW5XTFRXcUpYMzFjSUNRTG95bnFlUmk3azdVSUdzNkh5eHY3YTZfYzZWRjVGeEk3ZlNpb2lvZUdnMks1NzZCWXJJa2NPR3NPM1dRWGlSNC1RbUdRbjQyWmFQTl9JOEZlUmRDQ085OXZnSkRUMWw1X1I3ZDFCc2ZUdkNEUVdWYnRidGVLLV9nYjJHUGpJYVkyazE0VUtNdThkdXV4X1FRd3RLb2c2X1lxbjU5azFhdUVETdIBxAFBVV95cUxOcEpKc29pQjVPTW1mUnRXaTJybFFTcHY4b0g0eEtGc3lKdG1oa0lnMUJHZVM2UE5sQU5hSDhYaGE3TWdMcmZvb2xoQWtTLWZiNktHYlU4ODQ3dUY4aUlEYS15OWxKT29pTl9ZTUpWQ1RBTnBkeGpZZE9tTGlGcS1DcHZVSEZfZTdOOExCZWNjVGxFYndSVFlWNGMxc0xQQmJCbFRGOS1hdW1rRkt4dndFMEFhSjk4a2oxWExmY3NtYUhjb1lh?oc=5",
+   "nivel": "bajo",
+   "medio": "América TV",
+   "n": 8
+  },
+  {
+   "t": "2026-10-09T21:50:21+00:00",
+   "tipo": "noticia",
+   "texto": "24 HORAS VIVO: Incendios Forestales dejan cinco fallecidos en Cusco",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQc1E0SjhpOUtHb1kxcm8wRUUwZ3RRbThUb3ExSW9UeVpnRGlZY3RzdjNkUzV3Zy1TRmpsWGNCVnB1Qi1Cb3pDa2VodVBjOUVBa2ZNRnZtYlVDc3JlMXNJMGRUZFlhMHFva1ZkUW5QQnRkSEt2UUY3dHpnSmVya0dsMEhmT18zOEpyMTY5SHRJT0tCZDdvOEdCZHR2c1pLeEpWWUFOS0R5Sjc?oc=5",
+   "nivel": "bajo",
+   "medio": "www.apnoticias.pe",
+   "n": 9
+  },
+  {
+   "t": "2026-10-09T21:44:12+00:00",
+   "tipo": "noticia",
+   "texto": "Incendios forestales en la región Cusco dejan...",
+   "region": null,
+   "inc": null,
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNHF0c2xpR0ZGWkVwcFNTalJnWlVGdklTRWViNEMxa0JsQlc1Um0xYzg2VXE5cnFfdzZjSzkwdmRUYkh3bFExbDAyNWEwd2Nja2Z5RmNTcmRoTUVpYUNXZlRvMDRDMzd1cktteWZ0aGtJZTN1b3JkLW02eTVaemFKMnhvUTI4a29iSmlnaGxvZ2dLcUFCdHVOd1k1T3Fvd1Z0YVZwRWxnVU93QU03YU9fazIwWlotQ05Nb3fSAboBQVVfeXFMTzRxdHNsaUdGRlpFcHBTU2pSZ1pVRnZJU0VlYjRDMWtCbEJXNVJtMWM4NlVxOXJxX3c2Y0s5MHZkVGJId2xRMWwwMjVhMHdjY2tmeUZjU3JkaE1FaWFDV2ZUbzA0QzM3dXJLbXlmdGhrSWUzdW9yZC1tNnk1WnphSjJ4b1EyOGtvYkppZ2hsb2dnS3FBQnR1TndZNU9xb3dWdGFWcEVsZ1VPd0FNN2FPX2syMFpaLUNOTW93?oc=5",
+   "nivel": "bajo",
+   "medio": "Panamericana TV",
+   "n": 10
+  }
+ ]
+}

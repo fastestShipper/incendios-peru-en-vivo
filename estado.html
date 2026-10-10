@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Estado del monitoreo – Incendios forestales en Perú</title>
+<meta name="description" content="Salud del actualizador de incendios-peru-en-vivo: última corrida, fuentes, historial y novedades.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b1524">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style-estado.css">
+</head>
+<body>
+<main>
+  <header>
+    <a class="back" href="./">← Volver al mapa</a>
+    <h1>Estado del monitoreo</h1>
+    <p class="lead">El servidor descarga NASA FIRMS, INDECI y noticias cada <b id="iv">10</b> minutos. Esta página se refresca sola cada minuto.</p>
+  </header>
+
+  <section id="hero" class="hero ok">
+    <div class="dot"></div>
+    <div>
+      <div class="big" id="estado">Cargando…</div>
+      <div class="sub" id="estado-sub"></div>
+    </div>
+  </section>
+
+  <section class="grid" id="facts"></section>
+
+  <section class="card">
+    <h2>Últimos 7 días</h2>
+    <div class="chart-k"><span><i class="sw" style="background:#ff6a00"></i>Puntos de calor en 24 h</span><span><i class="sw" style="background:#ff3b1f"></i>Incendios activos o en control</span></div>
+    <canvas id="chart" width="1200" height="320" aria-label="Gráfico de puntos de calor e incendios activos"></canvas>
+    <p class="muted" id="chart-note"></p>
+  </section>
+
+  <section class="card">
+    <h2>Fuentes</h2>
+    <ul class="src" id="src"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Últimas corridas</h2>
+    <div class="runs" id="runs"></div>
+    <table id="runs-table"><thead><tr><th>Hora (Lima)</th><th>Duración</th><th>Fuentes</th><th>Focos 24 h</th><th>Activos</th><th></th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Últimas novedades</h2>
+    <ol class="feed" id="feed"></ol>
+  </section>
+
+  <footer class="muted">
+    <p>Archivos: <a href="data/meta.json">meta.json</a> · <a href="data/health.json">health.json</a> · <a href="data/historial.json">historial.json</a> · <a href="data/novedades.json">novedades.json</a> · <a href="https://github.com/fastestShipper/incendios-peru-en-vivo" target="_blank" rel="noopener">código</a></p>
+    <p>Mapa no oficial. En una emergencia sigue a INDECI/COEN y a los Bomberos (116).</p>
+  </footer>
+</main>
+<script src="assets/estado.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+ "generado": "2026-10-10T02:25:52.079779+00:00",
+ "ok": true,
+ "duracion_s": 27.4,
+ "intervalo_min": 10,
+ "version": "test2",
+ "fallos_seguidos": 0,
+ "ultima_ok": "2026-10-10T02:25:52.079779+00:00",
+ "fuentes": {
+  "FIRMS VIIRS S-NPP": {
+   "ok": true,
+   "detalle": "6857 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)",
+   "duracion_s": 2.0,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+  },
+  "FIRMS VIIRS NOAA-20": {
+   "ok": true,
+   "detalle": "7010 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)",
+   "duracion_s": 2.0,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+  },
+  "FIRMS VIIRS NOAA-21": {
+   "ok": true,
+   "detalle": "6308 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)",
+   "duracion_s": 2.0,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+  },
+  "FIRMS MODIS Terra/Aqua": {
+   "ok": true,
+   "detalle": "1069 detecciones en Perú (7 días) · feed público FIRMS 7d (Sudamérica)",
+   "duracion_s": 1.5,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+  },
+  "INDECI emergencias": {
+   "ok": true,
+   "detalle": "70 reportes de incendio forestal en 4 páginas · 13 PDF leídos",
+   "duracion_s": 18.2,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+  },
+  "Google Noticias RSS": {
+   "ok": true,
+   "detalle": "85 titulares",
+   "duracion_s": 0.2,
+   "fallos_seguidos": 0,
+   "ultima_ok": "2026-10-10T02:25:52.079779+00:00"
+  }
+ },
+ "corridas": [
+  {
+   "t": "2026-10-10T02:23:23.023890+00:00",
+   "duracion_s": 62.5,
+   "ok": true,
+   "fuentes_ok": 6,
+   "fuentes_total": 6,
+   "focos_24h": 1576,
+   "activos": 22
+  },
+  {
+   "t": "2026-10-10T02:25:52.079779+00:00",
+   "duracion_s": 27.4,
+   "ok": true,
+   "fuentes_ok": 6,
+   "fuentes_total": 6,
+   "focos_24h": 1576,
+   "activos": 23
+  }
+ ]
+}

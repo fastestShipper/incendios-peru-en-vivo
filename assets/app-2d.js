@@ -1,7 +1,7 @@
 /* Incendios forestales en Perú – mapa en vivo (no oficial). Sin dependencias salvo Leaflet. */
 (function () {
   "use strict";
-  const POLL_MS = 2 * 60 * 1000; // revisa si hay datos nuevos cada 2 minutos
+  const POLL_MS = 60 * 1000; // revisa si hay datos nuevos cada minuto
   const ESTADOS = {
     activo: { t: "Activo / descontrolado", c: "#e5312b" },
     en_control: { t: "En control (combatiéndose)", c: "#ff9800" },
@@ -214,8 +214,11 @@
 
   // enlace al repo si estamos en GitHub Pages
   const m = location.hostname.match(/^([^.]+)\.github\.io$/);
-  if (m) document.getElementById("repo-link").href = `https://github.com/${m[1]}/${location.pathname.split("/")[1] || ""}`;
+  if (m) document.getElementById("repo-link").href = "https://github.com/fastestShipper/incendios-peru-en-vivo";
 
+  // enlace directo a un punto: mapa-2d.html#lat,lon
+  const hm = location.hash.match(/^#(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/);
+  if (hm) map.setView([+hm[1], +hm[2]], 10);
   loadAll(true).catch((e) => { document.getElementById("upd").textContent = "error al cargar datos: " + e.message; });
   setInterval(() => loadAll(false).catch(() => {}), POLL_MS);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) loadAll(false).catch(() => {}); });
