@@ -52,7 +52,7 @@ jobs:
       - name: Preparar sitio
         run: |
           mkdir -p _site
-          cp -r index.html assets data .nojekyll _site/
+          cp -r index.html mapa-2d.html assets data .nojekyll _site/
           rm -rf _site/data/cache
           cat _site/data/meta.json
 
