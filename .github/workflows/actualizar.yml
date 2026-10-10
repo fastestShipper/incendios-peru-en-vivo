@@ -1,0 +1,64 @@
+name: Actualizar datos y publicar
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"   # cada 20 minutos (GitHub puede retrasarlo unos minutos)
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: actualizar-y-publicar
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restaurar últimos datos y caché de reportes INDECI
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/cache
+            data/firms.json
+            data/indeci.json
+            data/noticias.json
+          key: datos-${{ github.run_id }}
+          restore-keys: datos-
+
+      - name: Instalar pdftotext
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Descargar FIRMS, INDECI y noticias
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+        run: python3 scripts/update.py
+
+      - name: Preparar sitio
+        run: |
+          mkdir -p _site
+          cp -r index.html assets data .nojekyll _site/
+          rm -rf _site/data/cache
+          cat _site/data/meta.json
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
