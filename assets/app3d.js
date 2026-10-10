@@ -483,7 +483,7 @@ function renderText() {
   const nSerfor = burning.filter((i) => i.estado_origen === "SERFOR").length;
   const nAlert = incs.filter((i) => i.estado === "alerta").length;
   $("#subline").innerHTML = `${nAct} con fuego activo · ${nCtl} los están controlando` +
-    (nSerfor ? `<span class="xtra"> · ${nSerfor} de ellos según el monitoreo satelital de <a href="${SERFOR_VISOR}" target="_blank" rel="noopener">SERFOR</a></span>` : "") + falTxt +
+    (nSerfor ? ` · ${nSerfor} de ellos según <a href="${SERFOR_VISOR}" target="_blank" rel="noopener">SERFOR</a>` : "") + falTxt +
     (nAlert ? `<span class="xtra"><br>SERFOR tiene ${nAlert} alerta${nAlert === 1 ? "" : "s"} de incendio por confirmar.</span>` : "") +
     (inf ? `<span class="xtra"><br>Además, los satélites ven ${inf} posibles fuegos sin confirmar.</span>` : "");
   const s = D.meta.fuentes || {};

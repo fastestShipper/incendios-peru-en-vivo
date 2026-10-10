@@ -809,7 +809,7 @@ def merge_serfor(incs, reps):
             continue
         inc = {
             "id": "serfor-" + r["codigo"],
-            "nombre": f"{r['distrito'].title()} ({r['departamento'].title()})" + (f" – {r['lugar']}" if r.get("lugar") and norm(r["lugar"]) != r["distrito"] else ""),
+            "nombre": f"{r['distrito'].title()} ({reg_name(r['departamento'])})" + (f" – {r['lugar']}" if r.get("lugar") and norm(r["lugar"]) != r["distrito"] else ""),
             "departamento": r["departamento"], "provincia": r["provincia"], "distrito": r["distrito"],
             "estado": est, "estado_texto": texto, "estado_origen": "SERFOR",
             "hectareas": None, "fallecidos": None, "heridos": None,
